@@ -1,6 +1,6 @@
 # Do not copy work!
 
-For the INFO6250 class, please do not copy the work of others.
+For the INFO6150 class, please do not copy the work of others.
 
 I _encourage_ you to look at the work of your fellow students and various sources online.  There is a lot you can learn from reading the code of others.
 
