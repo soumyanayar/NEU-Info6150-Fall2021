@@ -1,0 +1,14 @@
+{
+  "name": "setup-test",
+  "version": "1.0.0",
+  "description": "Small test to make sure there are no permission issues",
+  "main": "parse.js",
+  "author": "Brett Ritter <brett.ritter@northeastern.edu>",
+  "license": "ISC",
+  "scripts": {
+    "start": "node parse.js"
+  },
+  "dependencies": {
+    "node-html-parser": "^4.1.4"
+  }
+}
