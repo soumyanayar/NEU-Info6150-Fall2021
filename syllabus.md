@@ -48,7 +48,7 @@ Fri Oct 1,
 - Navigation between pages and sites
 - Semantic HTML, MDN, The Browser Wars, evergreen browsers, the unreliability of not-that-old information
 - CSS Fundamentals: inline vs block, responsive rendering
-- CSS approaches: 
+- CSS approaches: semantic, BEM, utility-first
 - Layout with CSS: flexbox vs grid
 
 Topics To Be Determined:

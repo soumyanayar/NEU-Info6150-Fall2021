@@ -31,8 +31,8 @@ From this directory, at the command line:
   * You should see your github id output
   * Everything should run smoothly
   * Fix any errors that do turn up and repeat this step until everything runs smoothly
-1. Add the file to the list of files to commit: `git add parse.js`
-1. Run `git status` and make sure nothing is listed as an 'Untracked file' and only `parse.js` is listed to be added.
+1. Add the file to the list of files to commit: `git add people.html`
+1. Run `git status` and make sure nothing is listed as an 'Untracked file' and only `people.html` is listed to be added.
   * I have never heard *anyone* say "I run git status too much".  It is much easier to clean up a commit BEFORE you make it, so always run git status before doing a commit.  Always pay attention to the output of git status.  Multiple students forget this step each semester.
   * If you have git troubles, I recommend consulting the list of common solutions at https://ohshitgit.com
 1. Commit the file: `git commit -m "Adds MYNAME"` (Example: `git commit -m"Adds Lex"`
@@ -43,7 +43,7 @@ From this directory, at the command line:
   * Do not merge, you must create a Pull Request.  Your repositories should be set so that you cannot merge to main without a Pull Request, but they are created without that requirement so there is a period of time where you can merge, but you shouldn't do it.  Learn how to create the PR, because that's how all assignments for the class will be turned in, and if you do it wrong, your grade could suffer.
   * Add myself and the TA to review the PR.  If you don't do this, we may not know your work is ready and you won't get credit for it.
 2. If the changes look correct, Create the Pull Request.
-  * If you edited and added `.gitignore`, that change should be listed as well as your changes to list.js
+  * If you edited and added `.gitignore`, that change should be listed as well as your changes to people.html
   * There should NOT be changes to other files.
   * Be sure to **add me (and any TAs) as reviewer** on the PR.
 1. Remember to return the main branch!  `git checkout main`.  In this branch, your changes do not exist (not until they are approved, merged in, and you pull the updated main branch)
