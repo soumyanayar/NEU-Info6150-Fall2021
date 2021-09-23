@@ -1,19 +1,18 @@
-body {
-  margin: 10px;
-}
-.homepage {
+#homepage {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 20% 1fr;
   grid-template-rows: auto 1fr auto;
-  gap: 0px;
   grid-template-areas:
     "header header"
     "localmenu main"
     "footer footer";
 }
 
-.menubar {
+header {
   grid-area: header;
+}
+
+.menubar {
   background-color: plum;
   padding: 5px;
 }
@@ -25,24 +24,33 @@ body {
 }
 
 .local-menu {
-  grid-column: 1 / -1;
-  grid-row: 2;
-  list-style-type: none;
   background-color: pink;
-  line-height: 500%;
-  grid-area: auto;
-  grid-template-rows: auto;
+  grid-area: localmenu;
+  justify-content: space-evenly;
 }
-.main {
-  margin: 0px;
+
+.local-menu ul {
+  list-style-type: none;
+}
+
+main {
+  grid-area: main;
+  background-color: pink;
 }
 
 footer {
   grid-area: footer;
+  background-color: plum;
+  padding: 20px;
 }
 
-.menu a:hover,
-.local-menu a:hover {
+.menu a:hover {
   background-color: rebeccapurple;
+  color: white;
+  padding: 20px;
+}
+
+.local-menu a:hover {
+  background-color: plum;
   color: white;
 }
