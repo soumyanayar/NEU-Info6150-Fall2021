@@ -14,13 +14,13 @@ header {
 
 .menubar {
   background-color: plum;
-  padding: 0.1rem;
 }
 
 .menubar ul {
   display: flex;
   list-style-type: none;
   justify-content: space-around;
+  margin: 0rem;
 }
 
 .local-menu {
@@ -28,7 +28,6 @@ header {
   background-color: pink;
   grid-area: localmenu;
   border-right: 1px solid black;
-  padding-inline: inherit;
 }
 
 .local-menu li {
@@ -50,15 +49,19 @@ footer {
   padding: 1.25rem;
 }
 
-.menu a:hover {
-  background-color: rebeccapurple;
+.menu > li {
+  padding: 0.8rem;
+}
+
+.menu > li:hover a {
   color: white;
-  padding: 1.25rem;
+}
+
+.menu > li:hover {
+  background-color: rebeccapurple;
 }
 
 .local-menu a:hover {
   background-color: plum;
   color: white;
-
-  margin: 0px;
 }
