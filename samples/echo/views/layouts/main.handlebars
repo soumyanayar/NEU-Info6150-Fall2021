@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Form Echo</title> 
+    <link href="/css/site.css" rel="stylesheet">
+    <link href="/css/{{@exphbs.view}}.css" rel="stylesheet">
+  </head>
+  {{!-- Line below loads the template html as defined by the server --}}
+  {{!-- 3 curly brace syntax tells it to not convert HTML entities --}}
+  {{!-- e.g. an HTML tag will remain an HTML tag instead of being --}}
+  {{!-- changed to text that LOOKS like an HTML tag. --}}
+  {{!-- e.g. <p> doesn't become &lt;p&gt; --}}
+  {{!-- Normally HTML entities are converted for security reasons. --}}
+  {{!-- So that values from users shown in a template don't embed --}}
+  {{!-- undesired HTML or JS scripts --}}
+  {{!-- In this case, we're loading our own template --}}
+  {{!-- so the security exception is allowed --}}
+  {{!-- In the loaded template we will not use the 3 curly braces --}}
+  {{!-- that way any variables displayed will not be interpreted as HTML --}}
+  <body>{{{body}}}</body>
+</html>
