@@ -35,11 +35,10 @@ header {
 }
 
 .local-menu li {
-  padding-top: 0.4rem;
-  padding-bottom: 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   list-style-type: none;
-  margin-top: 2rem;
-  margin-left: -1.5rem;
+  margin-top: 1rem;
 }
 
 main {
@@ -51,7 +50,7 @@ main {
 footer {
   grid-area: footer;
   background-color: plum;
-  padding: 1.25rem;
+  padding: 1rem;
 }
 
 .menu > li {
