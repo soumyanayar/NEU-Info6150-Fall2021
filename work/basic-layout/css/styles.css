@@ -14,7 +14,7 @@ header {
 
 .menubar {
   background-color: plum;
-  padding: 5px;
+  padding: 0.31rem;
 }
 
 .menubar ul {
@@ -24,33 +24,39 @@ header {
 }
 
 .local-menu {
+  display: grid;
   background-color: pink;
   grid-area: localmenu;
-  justify-content: space-evenly;
+  border-right: 1px solid black;
 }
 
-.local-menu ul {
+.local-menu li {
+  padding: 0.5rem;
   list-style-type: none;
+  margin: 1rem;
 }
 
 main {
   grid-area: main;
   background-color: pink;
+  padding: 0.5rem;
 }
 
 footer {
   grid-area: footer;
   background-color: plum;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .menu a:hover {
   background-color: rebeccapurple;
   color: white;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .local-menu a:hover {
   background-color: plum;
   color: white;
+
+  margin: 0px;
 }
