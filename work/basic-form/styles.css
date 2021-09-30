@@ -15,7 +15,6 @@ div {
 }
 
 .form {
-  margin: 1.2rem;
   display: grid;
   grid-template-columns: 1fr 4fr;
 }
@@ -38,7 +37,7 @@ div {
 }
 
 button {
-  margin: 5px;
+  margin: 12px;
   border-color: rgb(6, 5, 95);
 }
 :required {
