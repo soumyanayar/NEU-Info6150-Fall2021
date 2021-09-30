@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h2>Welcome To My Website</h2>
+    <div class="topnavigation">
+      <a class="current" href="#home">Home</a>
+      <a href="#products">Products</a>
+      <a href="#careers">Careers</a>
+      <a href="#news">News</a>
+      <a href="#resources">Resources</a>
+      <a href="#contact">Contact</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="form">
+        <h3>Enter Your Information To Subscribe</h3>
+        <form method="post" name="mymailfrom" action="subscriberform.php">
+            <div class="name">
+                <label for='name'>Enter Name: </label>
+                <input type="text" name="name" required>
+            </div>
+            <div name="address">
+                <label for='email'>Enter Email Address: </label>
+                <input type="text" name="email" required>
+            </div>
+                <div class="tier">
+                    <label for="dropdown">Choose Tier</label>
+                <select name="dropdown" id="tier" required>
+                    <option value="">Please Select</option>
+                    <option value="silver">Silver Tier</option>
+                    <option value="gold">Gold Tier</option>
+                    <option value="platinum">Platinum Tier</option>
+                </select>
+                </div>
+                <div class="checkb">
+                    <label for="check">Do you want us to send you annoying emails?</label>
+                    <input type="checkbox" id="check" name="check">    
+                </div>     
+            <button type="submit">Submit</button>
+            </form> 
+    </div>
+  </body>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  margin: 1rem;
+  background-color: ivory;
+  color: rgb(6, 5, 95);
+}
+div {
+  margin: 1rem;
+}
+
+.topnavigation {
+  display: flex;
+  background-color: rgb(160, 222, 235);
+  color: black;
+  margin: 0.2rem;
+}
+
+.form {
+  margin: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.topnavigation a {
+  color: black;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.topnavigation a.current {
+  background-color: rgb(141, 158, 81);
+  color: black;
+}
+.topnavigation a:hover {
+  background-color: rgb(224, 240, 166);
+  color: black;
+}
+
+button {
+  margin: 5px;
+  border-color: rgb(6, 5, 95);
+}
+:required {
+  box-shadow: 0 0 1px 1px yellow;
+}
