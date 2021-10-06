@@ -1,0 +1,176 @@
+* {
+  box-sizing: border-box;
+  background-color: rgb(227, 209, 245);
+}
+body {
+  margin: 0;
+}
+header {
+  margin: 0rem;
+}
+
+header ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+header .logo {
+  width: 3rem;
+  height: auto;
+}
+
+header h1 {
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: purple;
+  color: white;
+}
+
+.menubar > ul {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.menu > li {
+  padding: 0 1rem;
+  position: 100%;
+  position: relative;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  left: 0;
+
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+
+  transition: max-height 1s;
+}
+
+.submenu a {
+  display: inline-block;
+
+  background-color: rgb(231, 185, 225);
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+
+.submenu a:hover {
+  background-color: rgb(122, 15, 122);
+  color: white;
+}
+.menu button {
+  background-color: transparent;
+  border: 0;
+  font: inherit;
+}
+
+.menu > li:focus-within .submenu,
+.menu > li:hover .submenu {
+  max-height: 90vh;
+  visibility: visible;
+}
+
+.localnav {
+  grid-area: localnav;
+
+  padding: 0.5rem;
+
+  /*background-color: darkolivegreen; */
+}
+
+.localnav ul {
+  display: flex;
+  flex-direction: column;
+
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.localnav li {
+  padding: 0.25rem 0;
+}
+main {
+  padding: 2rem;
+  background-color: antiquewhite;
+}
+
+.content {
+  position: fixed;
+  top: auto;
+  margin: 0.5rem;
+  width: 100%;
+  height: 12%;
+  background-color: pink;
+}
+
+.content ul {
+  list-style-type: none;
+  padding: 0.2rem;
+}
+.subject li {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  color: darkred;
+}
+
+.click {
+  font-weight: bold;
+  color: red;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.bg1 {
+  visibility: hidden;
+}
+.animate-area {
+  margin: 1rem;
+  width: auto;
+  height: 100%;
+  visibility: true;
+
+  background-image: url(tech2.jpeg);
+  background-position: 100%;
+  background-repeat: repeat-x;
+  animation: animatedBackground 10s linear infinite alternate;
+}
+footer {
+  margin: 0.5rem;
+  padding: 1rem;
+  position: fixed;
+
+  background-color: purple;
+
+  bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+footer a {
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background-color: pink;
+  color: black;
+  padding: 1rem;
+  position: 100%;
+}
