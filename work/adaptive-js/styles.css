@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.info {
+  padding: 0;
+  border: 1px solid black;
+}
+
+.add-form {
+  padding: 1rem;
+}
