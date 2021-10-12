@@ -7,15 +7,40 @@ body {
   font-family: sans-serif;
 }
 
-header h1 {
-  text-align: center;
+.main-header {
+  text-align: left;
 }
 
 .info {
-  padding: 0;
+  padding: 0 0.5rem;
+
   border: 1px solid black;
 }
 
+.info__label {
+  background-color: white;
+  position: relative;
+  top: -0.5rem;
+  left: 0.5rem;
+}
+
 .add-form {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.label__input {
+  width: 100%;
+}
+@media (min-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
 }

@@ -32,7 +32,7 @@ button.addEventListener("click", () => {
     }
 
     ++count;
-    infoText.innerHTML = `The ${textBoxValue} has ${count} count`;
+    infoText.innerHTML = `The count for ${textBoxValue} is ${count}`;
     previous = textBoxValue;
   }
 });
