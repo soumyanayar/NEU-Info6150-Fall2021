@@ -13,20 +13,21 @@ body {
 
 .info {
   padding: 0 0.5rem;
-
   border: 1px solid black;
 }
 
 .info__label {
-  background-color: white;
   position: relative;
   top: -0.5rem;
   left: 0.5rem;
+
+  background-color: white;
 }
 
 .add-form {
   display: flex;
   flex-direction: column;
+
   padding: 1rem;
 }
 
@@ -37,10 +38,15 @@ body {
 }
 .label__input {
   width: 100%;
+  margin-left: 0.5rem;
 }
 @media (min-width: 600px) {
   main {
     display: flex;
     flex-direction: row;
   }
+}
+
+.add-form__submit {
+  margin-top: 0.5rem;
 }
