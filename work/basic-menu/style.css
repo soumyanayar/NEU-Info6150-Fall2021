@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+
+  /* text decoration related attribute */
+  background-color: rgb(227, 209, 245);
+}
+body {
+  /* margin/ page bordering related attribute */
+  margin: 0;
+}
+header {
+  /* margin/ page bordering related attribute */
+  margin: 0rem;
+}
+
+header ul {
+  /* margin/ page bordering related attribute */
+  padding: 0;
+  margin: 0;
+
+  /* text decoration related attribute */
+  list-style-type: none;
+}
+
+header .logo {
+  width: 3rem;
+  height: auto;
+}
+
+header h1 {
+  /* margin/ page bordering related attribute */
+  margin: 0.5rem;
+
+  /* text font and color related attribute */
+  text-align: center;
+  font-size: 1.5rem;
+  background-color: purple;
+  color: white;
+}
+
+.menubar > ul {
+  /* placing of content(display) related attribute */
+  display: flex;
+  flex-direction: row;
+
+  /* margin/ page bordering/padding related attribute */
+  margin: 0.5rem;
+
+  /* text font and color related attribute */
+  font-size: 1.2rem;
+}
+
+.menu > li {
+  /* position of content related attribute */
+  position: relative;
+
+  /* margin/ page bordering/padding related attribute */
+  padding: 0 1rem;
+  position: 100%;
+}
+
+.submenu {
+  /* placing of content(display) related attribute */
+  display: flex;
+  flex-direction: column;
+
+  /* position of content related attribute */
+  position: absolute;
+  left: 0;
+
+  /* view related attribute */
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+
+  /* animation related attribute */
+  transition: max-height 1s;
+}
+
+.submenu a {
+  /* placing of content(display) related attribute */
+  display: inline-block;
+
+  /* text font and color related attribute */
+  background-color: rgb(231, 185, 225);
+
+  /* margin/ page bordering/padding related attribute */
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+
+.submenu a:hover {
+  /* text font and color related attribute */
+  background-color: rgb(122, 15, 122);
+  color: white;
+}
+.menu button {
+  /* page margin and padding related attribute */
+  border: 0;
+
+  /* text font and color related attribute */
+  background-color: transparent;
+  font: inherit;
+}
+
+.menu > li:focus-within .submenu,
+.menu > li:hover .submenu {
+  max-height: 90vh;
+  visibility: visible;
+}
+
+.localnav {
+  /* display related attribute */
+  grid-area: localnav;
+
+  /* page margin and padding related attribute */
+  padding: 0.5rem;
+}
+
+.localnav ul {
+  /* display related attribute */
+  display: flex;
+  flex-direction: column;
+
+  /* text decoration related attribute */
+  list-style-type: none;
+
+  /* page margin and padding related attribute */
+  padding: 0;
+  margin: 0;
+}
+
+.localnav li {
+  padding: 0.25rem 0;
+}
+main {
+  /* page margin and padding related attribute */
+  padding: 2rem;
+
+  /* text decoration(color, font etc) related attribute */
+  background-color: antiquewhite;
+}
+
+.content {
+  /* content position related attribute */
+  position: fixed;
+
+  /* page margin and padding related attribute */
+  top: auto;
+  margin: 0.5rem;
+  width: 100%;
+  height: 12%;
+}
+
+.content ul {
+  /* text decoration(color, font etc) related attribute */
+  list-style-type: none;
+
+  /* page margin and padding related attribute */
+  padding: 0.2rem;
+}
+.subject li {
+  /* page margin and padding related attribute */
+  padding: 0.5rem;
+  margin: 0.5rem;
+
+  /* text decoration(color, font etc) related attribute */
+  font-size: 1.2rem;
+  color: darkred;
+  background-color: lightblue;
+}
+.sub1 {
+  width: 20%;
+}
+.sub2 {
+  width: 30%;
+}
+
+.click {
+  /* text decoration(color, font etc) related attribute */
+  font-weight: bold;
+  color: red;
+  background-color: transparent;
+}
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+.bg1 {
+  visibility: hidden;
+}
+.animate-area {
+  /* page margin and padding related attribute */
+  margin: 1rem;
+  width: auto;
+  height: 100%;
+  visibility: true;
+
+  /* animation related attribute */
+  background-image: url(tech2.jpeg);
+  background-position: 100%;
+  background-repeat: repeat-x;
+  animation: animatedBackground 15s linear infinite alternate;
+}
+footer {
+  /* content position related attribute */
+  position: fixed;
+
+  /* page margin and padding related attribute */
+  margin: 0.5rem;
+  padding: 1rem;
+  bottom: 1rem;
+  width: 99%;
+
+  /* text font and color , decoration related attribute */
+  background-color: purple;
+  text-align: center;
+}
+footer a {
+  /* text font and color , decoration related attribute */
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  /* page margin and padding related attribute */
+  padding: 1rem;
+
+  /* text font and color , decoration related attribute */
+  background-color: pink;
+  color: black;
+  position: 100%;
+}
