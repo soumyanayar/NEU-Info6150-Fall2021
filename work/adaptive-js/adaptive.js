@@ -1,5 +1,4 @@
 let count = 0;
-let previous;
 
 // Removing the default behavior of form submit inorder to avoid
 // form elements being reset
@@ -14,12 +13,17 @@ let textBox = document.querySelector(".label__input");
 let infoText = document.querySelector(".info__report");
 let infoTextDefaultValue = infoText.textContent;
 
+let verifyInputValue = {
+  current: infoText,
+  previous: "",
+};
+
 textBox.addEventListener("keyup", () => {
   if (textBox.value !== "") {
     button.disabled = false;
   } else {
     button.disabled = true;
-    infoText.innerHTML = infoTextDefaultValue;
+    verifyInputValue.current.innerHTML = infoTextDefaultValue;
     count = 0;
   }
 });
@@ -27,12 +31,12 @@ textBox.addEventListener("keyup", () => {
 button.addEventListener("click", () => {
   let textBoxValue = textBox.value.trim();
   if (textBoxValue) {
-    if (textBoxValue !== previous) {
+    if (textBoxValue !== verifyInputValue.previous) {
       count = 0;
     }
 
     ++count;
-    infoText.innerHTML = `The count for ${textBoxValue} is ${count}`;
-    previous = textBoxValue;
+    verifyInputValue.current.innerHTML = `The count for ${textBoxValue} is ${count}`;
+    verifyInputValue.previous = textBoxValue;
   }
 });

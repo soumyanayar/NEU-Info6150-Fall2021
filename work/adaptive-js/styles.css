@@ -36,10 +36,12 @@ body {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .label__input {
   width: 100%;
   margin-left: 0.5rem;
 }
+
 @media (min-width: 600px) {
   main {
     display: flex;
