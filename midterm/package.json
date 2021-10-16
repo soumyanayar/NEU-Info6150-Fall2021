@@ -1,0 +1,15 @@
+{
+  "name": "midterm",
+  "version": "1.0.0",
+  "description": "** Due 11:59pm PT Thu Oct 28 **",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Brett Ritter <swiftone@swiftone.org>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
