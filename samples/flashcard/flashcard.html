@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title></title>
+  <link rel="stylesheet" href="flashcard.css">
+</head>
+<body>
+  <header>
+    <h1>Flashcards</h1>
+  </header>
+  <main>
+    <nav class="controls">
+      <ul>
+        <li><a href="#" class="controls__add" data-action="add">Add a Card</a></li>
+        <li><a href="#" class="controls__use" data-action="use">View random Cards</a></li>
+      </ul>
+    </nav>
+    <div class="message"></div>
+    <div class="use-card active">
+      <h2>Viewing a random Card</h2>
+      <button class="card">
+        <div class="card__container">
+          <div class="card__front">
+            <h3 class="card__prompt">Demo</h3>
+          </div>
+          <div class="card__back">
+            <h3 class="card__prompt">Special Answer</h3>
+            <div class="card__body">Amet officiis tempora blanditiis eum</div>
+          </div>
+        </div>
+      </button>
+    </div>
+    <div class="add-card">
+      <h2>Add a Card</h2>
+      <form class="add-card-form" action="#" method="POST">
+        <label><span>Prompt:</span><input name="prompt" class="add-card-form__prompt"></label>
+        <label><span>Body:</span><textarea name="body" class="add-card-form__body"></textarea></label>
+        <button type="submit">Add Card</button>
+      </form>
+    </div>
+  </main>
+  <footer>
+    There is no interesting text here, this sample is not about the footer.
+  </footer>
+  <script src="flashcard.js"></script> 
+</body>
+</html>

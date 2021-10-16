@@ -1,0 +1,119 @@
+* { 
+  box-sizing: border-box;
+}
+
+body { 
+  margin: 0;
+
+  font-family: sans-serif;
+}
+
+header h1 { 
+  text-align: center;
+}
+
+.controls ul { 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  padding: 2rem;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+.message { 
+    
+}
+
+.use-card .card { 
+  margin: 0 20%;
+  width: clamp(8rem, 60%, 30rem);
+  height: 12rem;
+  perspective: 30rem;
+  background: transparent;
+  font-size: inherit;
+  border: none;
+  padding: 0;
+}
+
+.add-card h2, 
+.use-card h2 { 
+  margin-left: 20%;
+}
+
+
+.use-card .card__container { 
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.use-card .card__front, 
+.use-card .card__back { 
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+
+  border: 1px solid black;
+
+  backface-visibility: hidden;
+}
+
+.use-card .card.flipped .card__container { 
+  transform: rotateY(180deg);
+}
+
+.use-card .card__front { 
+  background-color: lightblue;
+}
+
+.use-card .card__back { 
+  background-color: skyblue;
+  transform: rotateY(180deg);
+}
+
+.add-card-form { 
+  margin: 0 20%;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.add-card-form label { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+} 
+
+.add-card-form__prompt { 
+  width: max(70%, 10rem);
+}
+.add-card-form__body { 
+  width: max(70%, 10rem);
+  height: 6rem;
+}
+
+.add-card-form button { 
+  margin: 1rem;
+}
+
+.use-card:not(.active),
+.add-card:not(.active) { 
+  display: none;
+}
+
+footer { 
+  padding: 2rem;
+  text-align: center;
+}
