@@ -31,7 +31,7 @@ const renderPosts = () => {
     postElement.appendChild(postBody);
 
     let commentsContainer = document.createElement("div");
-    commentsContainer.className = "panel";
+    commentsContainer.className = "commentsContainer";
 
     let commentsListUl = document.createElement("ul");
     let commentsTitle = document.createElement("b");

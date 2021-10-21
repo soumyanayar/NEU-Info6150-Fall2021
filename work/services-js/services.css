@@ -24,7 +24,7 @@
   border: 0.1rem solid black;
 }
 
-.panel {
+.commentsContainer {
   padding: 0 18px;
   display: none;
   background-color: white;
