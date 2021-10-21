@@ -1,32 +1,70 @@
 * {
-  margin: 0;
+  margin-top: 0.5rem;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
 }
 
 .accordion {
-  background-color: #eee;
-  color: #444;
+  transition: 0.4s;
+
+  position: relative;
+
   cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
+
+  color: darkred;
   text-align: left;
   outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+  font-size: 1rem;
+  border: none;
+
+  width: 100%;
+  padding: 0.5rem;
 }
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
-  border: 0.1rem solid black;
+  background-color: white;
 }
 
 .commentsContainer {
-  padding: 0 18px;
   display: none;
   background-color: white;
   overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.postDiv {
+  background-color: rgb(218, 223, 224);
+  border-radius: 0.7rem;
+  border: 0.1rem solid black;
+}
+
+.postBodyDiv {
+  position: relative;
+  height: 2rem;
+
+  font-size: 0.8rem;
+
+  margin-left: 0.5rem;
+  border-radius: 0.7rem;
+}
+
+.commentsBlockDiv {
+  font-size: 0.8rem;
+  margin: 0;
+  padding: 0;
+  border-bottom: 0.1rem solid black;
+}
+.commentsBlockCommentBodyDiv {
+  margin-left: 0.5rem;
+}
+.nameSpan {
+  margin-left: 0.5rem;
+  padding: 0;
+  color: darkred;
+}
+
+h5 {
+  margin: 0.5rem;
 }

@@ -18,7 +18,7 @@ const renderPosts = () => {
   for (let i = 0; i < posts.length; ++i) {
     let postListItem = document.createElement("li");
     let postElement = document.createElement("div");
-    // postElement.className = "postDiv"
+    postElement.className = "postDiv";
 
     let postTitle = document.createElement("button");
     postTitle.innerHTML = posts[i].title;
@@ -26,7 +26,7 @@ const renderPosts = () => {
     postElement.appendChild(postTitle);
 
     let postBody = document.createElement("div");
-    // postBody.className = "postBodyDiv";
+    postBody.className = "postBodyDiv";
     postBody.innerHTML = posts[i].body;
     postElement.appendChild(postBody);
 
@@ -34,7 +34,7 @@ const renderPosts = () => {
     commentsContainer.className = "commentsContainer";
 
     let commentsListUl = document.createElement("ul");
-    let commentsTitle = document.createElement("b");
+    let commentsTitle = document.createElement("h5");
     commentsTitle.innerHTML = "Comments";
     commentsListUl.appendChild(commentsTitle);
     commentsContainer.appendChild(commentsListUl);
@@ -54,13 +54,15 @@ const renderPosts = () => {
           for (let j = 0; j < commentsList[i].length; ++j) {
             let commentsListLiElement = document.createElement("li");
             let commentsBlockDiv = document.createElement("div");
-            // commentsBlockDiv.className("commentsBlockDiv");
+            commentsBlockDiv.className = "commentsBlockDiv";
             let commentsBlockUserNameSpan = document.createElement("span");
+            commentsBlockUserNameSpan.className = "nameSpan";
             commentsBlockUserNameSpan.innerHTML = commentsList[i][j].name;
             commentsBlockDiv.appendChild(commentsBlockUserNameSpan);
 
             let commentsBlockCommentBodyDiv = document.createElement("div");
-            // commentsBlockCommentBodyDiv.className = "commentsBlockCommentBodyDiv";
+            commentsBlockCommentBodyDiv.className =
+              "commentsBlockCommentBodyDiv";
             commentsBlockCommentBodyDiv.innerHTML = commentsList[i][j].body;
             commentsBlockDiv.appendChild(commentsBlockCommentBodyDiv);
 
