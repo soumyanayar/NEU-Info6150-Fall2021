@@ -1,6 +1,6 @@
 let posts = [];
 let commentsList = [];
-let postList = document.querySelector(".posts");
+const postList = document.querySelector(".posts");
 
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then(function (response) {
@@ -14,7 +14,7 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     console.log("error: " + err);
   });
 
-let renderPosts = () => {
+const renderPosts = () => {
   for (let i = 0; i < posts.length; ++i) {
     let postListItem = document.createElement("li");
     let postElement = document.createElement("div");
@@ -38,10 +38,6 @@ let renderPosts = () => {
     commentsTitle.innerHTML = "Comments";
     commentsListUl.appendChild(commentsTitle);
     commentsContainer.appendChild(commentsListUl);
-
-    // let comment = document.createElement("p");
-    // commentsContainer.appendChild(comment);
-
     postElement.appendChild(commentsContainer);
 
     commentsList.push(undefined);
@@ -54,12 +50,8 @@ let renderPosts = () => {
         if (commentsList[i] === undefined) {
           let comments = await getPostComments(posts[i].id);
           commentsList[i] = comments;
-          // panel.childNodes[0].innerHTML = JSON.stringify(commentsList[i]);
           let commentsListUlElement = panel.getElementsByTagName("ul").item(0);
           for (let j = 0; j < commentsList[i].length; ++j) {
-            console.log(commentsList[i][j].name);
-            console.log(commentsList[i][j].body);
-
             let commentsListLiElement = document.createElement("li");
             let commentsBlockDiv = document.createElement("div");
             // commentsBlockDiv.className("commentsBlockDiv");
@@ -85,7 +77,7 @@ let renderPosts = () => {
     postList.appendChild(postListItem);
   }
 
-  let getPostComments = async (postId) => {
+  const getPostComments = async (postId) => {
     try {
       let response = await (
         await fetch(
