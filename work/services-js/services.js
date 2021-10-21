@@ -42,9 +42,9 @@ let renderPosts = () => {
         if (commentsList[i] === undefined) {
           let comments = await getPostComments(posts[i].id);
           commentsList[i] = comments;
+          panel.childNodes[0].innerHTML = JSON.stringify(commentsList[i]);
         }
 
-        panel.childNodes[0].innerHTML = JSON.stringify(commentsList[i]);
         panel.style.display = "block";
       }
     });

@@ -21,6 +21,7 @@
 .active,
 .accordion:hover {
   background-color: #ccc;
+  border: 0.1rem solid black;
 }
 
 .panel {
