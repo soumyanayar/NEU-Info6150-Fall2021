@@ -1,4 +1,5 @@
 let posts = [];
+let commentsList = [];
 let postList = document.querySelector(".posts");
 
 fetch("https://jsonplaceholder.typicode.com/posts")
@@ -30,14 +31,20 @@ let renderPosts = () => {
     commentsContainer.appendChild(comment);
     postList.appendChild(commentsContainer);
 
+    commentsList.push(undefined);
+
     titleButton.addEventListener("click", async function () {
       this.classList.toggle("active");
       let panel = this.nextElementSibling.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
       } else {
-        let comments = await getPostComments(posts[i].id);
-        panel.childNodes[0].innerHTML = JSON.stringify(comments);
+        if (commentsList[i] === undefined) {
+          let comments = await getPostComments(posts[i].id);
+          commentsList[i] = comments;
+        }
+
+        panel.childNodes[0].innerHTML = JSON.stringify(commentsList[i]);
         panel.style.display = "block";
       }
     });
