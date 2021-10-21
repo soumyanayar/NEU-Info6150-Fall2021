@@ -2,6 +2,7 @@
   margin-top: 0.5rem;
   padding: 0;
   box-sizing: border-box;
+
   font-family: sans-serif;
 }
 
@@ -29,6 +30,7 @@
 
 .commentsContainer {
   display: none;
+
   background-color: white;
   overflow: hidden;
   margin-bottom: 0.5rem;
@@ -36,6 +38,7 @@
 
 .postDiv {
   background-color: rgb(218, 223, 224);
+
   border-radius: 0.7rem;
   border: 0.1rem solid black;
 }
@@ -52,6 +55,7 @@
 
 .commentsBlockDiv {
   font-size: 0.8rem;
+
   margin: 0;
   padding: 0;
   border-bottom: 0.1rem solid black;
@@ -62,6 +66,7 @@
 .nameSpan {
   margin-left: 0.5rem;
   padding: 0;
+
   color: darkred;
 }
 

@@ -1,6 +1,7 @@
 let posts = [];
 let commentsList = [];
 const postList = document.querySelector(".posts");
+let activePosts = [];
 
 fetch("https://jsonplaceholder.typicode.com/posts")
   .then(function (response) {
@@ -46,6 +47,7 @@ const renderPosts = () => {
       let panel = this.nextElementSibling.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
+        activePosts = [];
       } else {
         if (commentsList[i] === undefined) {
           let comments = await getPostComments(posts[i].id);
@@ -71,6 +73,11 @@ const renderPosts = () => {
           }
         }
 
+        for (let a = 0; a < activePosts.length; ++a) {
+          activePosts[a].click();
+        }
+
+        activePosts = [this];
         panel.style.display = "block";
       }
     });
