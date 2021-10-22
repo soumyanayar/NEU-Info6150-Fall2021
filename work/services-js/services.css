@@ -28,7 +28,7 @@
   background-color: white;
 }
 
-.commentsContainer {
+.comments-container {
   display: none;
 
   background-color: white;
@@ -36,14 +36,14 @@
   margin-bottom: 0.5rem;
 }
 
-.postDiv {
+.post-div {
   background-color: rgb(218, 223, 224);
 
   border-radius: 0.7rem;
   border: 0.1rem solid black;
 }
 
-.postBodyDiv {
+.post-body-div {
   position: relative;
   height: auto;
 
@@ -53,17 +53,17 @@
   border-radius: 0.7rem;
 }
 
-.commentsBlockDiv {
+.comments-block-div {
   font-size: 0.8rem;
 
   margin: 0;
   padding: 0;
   border-bottom: 0.1rem solid black;
 }
-.commentsBlockCommentBodyDiv {
+.comments-block-comment-body-div {
   margin-left: 0.5rem;
 }
-.nameSpan {
+.name-span {
   margin-left: 0.5rem;
   padding: 0;
 

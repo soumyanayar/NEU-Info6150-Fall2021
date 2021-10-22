@@ -1,5 +1,5 @@
 let posts = [];
-let commentsList = [];
+const commentsList = [];
 const postList = document.querySelector(".posts");
 let activePosts = [];
 
@@ -17,25 +17,25 @@ fetch("https://jsonplaceholder.typicode.com/posts")
 
 const renderPosts = () => {
   for (let i = 0; i < posts.length; ++i) {
-    let postListItem = document.createElement("li");
-    let postElement = document.createElement("div");
-    postElement.className = "postDiv";
+    const postListItem = document.createElement("li");
+    const postElement = document.createElement("div");
+    postElement.className = "post-div";
 
-    let postTitle = document.createElement("button");
+    const postTitle = document.createElement("button");
     postTitle.innerHTML = posts[i].title;
     postTitle.className = "accordion";
     postElement.appendChild(postTitle);
 
-    let postBody = document.createElement("div");
-    postBody.className = "postBodyDiv";
+    const postBody = document.createElement("div");
+    postBody.className = "post-body-div";
     postBody.innerHTML = posts[i].body;
     postElement.appendChild(postBody);
 
-    let commentsContainer = document.createElement("div");
-    commentsContainer.className = "commentsContainer";
+    const commentsContainer = document.createElement("div");
+    commentsContainer.className = "comments-container";
 
-    let commentsListUl = document.createElement("ul");
-    let commentsTitle = document.createElement("h5");
+    const commentsListUl = document.createElement("ul");
+    const commentsTitle = document.createElement("h5");
     commentsTitle.innerHTML = "Comments";
     commentsListUl.appendChild(commentsTitle);
     commentsContainer.appendChild(commentsListUl);
@@ -44,27 +44,29 @@ const renderPosts = () => {
     commentsList.push(undefined);
     postTitle.addEventListener("click", async function () {
       this.classList.toggle("active");
-      let panel = this.nextElementSibling.nextElementSibling;
+      const panel = this.nextElementSibling.nextElementSibling;
       if (panel.style.display === "block") {
         panel.style.display = "none";
         activePosts = [];
       } else {
         if (commentsList[i] === undefined) {
-          let comments = await getPostComments(posts[i].id);
+          const comments = await getPostComments(posts[i].id);
           commentsList[i] = comments;
-          let commentsListUlElement = panel.getElementsByTagName("ul").item(0);
+          const commentsListUlElement = panel
+            .getElementsByTagName("ul")
+            .item(0);
           for (let j = 0; j < commentsList[i].length; ++j) {
-            let commentsListLiElement = document.createElement("li");
-            let commentsBlockDiv = document.createElement("div");
-            commentsBlockDiv.className = "commentsBlockDiv";
-            let commentsBlockUserNameSpan = document.createElement("span");
-            commentsBlockUserNameSpan.className = "nameSpan";
+            const commentsListLiElement = document.createElement("li");
+            const commentsBlockDiv = document.createElement("div");
+            commentsBlockDiv.className = "comments-block-div";
+            const commentsBlockUserNameSpan = document.createElement("span");
+            commentsBlockUserNameSpan.className = "name-span";
             commentsBlockUserNameSpan.innerHTML = commentsList[i][j].name;
             commentsBlockDiv.appendChild(commentsBlockUserNameSpan);
 
-            let commentsBlockCommentBodyDiv = document.createElement("div");
+            const commentsBlockCommentBodyDiv = document.createElement("div");
             commentsBlockCommentBodyDiv.className =
-              "commentsBlockCommentBodyDiv";
+              "comments-block-comment-body-div";
             commentsBlockCommentBodyDiv.innerHTML = commentsList[i][j].body;
             commentsBlockDiv.appendChild(commentsBlockCommentBodyDiv);
 
@@ -88,7 +90,7 @@ const renderPosts = () => {
 
   const getPostComments = async (postId) => {
     try {
-      let response = await (
+      const response = await (
         await fetch(
           "https://jsonplaceholder.typicode.com/posts/" + postId + "/comments"
         )
