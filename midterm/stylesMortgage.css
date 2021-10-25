@@ -1,16 +1,30 @@
-h2 {
-  color: rgb(11, 187, 105);
-}
-
 .mortgage-main-container {
   margin-top: 5rem;
   margin-left: 1rem;
 }
 
+.mortgage-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-image {
+  width: 4rem;
+  height: auto;
+  margin-top: 1rem;
+  margin-right: 0;
+}
+
+h2 {
+  color: rgb(28, 179, 78);
+  text-align: left;
+  margin-top: 2rem;
+}
+
 .mortgage-sub-container1 {
-  display: block;
-  margin: auto;
-  width: 60%;
+  position: absolute;
+  margin: 0 auto;
+  width: 40%;
   height: auto;
   box-shadow: 0.2rem 0.3rem 0.5rem grey;
 }
@@ -23,7 +37,7 @@ h3 {
   display: block;
   padding: 1rem;
   width: 25%;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   border: 0.1rem solid rgb(46, 121, 121);
   border-radius: 2rem;
 }
@@ -46,13 +60,33 @@ h3 {
 }
 
 .price-label {
-  position: inherit;
   margin: 1rem;
   padding: 0.5rem;
 }
 .home-price-input {
-  position: inherit;
   margin: 1rem;
   padding: 0.5rem;
   border: 0.1rem solid rgb(46, 121, 121);
+}
+
+.credit-score-div {
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+}
+
+.credit-score-div label {
+  color: red;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.credit-score {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding: 0.5rem;
+}
+
+.radio-btn-div {
+  margin: 1rem;
 }
