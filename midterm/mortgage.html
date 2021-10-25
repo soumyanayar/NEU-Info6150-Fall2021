@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Financial Calculator</title>
+    <link rel="stylesheet" href="stylesIndex.css" />
+    <link rel="stylesheet" href="stylesMortgage.css" />
+  </head>
+  <body>
+    <image
+      class="bg-img"
+      src="https://static.vecteezy.com/system/resources/previews/003/670/381/non_2x/business-marketing-graph-and-financial-analysis-chart-report-with-calculator-on-wooden-table-background-free-photo.jpg"
+      alt=""
+    ></image>
+    <header>
+      <img class="logo" src="logo.png" alt="" />
+      <h1>FINANCIAL CALCULATOR</h1>
+      <nav class="menubar">
+        <ul class="menu">
+          <li><a href="index.html">Home</a></li>
+          <li>
+            <button type="button">Our Calculators</button>
+            <ul class="submenu">
+              <li><a href="mortgage.html">Mortgage Calculator</a></li>
+              <li><a href="auto.html">Auto Loan Calculator</a></li>
+              <li><a href="tip.html">Tip Calculator</a></li>
+              <li><a href="compound.html">Compound Interest Calculator</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="mortgage-main-container">
+      <div class="mortgage-title">
+        <h2>Mortgage Calculator</h2>
+      </div>
+      <div class="mortgage-sub-container1">
+        <h3>Your Monthly Mortgage Payment</h3>
+        <div class="mortgage-value-div">
+          <input class="mortgage-input" placeholder="Monthly Payment" />
+        </div>
+        <div class="mortgage-sub-container2">
+          <div class="prices-value1">
+            <div class="home-price-div">
+              <label class="price-label">Home Price</label>
+              <input class="home-price-input" placeholder="$0" />
+            </div>
+            <div class="down-payment-price-div">
+              <label class="price-label">Home Price</label>
+              <input class="home-price-input" placeholder="$0" />
+            </div>
+          </div>
+
+          <div class="prices-value2">
+            <div class="insurance-div">
+              <label class="price-label">Mortgage Insurance Rate</label>
+              <input class="home-price-input" placeholder="%" />
+            </div>
+            <div class="loan-type-div">
+              <label class="price-label">Loan Type</label>
+              <input class="home-price-input" placeholder="$0" />
+            </div>
+          </div>
+
+          <div class="prices-value3">
+            <div class="owners-insurance-div">
+              <label class="owners-insurance-rate-label"
+                >Annual House Owner's Insurance Rate</label
+              >
+              <input class="oi-price-input" placeholder="%" />
+            </div>
+            <div class="hoa-div">
+              <label class="ha-label"
+                >House Owner's Association(HOA) Fees</label
+              >
+              <input class="down-payment-input" placeholder="$0" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>Image Source : </span>
+    </footer>
+  </body>
+</html>
