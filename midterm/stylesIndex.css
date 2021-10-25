@@ -78,6 +78,7 @@ a {
   position: absolute;
 
   max-height: 0;
+  width: 100%;
   overflow: hidden;
   visibility: hidden;
 }
@@ -93,7 +94,7 @@ a {
 
 .submenu a:hover {
   /* text font and color related attribute */
-  color: white;
+  color: rgb(76, 214, 48);
   transition: all 1s ease-out;
 }
 
@@ -118,8 +119,8 @@ a {
 .menu > li:hover .submenu {
   max-height: 90vh;
   visibility: visible;
-  background-color: rgb(126, 62, 62);
-  color: white;
+  background-color: rgb(189, 235, 241);
+  color: blue;
 }
 
 .main-container {
@@ -141,8 +142,18 @@ a {
 
 .blocks li {
   display: block;
+  cursor: pointer;
   margin: 1rem;
   box-shadow: 0.2rem 0.3rem 0.5rem grey;
+}
+
+.blocks li a {
+  display: block;
+}
+
+.blocks li a:hover,
+.blocks li a:focus {
+  color: greenyellow;
 }
 
 .blocks span {
