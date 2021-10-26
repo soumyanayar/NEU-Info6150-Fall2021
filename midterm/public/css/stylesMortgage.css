@@ -22,11 +22,15 @@ h2 {
 }
 
 .mortgage-sub-container1 {
-  position: absolute;
-  margin: 0 auto;
-  width: 40%;
-  height: auto;
-  box-shadow: 0.2rem 0.3rem 0.5rem grey;
+  /* position: absolute; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 10px 10px 70px grey;
+  padding: 1rem;
+  margin: 2rem 2rem 1rem;
 }
 
 h3 {

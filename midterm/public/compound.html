@@ -3,17 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <title>Financial Calculator</title>
-    <link rel="stylesheet" href="stylesIndex.css" />
-    <link rel="stylesheet" href="stylesMortgage.css" />
+    <link rel="stylesheet" href="css/stylesIndex.css" />
+    <link rel="stylesheet" href="css/stylesMortgage.css" />
   </head>
   <body>
-    <image
+    <!-- <image
       class="bg-img"
       src="https://static.vecteezy.com/system/resources/previews/003/670/381/non_2x/business-marketing-graph-and-financial-analysis-chart-report-with-calculator-on-wooden-table-background-free-photo.jpg"
       alt=""
-    ></image>
+    ></image> -->
     <header>
-      <img class="logo" src="logo.png" alt="" />
+      <img class="logo" src="assets/images/logo.png" alt="" />
       <h1>FINANCIAL CALCULATOR</h1>
       <nav class="menubar">
         <ul class="menu">
@@ -32,59 +32,46 @@
     </header>
     <div class="mortgage-main-container">
       <div class="mortgage-title">
-        <img class="home-image" src="home-pic.png" alt="home-image" />
-        <h2>Mortgage Calculator</h2>
+        <img
+          class="home-image"
+          src="assets/images/compoundInterst.png"
+          alt="home-image"
+        />
+        <h2>Compound Interest Calculator</h2>
       </div>
       <div class="mortgage-sub-container1">
-        <h3>Your Monthly Mortgage Payment</h3>
+        <h3>Your Compound Interest Payment</h3>
         <div class="mortgage-value-div">
           <input class="mortgage-input" placeholder="Your Monthly Payment($)" />
         </div>
         <div class="mortgage-sub-container2">
+          <div class="radio-btn-div">
+            <label for="contribution-label">Type Of Contribution</label>
+            <input type="radio" id="monthly" name="annually" value="12" />
+            <label for="monthly">Monthly</label>
+            <input type="radio" id="annually" name="annually" value="1" />
+            <label for="annually">Annually</label>
+          </div>
           <div class="prices-value1">
             <div class="home-price-div">
-              <label class="price-label">Home Price</label>
-              <input
-                type="number"
-                class="home-price-input"
-                id="home-price-input"
-                onfocusout="validateHomePriceInput()"
-                placeholder="$0"
-              />
+              <label class="price-label">Initial Deposit</label>
+              <input class="home-price-input" placeholder="$0" />
             </div>
             <div class="down-payment-price-div">
-              <label class="price-label">Down Payment</label>
-              <input
-                input
-                type="number"
-                class="home-price-input"
-                id="down-payment-input"
-                placeholder="$0"
-              />
+              <label class="price-label">Contributions</label>
+              <input class="home-price-input" placeholder="$0" />
             </div>
           </div>
 
           <div class="prices-value2">
             <div class="insurance-div">
-              <label class="price-label">Mortgage Interest Rate</label>
-              <input
-                input
-                type="number"
-                class="home-price-input"
-                id="mrt-interest-input"
-                placeholder="%"
-              />
+              <label class="price-label">Time Span</label>
+              <input class="home-price-input" placeholder="12(Months)" />
             </div>
             <div class="loan-type-div">
-              <label class="price-label">Loan Term</label>
-              <select class="home-price-input" id="loan-term-input">
-                <option value="15">15 Years Fixed</option>
-                <option value="30">15 Years Fixed</option>
-              </select>
+              <label class="price-label">Rate Of Interest</label>
+              <input class="home-price-input" placeholder="12" />
             </div>
-          </div>
-          <div>
-            <button type="submit" class="calculate-btn">Calculate</button>
           </div>
         </div>
       </div>
@@ -92,6 +79,5 @@
     <footer class="footer">
       <span>Image Source : </span>
     </footer>
-    <script src="home.js"></script>
   </body>
 </html>
