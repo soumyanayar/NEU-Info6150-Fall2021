@@ -61,8 +61,8 @@ h3 {
 
 .price-label {
   margin: 1rem;
-  padding: 0.5rem;
 }
+
 .home-price-input {
   margin: 1rem;
   padding: 0.5rem;
@@ -89,4 +89,20 @@ h3 {
 
 .radio-btn-div {
   margin: 1rem;
+}
+
+.calculate-btn {
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  width: 20%;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: row;
+  }
 }

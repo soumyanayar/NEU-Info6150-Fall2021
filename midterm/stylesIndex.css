@@ -129,16 +129,21 @@ a {
   margin-top: 10rem;
   margin-left: 1rem;
 }
+
 .main-container h3 {
   color: rgb(19, 104, 64);
+}
+
+.sub-container {
+  display: block;
+  margin: auto;
 }
 
 .blocks {
   display: flex;
   flex-direction: row;
   font-size: 1.2rem;
-  width: 60%;
-  margin-left: 10rem;
+  width: auto;
   padding: 0;
 }
 
