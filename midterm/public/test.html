@@ -4,14 +4,9 @@
     <meta charset="UTF-8" />
     <title>Financial Calculator</title>
     <link rel="stylesheet" href="css/stylesIndex.css" />
-    <link rel="stylesheet" href="css/stylesMortgage.css" />
+    <link rel="stylesheet" href="css/test.css" />
   </head>
   <body>
-    <!--img
-      class="bg-img"
-      src="https://static.vecteezy.com/system/resources/previews/003/670/381/non_2x/business-marketing-graph-and-financial-analysis-chart-report-with-calculator-on-wooden-table-background-free-photo.jpg"
-      alt=""
-    ></img!-->
     <header>
       <img class="logo" src="assets/images/logo.png" alt="" />
       <h1>FINANCIAL CALCULATOR</h1>
@@ -49,9 +44,8 @@
           />
         </div>
         <div class="mortgage-sub-container2">
-          <div class="prices-value1">
-            <div class="home-price-div">
-              <label class="price-label">Home Price</label>
+            <form onsubmit="event.preventDefault()">
+                <label class="price-label">Home Price</label>
               <input
                 type="number"
                 class="home-price-input"
@@ -59,8 +53,6 @@
                 placeholder="$0"
                 required
               />
-            </div>
-            <div class="down-payment-price-div">
               <label class="price-label">Down Payment</label>
               <input
                 input
@@ -68,32 +60,23 @@
                 class="home-price-input"
                 id="down-payment-input"
                 placeholder="$0"
+                required
               />
-            </div>
-          </div>
-
-          <div class="prices-value2">
-            <div class="insurance-div">
               <label class="price-label">Mortgage Interest Rate</label>
               <input
                 type="number"
                 class="home-price-input"
                 id="mrt-interest-input"
                 placeholder="%"
+                required
               />
-            </div>
-            <div class="loan-type-div">
               <label class="price-label">Loan Term</label>
               <select class="home-price-input" id="loan-term-input">
                 <option value="15">15 Years Fixed</option>
                 <option value="30">30 Years Fixed</option>
               </select>
-            </div>
-          </div>
-          <div>
-            <button type="submit" class="calculate-btn">Calculate</button>
-          </div>
-        </div>
+              <button type="submit" class="calculate-btn">Calculate</button>
+            </form>
       </div>
     </div>
     <footer class="footer">

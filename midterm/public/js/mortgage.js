@@ -3,38 +3,65 @@ const downPayment = document.querySelector("#down-payment-input");
 const interestRate = document.querySelector("#mrt-interest-input");
 const numberOfTerms = document.querySelector("#loan-term-input");
 const calculateBtn = document.querySelector(".calculate-btn");
+const mortgageOutput = document.querySelector(".mortgage-output");
 
-function validateInput() {
-  homePrice.style.backgroundColor = "red";
-}
+//calculateBtn.disabled = true;
 
-calculateBtn.addEventListener("click", () => {
-  let homePriceCurrent = parseFloat(homePrice.value);
-  let downPaymentCurrent = parseFloat(downPayment.value);
-  let currentInterestRate = parseFloat(interestRate.value);
-  let currentNumberOfTerms = parseInt(numberOfTerms.value);
-  console.log(
-    homePriceCurrent,
-    downPaymentCurrent,
-    currentInterestRate,
-    currentNumberOfTerms
-  );
-  let principleAmount = homePriceCurrent - downPaymentCurrent;
-  let paymentTermsPerYear = currentNumberOfTerms * 12;
+const validateAllInputsArePresent = () => {
+  // if (
+  //   homePrice.value !== "" &&
+  //   downPayment.value !== "" &&
+  //   interestRate.value !== ""
+  // ) {
+  //   calculateBtn.disabled = false;
+  // } else {
+  //   calculateBtn.disabled = true;
+  // }
+  if (homePrice.value < 0) {
+    homePrice.value = "";
+  }
+  if (downPayment.value < 0) {
+    downPayment.value = "";
+  }
+  if (interestRate.value >= 100) {
+    interestRate.value = "";
+  }
+  if (interestRate.value < 0) {
+    interestRate.value = "";
+  }
+  if (parseFloat(homePrice.value) < parseFloat(downPayment.value)) {
+    downPayment.value = "";
+  }
+};
 
-  let ratioOfInterestToTerms = currentInterestRate / currentNumberOfTerms;
+homePrice.onkeyup = validateAllInputsArePresent;
+downPayment.onkeyup = validateAllInputsArePresent;
+interestRate.onkeyup = validateAllInputsArePresent;
 
-  let ratioOfTermsTopaymentTermsPerYear =
-    currentNumberOfTerms / paymentTermsPerYear;
+const calculateMortgage = () => {
+  const homePriceCurrent = parseFloat(homePrice.value);
+  const downPaymentCurrent = parseFloat(downPayment.value);
+  const currentInterestRate = parseFloat(interestRate.value) / 1200;
+  const currentNumberOfTerms = parseInt(numberOfTerms.value);
+  if (
+    isNaN(homePriceCurrent) ||
+    isNaN(downPaymentCurrent) ||
+    isNaN(currentInterestRate)
+  ) {
+    mortgageOutput.innerHTML = 0;
+  } else {
+    const principleAmount = homePriceCurrent - downPaymentCurrent;
+    const paymentTermsPerYear = currentNumberOfTerms * 12;
 
-  let mortgageNumerator =
-    principleAmount *
-    ratioOfInterestToTerms *
-    (1 + ratioOfInterestToTerms) ** ratioOfTermsTopaymentTermsPerYear;
+    const mortgageNumerator =
+      currentInterestRate * (1 + currentInterestRate) ** paymentTermsPerYear;
 
-  let mortgageDenominator =
-    (1 + ratioOfInterestToTerms) ** (ratioOfTermsTopaymentTermsPerYear - 1);
+    const mortgageDenominator =
+      (1 + currentInterestRate) ** paymentTermsPerYear - 1;
 
-  let mortgage = mortgageNumerator / mortgageDenominator;
-  console.log(mortgage);
-});
+    let mortgage = principleAmount * (mortgageNumerator / mortgageDenominator);
+    mortgageOutput.value = mortgage;
+  }
+};
+
+calculateBtn.addEventListener("click", calculateMortgage);
