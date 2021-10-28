@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:3000/mortgage.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Calculator</title>
+    <link rel="stylesheet" href="./Financial Calculator_files/stylesIndex.css">
+    <link rel="stylesheet" href="./Financial Calculator_files/stylesMortgage.css">
+  </head>
+  <body>
+    <!--img
+      class="bg-img"
+      src="https://static.vecteezy.com/system/resources/previews/003/670/381/non_2x/business-marketing-graph-and-financial-analysis-chart-report-with-calculator-on-wooden-table-background-free-photo.jpg"
+      alt=""
+    ></img!-->
+    <header>
+      <div class="header-title">
+        <img class="logo" src="./Financial Calculator_files/logo.png" alt="">
+        <h1>FINANCIAL CALCULATOR</h1>
+      </div>
+      <nav class="menubar">
+        <ul class="menu">
+          <li><a href="http://localhost:3000/">Home</a></li>
+          <li>
+            <button type="button">Our Calculators</button>
+            <ul class="submenu">
+              <li><a href="http://localhost:3000/mortgage.html">Mortgage Calculator</a></li>
+              <li><a href="http://localhost:3000/auto.html">Auto Loan Calculator</a></li>
+              <li><a href="http://localhost:3000/tip.html">Tip Calculator</a></li>
+              <li><a href="http://localhost:3000/compound.html">Compound Interest Calculator</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="mortgage-main-container">
+      <div class="mortgage-title">
+        <img class="home-image" src="./Financial Calculator_files/home-pic.png" alt="home-image">
+        <h2>Mortgage Calculator</h2>
+      </div>
+      <div class="mortgage-sub-container1">
+        <h3>Your Monthly Mortgage Payment</h3>
+        <div class="mortgage-value-div">
+          <input class="mortgage-output" placeholder="Result($)" readonly="readonly">
+        </div>
+        <div class="mortgage-sub-container2">
+          <div class="prices-value1">
+            <div class="home-price-div">
+              <label class="price-label">Home Price</label>
+              <input type="number" class="home-price-input" id="home-price-input" placeholder="$0" required="">
+            </div>
+            <div class="down-payment-price-div">
+              <label class="price-label">Down Payment</label>
+              <input input="" type="number" class="home-price-input" id="down-payment-input" placeholder="$0">
+            </div>
+          </div>
+
+          <div class="prices-value2">
+            <div class="insurance-div">
+              <label class="price-label">Mortgage Interest Rate</label>
+              <input type="number" class="home-price-input" id="mrt-interest-input" placeholder="%">
+            </div>
+            <div class="loan-type-div">
+              <label class="price-label">Loan Term</label>
+              <select class="home-price-input" id="loan-term-input">
+                <option value="15">15 Years Fixed</option>
+                <option value="30">30 Years Fixed</option>
+              </select>
+            </div>
+          </div>
+          <div>
+            <button type="submit" class="calculate-btn">Calculate</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span>Image Source : </span>
+    </footer>
+    <script src="./Financial Calculator_files/mortgage.js"></script>
+  
+
+</body></html>

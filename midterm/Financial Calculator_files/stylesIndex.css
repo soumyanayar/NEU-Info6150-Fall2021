@@ -7,11 +7,6 @@ body {
   background-color: ivory;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-}
-
 .header-title {
   display: flex;
   margin: 0rem;
@@ -54,7 +49,6 @@ header h1 {
   flex-direction: row;
 
   font-size: 1.3rem;
-  color: rgb(0, 2, 100);
 }
 
 a {
@@ -196,13 +190,5 @@ footer {
   }
   footer {
     position: fixed;
-  }
-  header {
-    display: flex;
-    flex-direction: row;
-  }
-  .menubar {
-    display: block;
-    margin: auto;
   }
 }

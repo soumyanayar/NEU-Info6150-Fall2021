@@ -2,14 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Financial Calculator</title>
     <link rel="stylesheet" href="css/stylesIndex.css" />
     <link rel="stylesheet" href="css/stylesMortgage.css" />
   </head>
   <body>
     <header>
-      <img class="logo" src="assets/images/logo.png" alt="" />
-      <h1>FINANCIAL CALCULATOR</h1>
+      <div class="header-title">
+        <img class="logo" src="assets/images/logo.png" alt="" />
+        <h1>FINANCIAL CALCULATOR</h1>
+      </div>
       <nav class="menubar">
         <ul class="menu">
           <li><a href="/">Home</a></li>
@@ -25,17 +28,17 @@
         </ul>
       </nav>
     </header>
-    <div class="mortgage-main-container">
-      <div class="mortgage-title">
+    <div class="main-container">
+      <div class="sub-title">
         <img class="home-image" src="assets/images/car.png" alt="home-image" />
         <h2>Auto Loan Calculator</h2>
       </div>
-      <div class="mortgage-sub-container1">
+      <div class="sub-container1">
         <h3>Your Auto Loan Payment</h3>
-        <div class="mortgage-value-div">
-          <input class="mortgage-input" placeholder="Your Monthly Payment($)" />
+        <div class="result-value-div">
+          <input class="output" placeholder="Result($)" />
         </div>
-        <div class="mortgage-sub-container2">
+        <div class="sub-container2">
           <div class="credit-score-div">
             <label for="credit-score-label">What's Your Credit Score?</label>
             <select class="credit-score">
@@ -49,22 +52,22 @@
           <div class="prices-value1">
             <div class="home-price-div">
               <label class="price-label">Car Price</label>
-              <input class="home-price-input" placeholder="$0" />
+              <input class="price-input" placeholder="$0" />
             </div>
             <div class="down-payment-price-div">
               <label class="price-label">Down Payment</label>
-              <input class="home-price-input" placeholder="$0" />
+              <input class="price-input" placeholder="$0" />
             </div>
           </div>
 
           <div class="prices-value2">
             <div class="insurance-div">
               <label class="price-label">Interest Rate</label>
-              <input class="home-price-input" placeholder="%" />
+              <input class="price-input" placeholder="%" />
             </div>
             <div class="loan-type-div">
               <label class="price-label">Number Of Months</label>
-              <input class="home-price-input" placeholder="12" />
+              <input class="price-input" placeholder="12" />
             </div>
           </div>
           <div>
@@ -76,5 +79,6 @@
     <footer class="footer">
       <span>Image Source : </span>
     </footer>
+    <script src="js/auto.js"></script>
   </body>
 </html>

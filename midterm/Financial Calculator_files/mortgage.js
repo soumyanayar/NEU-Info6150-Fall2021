@@ -3,20 +3,20 @@ const downPayment = document.querySelector("#down-payment-input");
 const interestRate = document.querySelector("#mrt-interest-input");
 const numberOfTerms = document.querySelector("#loan-term-input");
 const calculateBtn = document.querySelector(".calculate-btn");
-const mortgageOutput = document.querySelector(".output");
+const mortgageOutput = document.querySelector(".mortgage-output");
 
-calculateBtn.disabled = true;
+//calculateBtn.disabled = true;
 
 const validateAllInputsArePresent = () => {
-  if (
-    homePrice.value !== "" &&
-    downPayment.value !== "" &&
-    interestRate.value !== ""
-  ) {
-    calculateBtn.disabled = false;
-  } else {
-    calculateBtn.disabled = true;
-  }
+  // if (
+  //   homePrice.value !== "" &&
+  //   downPayment.value !== "" &&
+  //   interestRate.value !== ""
+  // ) {
+  //   calculateBtn.disabled = false;
+  // } else {
+  //   calculateBtn.disabled = true;
+  // }
   if (homePrice.value < 0) {
     homePrice.value = "";
   }
