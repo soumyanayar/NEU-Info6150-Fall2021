@@ -1,15 +1,16 @@
-const homePrice = document.querySelector("#home-price-input");
-const downPayment = document.querySelector("#down-payment-input");
-const interestRate = document.querySelector("#mrt-interest-input");
-const numberOfTerms = document.querySelector("#loan-term-input");
+const carPrice = document.querySelector("#car-price");
+const downPayment = document.querySelector("#car-down-payment");
+const interestRate = document.querySelector("#car-apr");
+const numberOfMonths = document.querySelector("#loan-months");
 const calculateBtn = document.querySelector(".calculate-btn");
-const mortgageOutput = document.querySelector(".mortgage-output");
+const creditScore = document.querySelector("credit-score");
+const mortgageOutput = document.querySelector(".output");
 
 calculateBtn.disabled = true;
 
 const validateAllInputsArePresent = () => {
   if (
-    homePrice.value !== "" &&
+    carPrice.value !== "" &&
     downPayment.value !== "" &&
     interestRate.value !== ""
   ) {
@@ -17,8 +18,8 @@ const validateAllInputsArePresent = () => {
   } else {
     calculateBtn.disabled = true;
   }
-  if (homePrice.value < 0) {
-    homePrice.value = "";
+  if (carPrice.value < 0) {
+    carPrice.value = "";
   }
   if (downPayment.value < 0) {
     downPayment.value = "";
@@ -29,29 +30,32 @@ const validateAllInputsArePresent = () => {
   if (interestRate.value < 0) {
     interestRate.value = "";
   }
-  if (parseFloat(homePrice.value) < parseFloat(downPayment.value)) {
+  if (numberOfMonths.value < 1) {
+    numberOfMonths.value = "";
+  }
+  if (parseFloat(carPrice.value) < parseFloat(downPayment.value)) {
     downPayment.value = "";
   }
 };
 
-homePrice.onkeyup = validateAllInputsArePresent;
+carPrice.onkeyup = validateAllInputsArePresent;
 downPayment.onkeyup = validateAllInputsArePresent;
 interestRate.onkeyup = validateAllInputsArePresent;
 
 const calculateMortgage = () => {
-  const homePriceCurrent = parseFloat(homePrice.value);
+  const carPriceCurrent = parseFloat(carPrice.value);
   const downPaymentCurrent = parseFloat(downPayment.value);
   const currentInterestRate = parseFloat(interestRate.value) / 1200;
-  const currentNumberOfTerms = parseInt(numberOfTerms.value);
+  const currentnumberOfMonths = parseInt(numberOfMonths.value);
   if (
-    isNaN(homePriceCurrent) ||
+    isNaN(carPriceCurrent) ||
     isNaN(downPaymentCurrent) ||
     isNaN(currentInterestRate)
   ) {
     mortgageOutput.innerHTML = 0;
   } else {
-    const principleAmount = homePriceCurrent - downPaymentCurrent;
-    const paymentTermsPerYear = currentNumberOfTerms * 12;
+    const principleAmount = carPriceCurrent - downPaymentCurrent;
+    const paymentTermsPerYear = currentnumberOfMonths * 12;
 
     const mortgageNumerator =
       currentInterestRate * (1 + currentInterestRate) ** paymentTermsPerYear;

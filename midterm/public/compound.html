@@ -2,19 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Financial Calculator</title>
     <link rel="stylesheet" href="css/stylesIndex.css" />
     <link rel="stylesheet" href="css/stylesMortgage.css" />
   </head>
   <body>
-    <!-- <image
+    <!--img
       class="bg-img"
       src="https://static.vecteezy.com/system/resources/previews/003/670/381/non_2x/business-marketing-graph-and-financial-analysis-chart-report-with-calculator-on-wooden-table-background-free-photo.jpg"
       alt=""
-    ></image> -->
+    ></img!-->
     <header>
-      <img class="logo" src="assets/images/logo.png" alt="" />
-      <h1>FINANCIAL CALCULATOR</h1>
+      <div class="header-title">
+        <img class="logo" src="assets/images/logo.png" alt="" />
+        <h1>FINANCIAL CALCULATOR</h1>
+      </div>
       <nav class="menubar">
         <ul class="menu">
           <li><a href="/">Home</a></li>
@@ -30,8 +33,8 @@
         </ul>
       </nav>
     </header>
-    <div class="mortgage-main-container">
-      <div class="mortgage-title">
+    <div class="main-container">
+      <div class="sub-title">
         <img
           class="home-image"
           src="assets/images/compoundInterst.png"
@@ -39,39 +42,62 @@
         />
         <h2>Compound Interest Calculator</h2>
       </div>
-      <div class="mortgage-sub-container1">
+      <div class="sub-container1">
         <h3>Your Compound Interest Payment</h3>
-        <div class="mortgage-value-div">
-          <input class="mortgage-input" placeholder="Your Monthly Payment($)" />
+        <div class="result-value-div">
+          <input class="output" placeholder="Result($)" readonly="readonly" />
         </div>
-        <div class="mortgage-sub-container2">
+        <div class="sub-container2">
           <div class="radio-btn-div">
             <label for="contribution-label">Type Of Contribution</label>
-            <input type="radio" id="monthly" name="annually" value="12" />
-            <label for="monthly">Monthly</label>
-            <input type="radio" id="annually" name="annually" value="1" />
-            <label for="annually">Annually</label>
+            <div>
+              <input
+                type="radio"
+                id="annually"
+                name="annually"
+                value="1"
+                checked
+              />
+              <label for="annually">Annually</label>
+              <input type="radio" id="monthly" name="annually" value="12" />
+              <label for="monthly">Monthly</label>
+            </div>
           </div>
           <div class="prices-value1">
-            <div class="home-price-div">
+            <div class="price-div">
               <label class="price-label">Initial Deposit</label>
-              <input class="home-price-input" placeholder="$0" />
+              <input class="price-input" placeholder="$0" />
             </div>
-            <div class="down-payment-price-div">
+            <div class="contribution-price-div">
               <label class="price-label">Contributions</label>
-              <input class="home-price-input" placeholder="$0" />
+              <input class="price-input" placeholder="$0" />
             </div>
           </div>
 
           <div class="prices-value2">
             <div class="insurance-div">
-              <label class="price-label">Time Span</label>
-              <input class="home-price-input" placeholder="12(Months)" />
+              <label class="price-label">Interest Rate</label>
+              <input
+                type="number"
+                class="price-input"
+                id="car-apr"
+                placeholder="%"
+                min="0"
+                max="99"
+              />
             </div>
             <div class="loan-type-div">
-              <label class="price-label">Rate Of Interest</label>
-              <input class="home-price-input" placeholder="12" />
+              <label class="price-label">Number Of Months</label>
+              <input
+                type="number"
+                class="price-input"
+                id="loan-months"
+                placeholder="Months"
+              />
             </div>
+          </div>
+          <div>
+            <button type="submit" class="calculate-btn">Calculate</button>
           </div>
         </div>
       </div>
@@ -79,5 +105,6 @@
     <footer class="footer">
       <span>Image Source : </span>
     </footer>
+    <script src="js/compound.js"></script>
   </body>
 </html>

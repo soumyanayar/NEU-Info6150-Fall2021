@@ -122,7 +122,8 @@ a {
 }
 
 .main-container {
-  margin-top: 10rem;
+  margin-top: 2rem;
+  text-align: center;
   /* margin-left: 1rem; */
 }
 
@@ -204,5 +205,9 @@ footer {
   .menubar {
     display: block;
     margin: auto;
+  }
+  .main-container {
+    margin-top: 10rem;
+    text-align: center;
   }
 }
