@@ -48,29 +48,33 @@
           <input class="output" placeholder="Result($)" readonly="readonly" />
         </div>
         <div class="sub-container2">
-          <div class="radio-btn-div">
+          <!--div class="radio-btn-div">
             <label for="contribution-label">Type Of Contribution</label>
             <div>
               <input
                 type="radio"
                 id="annually"
-                name="annually"
+                name="term-type"
                 value="1"
                 checked
               />
               <label for="annually">Annually</label>
-              <input type="radio" id="monthly" name="annually" value="12" />
+              <input type="radio" id="monthly" name="term-type" value="12" />
               <label for="monthly">Monthly</label>
-            </div>
-          </div>
+            </div!-->
+
           <div class="prices-value1">
             <div class="price-div">
-              <label class="price-label">Initial Deposit</label>
-              <input class="price-input" placeholder="$0" />
+              <label class="price-label">Principal Amount</label>
+              <input class="price-input" id="deposit-input" placeholder="$0" />
             </div>
             <div class="contribution-price-div">
-              <label class="price-label">Contributions</label>
-              <input class="price-input" placeholder="$0" />
+              <label class="price-label">Compound/Year</label>
+              <input
+                class="price-input"
+                id="contribution-input"
+                placeholder="0"
+              />
             </div>
           </div>
 
@@ -80,19 +84,19 @@
               <input
                 type="number"
                 class="price-input"
-                id="car-apr"
+                id="apr"
                 placeholder="%"
                 min="0"
                 max="99"
               />
             </div>
             <div class="loan-type-div">
-              <label class="price-label">Number Of Months</label>
+              <label class="price-label">Number Of Years</label>
               <input
                 type="number"
                 class="price-input"
-                id="loan-months"
-                placeholder="Months"
+                id="terms-input"
+                placeholder="0"
               />
             </div>
           </div>
