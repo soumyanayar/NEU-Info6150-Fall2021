@@ -20,7 +20,6 @@ h2 {
 }
 
 .sub-container1 .sub-container2 {
-  /* position: absolute; */
   display: flex;
   flex-direction: column;
   align-items: center;

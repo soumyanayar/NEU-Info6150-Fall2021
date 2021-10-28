@@ -91,7 +91,6 @@ a {
 }
 
 .submenu a:hover {
-  /* text font and color related attribute */
   color: rgb(11, 84, 133);
   transition: all 1s ease-out;
 }
@@ -111,6 +110,7 @@ a {
 .menu > li > a:hover {
   visibility: visible;
   background-color: transparent;
+  color: rgb(192, 107, 37);
 }
 
 .menu > li:focus-within .submenu,
@@ -124,7 +124,6 @@ a {
 .main-container {
   margin-top: 2rem;
   text-align: center;
-  /* margin-left: 1rem; */
 }
 
 .main-container h3 {
@@ -144,7 +143,6 @@ a {
 }
 
 .blocks li {
-  /* display: block; */
   cursor: pointer;
   list-style-type: none;
   margin: 1rem;
@@ -174,19 +172,9 @@ footer {
   width: 99%;
 }
 
-.register-btn {
-  width: 8rem;
-  left: 50%;
-  bottom: 10%;
-  padding: 0.7rem;
-  box-shadow: 0.2rem 0.3rem 0.5rem grey;
-  border-radius: 2rem;
-  border: 0.1rem solid;
-  cursor: pointer;
-  margin: 1rem;
-  background-color: darkcyan;
-  color: white;
-  font-weight: bold;
+footer span {
+  display: block;
+  margin: auto;
 }
 
 @media (min-width: 600px) {
@@ -209,5 +197,9 @@ footer {
   .main-container {
     margin-top: 10rem;
     text-align: center;
+  }
+  footer {
+    display: flex;
+    flex-direction: row;
   }
 }

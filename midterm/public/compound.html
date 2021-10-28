@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="css/stylesMortgage.css" />
   </head>
   <body>
-    <!--img
-      class="bg-img"
-      src="https://static.vecteezy.com/system/resources/previews/003/670/381/non_2x/business-marketing-graph-and-financial-analysis-chart-report-with-calculator-on-wooden-table-background-free-photo.jpg"
-      alt=""
-    ></img!-->
     <header>
       <div class="header-title">
         <img class="logo" src="assets/images/logo.png" alt="" />
@@ -26,10 +21,10 @@
             <ul class="submenu">
               <li><a href="mortgage.html">Mortgage Calculator</a></li>
               <li><a href="auto.html">Auto Loan Calculator</a></li>
-              <li><a href="tip.html">Tip Calculator</a></li>
               <li><a href="compound.html">Compound Interest Calculator</a></li>
             </ul>
           </li>
+          <li><a class="survey" href="survey.html">Take A Survey</a></li>
         </ul>
       </nav>
     </header>
@@ -38,7 +33,7 @@
         <img
           class="home-image"
           src="assets/images/compoundInterst.png"
-          alt="home-image"
+          alt="assets/images/compoundInterst-alt.png"
         />
         <h2>Compound Interest Calculator</h2>
       </div>
@@ -48,28 +43,13 @@
           <input class="output" placeholder="Result($)" readonly="readonly" />
         </div>
         <div class="sub-container2">
-          <!--div class="radio-btn-div">
-            <label for="contribution-label">Type Of Contribution</label>
-            <div>
-              <input
-                type="radio"
-                id="annually"
-                name="term-type"
-                value="1"
-                checked
-              />
-              <label for="annually">Annually</label>
-              <input type="radio" id="monthly" name="term-type" value="12" />
-              <label for="monthly">Monthly</label>
-            </div!-->
-
           <div class="prices-value1">
             <div class="price-div">
               <label class="price-label">Principal Amount</label>
               <input class="price-input" id="deposit-input" placeholder="$0" />
             </div>
             <div class="contribution-price-div">
-              <label class="price-label">Compound/Year</label>
+              <label class="price-label">Compound Per Year</label>
               <input
                 class="price-input"
                 id="contribution-input"
@@ -80,7 +60,7 @@
 
           <div class="prices-value2">
             <div class="insurance-div">
-              <label class="price-label">Interest Rate</label>
+              <label class="price-label">Annual Interest Rate</label>
               <input
                 type="number"
                 class="price-input"
@@ -107,7 +87,14 @@
       </div>
     </div>
     <footer class="footer">
-      <span>Image Source : </span>
+      <span
+        >Image Source :<a
+          href=" https://www.iconfinder.com/search?q=dollar"
+          target="_blank"
+        >
+          Icon Finder</a
+        >
+      </span>
     </footer>
     <script src="js/compound.js"></script>
   </body>
