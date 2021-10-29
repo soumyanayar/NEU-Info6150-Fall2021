@@ -95,9 +95,9 @@ h3 {
 }
 
 .calculate-btn {
-  margin: auto;
+  margin: 2rem;
   cursor: pointer;
-  width: 100%;
+  width: 40%;
   padding: 0.7rem;
   margin-bottom: 1rem;
   border-radius: 0.5rem;
