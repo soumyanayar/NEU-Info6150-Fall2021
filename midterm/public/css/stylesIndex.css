@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   margin: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -17,8 +18,6 @@ header {
   margin: 0rem;
 }
 header {
-  /* display: flex;
-  flex-direction: row; */
   margin: 0rem;
 }
 
@@ -30,10 +29,10 @@ header ul {
 }
 
 header .logo {
-  width: 4rem;
-  height: auto;
   margin-top: 1rem;
   margin-right: 0;
+  width: 4rem;
+  height: auto;
 }
 
 header h1 {
@@ -44,6 +43,7 @@ header h1 {
   color: rgb(11, 187, 105);
   font-weight: bold;
 }
+
 .menubar {
   list-style-type: none;
   margin-left: 3rem;
@@ -121,8 +121,14 @@ a {
   color: blue;
 }
 
+.page-content {
+  margin: 1rem;
+
+  font-size: 1.2rem;
+}
+
 .main-container {
-  margin-top: 2rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
@@ -138,14 +144,17 @@ a {
 .blocks {
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
+
   padding: 2rem;
+
+  font-size: 1.2rem;
 }
 
 .blocks li {
+  margin: 1rem;
+
   cursor: pointer;
   list-style-type: none;
-  margin: 1rem;
   box-shadow: 0.2rem 0.3rem 0.5rem grey;
 }
 
@@ -178,6 +187,10 @@ footer span {
 }
 
 @media (min-width: 600px) {
+  .page-content {
+    margin-top: 5rem;
+    padding: 2rem;
+  }
   .blocks {
     flex-direction: row;
     align-items: center;
@@ -195,11 +208,10 @@ footer span {
     margin: auto;
   }
   .main-container {
-    margin-top: 10rem;
+    margin-top: 5rem;
     text-align: center;
   }
   footer {
-    display: flex;
-    flex-direction: row;
+    left: 30%;
   }
 }
