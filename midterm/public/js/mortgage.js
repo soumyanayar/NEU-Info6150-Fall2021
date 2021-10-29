@@ -4,39 +4,32 @@ const interestRate = document.querySelector("#mrt-interest-input");
 const numberOfTerms = document.querySelector("#loan-term-input");
 const calculateBtn = document.querySelector(".calculate-btn");
 const mortgageOutput = document.querySelector(".output");
-
-calculateBtn.disabled = true;
-
-const validateAllInputsArePresent = () => {
-  if (
-    homePrice.value !== "" &&
-    downPayment.value !== "" &&
-    interestRate.value !== ""
-  ) {
-    calculateBtn.disabled = false;
-  } else {
-    calculateBtn.disabled = true;
-  }
-  if (homePrice.value < 0) {
-    homePrice.value = "";
-  }
-  if (downPayment.value < 0) {
-    downPayment.value = "";
-  }
-  if (interestRate.value >= 100) {
-    interestRate.value = "";
-  }
-  if (interestRate.value < 0) {
-    interestRate.value = "";
-  }
-  if (parseFloat(homePrice.value) < parseFloat(downPayment.value)) {
-    downPayment.value = "";
-  }
+const mortgageForm = document.getElementById("mortgage-form");
+mortgageForm.onsubmit = (event) => {
+  event.preventDefault();
+  calculateMortgage();
+  return false;
 };
 
-homePrice.onkeyup = validateAllInputsArePresent;
-downPayment.onkeyup = validateAllInputsArePresent;
-interestRate.onkeyup = validateAllInputsArePresent;
+downPayment.addEventListener("change", (event) => {
+  if (parseFloat(homePrice.value) < parseFloat(downPayment.value)) {
+    downPayment.setCustomValidity(
+      "Down Payment cannot be greater than Home Price"
+    );
+    mortgageOutput.value = "";
+  }
+});
+
+homePrice.addEventListener("change", (event) => {
+  if (!isNaN(downPayment.value)) {
+    if (parseFloat(homePrice.value) < parseFloat(downPayment.value)) {
+      homePrice.setCustomValidity(
+        "Home Price cannot be lesser than Down Payment"
+      );
+      autoloanOutput.value = "";
+    }
+  }
+});
 
 const calculateMortgage = () => {
   const homePriceCurrent = parseFloat(homePrice.value);
@@ -48,7 +41,7 @@ const calculateMortgage = () => {
     isNaN(downPaymentCurrent) ||
     isNaN(currentInterestRate)
   ) {
-    mortgageOutput.innerHTML = 0;
+    mortgageOutput.innerHTML = "";
   } else {
     const principleAmount = homePriceCurrent - downPaymentCurrent;
     const paymentTermsPerYear = currentNumberOfTerms * 12;
@@ -60,8 +53,6 @@ const calculateMortgage = () => {
       (1 + currentInterestRate) ** paymentTermsPerYear - 1;
 
     let mortgage = principleAmount * (mortgageNumerator / mortgageDenominator);
-    mortgageOutput.value = mortgage;
+    mortgageOutput.value = mortgage.toFixed(2);
   }
 };
-
-calculateBtn.addEventListener("click", calculateMortgage);

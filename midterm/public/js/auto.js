@@ -7,7 +7,7 @@ const autoloanOutput = document.querySelector(".output");
 const autoloanForm = document.getElementById("auto-form");
 autoloanForm.onsubmit = (event) => {
   event.preventDefault();
-  calculateMortgage();
+  calculateCarLoan();
   return false;
 };
 
@@ -31,7 +31,7 @@ carPrice.addEventListener("change", (event) => {
   }
 });
 
-const calculateMortgage = () => {
+const calculateCarLoan = () => {
   const carPriceCurrent = parseFloat(carPrice.value);
   const downPaymentCurrent = parseFloat(downPayment.value);
   const currentInterestRate = parseFloat(interestRate.value) / 1200;
@@ -47,13 +47,14 @@ const calculateMortgage = () => {
     const principleAmount = carPriceCurrent - downPaymentCurrent;
     const paymentTermsPerYear = currentnumberOfMonths * 12;
 
-    const mortgageNumerator =
+    const autoloanNumerator =
       currentInterestRate * (1 + currentInterestRate) ** paymentTermsPerYear;
 
-    const mortgageDenominator =
+    const autoloanDenominator =
       (1 + currentInterestRate) ** paymentTermsPerYear - 1;
 
-    let mortgage = principleAmount * (mortgageNumerator / mortgageDenominator);
-    autoloanOutput.value = mortgage.toFixed(2);
+    let autoloanAmount =
+      principleAmount * (autoloanNumerator / autoloanDenominator);
+    autoloanOutput.value = autoloanAmount.toFixed(2);
   }
 };

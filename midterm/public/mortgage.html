@@ -40,53 +40,70 @@
       <div class="sub-container1">
         <h3>Your Monthly Mortgage Payment</h3>
         <div class="mortgage-value-div">
-          <input class="output" placeholder="Result($)" readonly="readonly" />
+          <input
+            class="output"
+            placeholder="Monthly Payment ($)"
+            readonly="readonly"
+          />
         </div>
         <div class="sub-container2">
-          <div class="prices-value1">
-            <div class="price-div">
-              <label class="price-label">Home/Property Price</label>
-              <input
-                type="number"
-                class="price-input"
-                id="home-price-input"
-                placeholder="$0"
-                required
-              />
+          <form id="mortgage-form" action="/">
+            <div class="prices-value1">
+              <div class="price-div">
+                <label class="price-label">Home/Property Price</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="home-price-input"
+                  placeholder="$"
+                  min="1"
+                  step="0.01"
+                  oninput="setCustomValidity('')"
+                  required
+                />
+              </div>
+              <div class="down-payment-price-div">
+                <label class="price-label">Down Payment</label>
+                <input
+                  input
+                  type="number"
+                  class="price-input"
+                  id="down-payment-input"
+                  placeholder="$"
+                  min="0"
+                  step="0.01"
+                  oninput="setCustomValidity('')"
+                  required
+                />
+              </div>
             </div>
-            <div class="down-payment-price-div">
-              <label class="price-label">Down Payment</label>
-              <input
-                input
-                type="number"
-                class="price-input"
-                id="down-payment-input"
-                placeholder="$0"
-              />
-            </div>
-          </div>
 
-          <div class="prices-value2">
-            <div class="insurance-div">
-              <label class="price-label">Mortgage Interest Rate</label>
-              <input
-                type="number"
-                class="price-input"
-                id="mrt-interest-input"
-                placeholder="%"
-              />
+            <div class="prices-value2">
+              <div class="insurance-div">
+                <label class="price-label">Mortgage Interest Rate</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="mrt-interest-input"
+                  placeholder="%"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="loan-type-div">
+                <label class="price-label">Loan Duration</label>
+                <select class="price-input" id="loan-term-input" required>
+                  <option value="15">15 Years Fixed</option>
+                  <option value="30">30 Years Fixed</option>
+                </select>
+              </div>
             </div>
-            <div class="loan-type-div">
-              <label class="price-label">Loan Duration</label>
-              <select class="price-input" id="loan-term-input">
-                <option value="15">15 Years Fixed</option>
-                <option value="30">30 Years Fixed</option>
-              </select>
+            <div>
+              <button type="submit" class="calculate-btn">Calculate</button>
             </div>
-          </div>
-          <div>
-            <button type="submit" class="calculate-btn">Calculate</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
