@@ -38,51 +38,69 @@
         <h2>Compound Interest Calculator</h2>
       </div>
       <div class="sub-container1">
-        <h3>Your Compound Interest Payment</h3>
+        <h3>Your Compound Interest</h3>
         <div class="result-value-div">
-          <input class="output" placeholder="Result($)" readonly="readonly" />
+          <input class="output" placeholder="Amount ($)" readonly="readonly" />
         </div>
         <div class="sub-container2">
-          <div class="prices-value1">
-            <div class="price-div">
-              <label class="price-label">Principal Amount</label>
-              <input class="price-input" id="deposit-input" placeholder="$0" />
+          <form id="compound-form" action="/">
+            <div class="prices-value1">
+              <div class="price-div">
+                <label class="price-label">Principal Amount</label>
+                <input
+                  class="price-input"
+                  id="deposit-input"
+                  placeholder="$"
+                  min="1"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="contribution-price-div">
+                <label class="price-label">Compound Per Year</label>
+                <input
+                  class="price-input"
+                  id="contribution-input"
+                  placeholder="1 - 12"
+                  min="1"
+                  max="12"
+                  step="1"
+                  required
+                />
+              </div>
             </div>
-            <div class="contribution-price-div">
-              <label class="price-label">Compound Per Year</label>
-              <input
-                class="price-input"
-                id="contribution-input"
-                placeholder="0"
-              />
-            </div>
-          </div>
 
-          <div class="prices-value2">
-            <div class="insurance-div">
-              <label class="price-label">Annual Interest Rate</label>
-              <input
-                type="number"
-                class="price-input"
-                id="apr"
-                placeholder="%"
-                min="0"
-                max="99"
-              />
+            <div class="prices-value2">
+              <div class="insurance-div">
+                <label class="price-label">Annual Interest Rate</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="apr"
+                  placeholder="%"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="loan-type-div">
+                <label class="price-label">Number Of Years</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="terms-input"
+                  placeholder="Ex:5"
+                  min="1"
+                  step="1"
+                  required
+                />
+              </div>
             </div>
-            <div class="loan-type-div">
-              <label class="price-label">Number Of Years</label>
-              <input
-                type="number"
-                class="price-input"
-                id="terms-input"
-                placeholder="0"
-              />
+            <div>
+              <button type="submit" class="calculate-btn">Calculate</button>
             </div>
-          </div>
-          <div>
-            <button type="submit" class="calculate-btn">Calculate</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
