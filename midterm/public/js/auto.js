@@ -3,44 +3,33 @@ const downPayment = document.querySelector("#car-down-payment");
 const interestRate = document.querySelector("#car-apr");
 const numberOfMonths = document.querySelector("#loan-months");
 const calculateBtn = document.querySelector(".calculate-btn");
-const creditScore = document.querySelector("credit-score");
-const mortgageOutput = document.querySelector(".output");
-
-calculateBtn.disabled = true;
-
-const validateAllInputsArePresent = () => {
-  if (
-    carPrice.value !== "" &&
-    downPayment.value !== "" &&
-    interestRate.value !== ""
-  ) {
-    calculateBtn.disabled = false;
-  } else {
-    calculateBtn.disabled = true;
-  }
-  if (carPrice.value < 0) {
-    carPrice.value = "";
-  }
-  if (downPayment.value < 0) {
-    downPayment.value = "";
-  }
-  if (interestRate.value >= 100) {
-    interestRate.value = "";
-  }
-  if (interestRate.value < 0) {
-    interestRate.value = "";
-  }
-  if (numberOfMonths.value < 1) {
-    numberOfMonths.value = "";
-  }
-  if (parseFloat(carPrice.value) < parseFloat(downPayment.value)) {
-    downPayment.value = "";
-  }
+const autoloanOutput = document.querySelector(".output");
+const autoloanForm = document.getElementById("auto-form");
+autoloanForm.onsubmit = (event) => {
+  event.preventDefault();
+  calculateMortgage();
+  return false;
 };
 
-carPrice.onkeyup = validateAllInputsArePresent;
-downPayment.onkeyup = validateAllInputsArePresent;
-interestRate.onkeyup = validateAllInputsArePresent;
+downPayment.addEventListener("change", (event) => {
+  if (parseFloat(carPrice.value) < parseFloat(downPayment.value)) {
+    downPayment.setCustomValidity(
+      "Down Payment cannot be greater than Car Price"
+    );
+    autoloanOutput.value = "";
+  }
+});
+
+carPrice.addEventListener("change", (event) => {
+  if (!isNaN(downPayment.value)) {
+    if (parseFloat(carPrice.value) < parseFloat(downPayment.value)) {
+      carPrice.setCustomValidity(
+        "Car Price cannot be lesser than Down Payment"
+      );
+      autoloanOutput.value = "";
+    }
+  }
+});
 
 const calculateMortgage = () => {
   const carPriceCurrent = parseFloat(carPrice.value);
@@ -50,9 +39,10 @@ const calculateMortgage = () => {
   if (
     isNaN(carPriceCurrent) ||
     isNaN(downPaymentCurrent) ||
-    isNaN(currentInterestRate)
+    isNaN(currentInterestRate) ||
+    isNaN(currentnumberOfMonths)
   ) {
-    mortgageOutput.innerHTML = 0;
+    autoloanOutput.value = "";
   } else {
     const principleAmount = carPriceCurrent - downPaymentCurrent;
     const paymentTermsPerYear = currentnumberOfMonths * 12;
@@ -64,8 +54,6 @@ const calculateMortgage = () => {
       (1 + currentInterestRate) ** paymentTermsPerYear - 1;
 
     let mortgage = principleAmount * (mortgageNumerator / mortgageDenominator);
-    mortgageOutput.value = mortgage;
+    autoloanOutput.value = mortgage.toFixed(2);
   }
 };
-
-calculateBtn.addEventListener("click", calculateMortgage);
