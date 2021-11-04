@@ -19,13 +19,23 @@ function App() {
   }
     
   return (
-    <div className="app"> 
-      <p class="text">Your counter value is {counter} </p>
-      <button className="btn" onClick = {incrementCounter}> + </button>
-      <button className="btn" disabled={!counter} onClick = {decrementCounter}> - </button>
-      {
-        counter === 0 ? <Reorder onReorder = {reorderFunction}/>  : ""
-      }
+    <div className="app-container"> 
+      <h2 >Counter App </h2>
+      <p class="text">Counter Value = {counter}</p>
+      <div class="app-sub-container"> 
+        <div className="counter-div">
+          <button className="btn" onClick = {incrementCounter}> + </button>
+        </div>  
+        <div className="reorder-div">
+          {
+            counter === 0 ? <Reorder onReorder = {reorderFunction}/>  : ""
+          }
+        </div>
+        <div className="counter-div">
+          <button className="btn" disabled={!counter} onClick = {decrementCounter}> - </button>
+        </div>
+
+      </div>
     </div>
   );
 } 
