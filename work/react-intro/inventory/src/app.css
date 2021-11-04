@@ -1,0 +1,32 @@
+.app {
+  margin: 0;
+}
+
+.text {
+  margin: 1rem;
+}
+
+.btn {
+  width: 5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  background-color: lightyellow;
+}
+
+.reorder-btn {
+  width: 5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  background-color: yellowgreen;
+  animation: fadein 2s linear;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
