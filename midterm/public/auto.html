@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Calculator</title>
+    <link rel="stylesheet" href="css/stylesIndex.css" />
+    <link rel="stylesheet" href="css/stylesCalculator.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <img class="logo" src="assets/images/logo.png" alt="" />
+        <h1>FINANCIAL CALCULATOR</h1>
+      </div>
+      <nav class="menubar">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li>
+            <button type="button">Our Calculators</button>
+            <ul class="submenu">
+              <li><a href="mortgage.html">Mortgage Calculator</a></li>
+              <li><a href="auto.html">Auto Loan Calculator</a></li>
+              <li><a href="compound.html">Compound Interest Calculator</a></li>
+            </ul>
+          </li>
+          <li><a class="survey" href="survey.html">Take Survey</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-container">
+      <div class="sub-title">
+        <img class="home-image" src="assets/images/car.png" alt="home-image" />
+        <h2>Auto Loan Calculator</h2>
+      </div>
+      <div class="sub-container1">
+        <h3>Your Auto Loan Payment</h3>
+        <div class="result-value-div">
+          <input
+            class="output"
+            placeholder="Monthly Payment ($)"
+            readonly="readonly"
+          />
+        </div>
+        <div class="sub-container2">
+          <form id="auto-form" action="/">
+            <div class="prices-value1">
+              <div class="price-div">
+                <label class="price-label">Vehicle/Car Price</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="car-price"
+                  placeholder="$"
+                  min="1"
+                  step="0.01"
+                  oninput="setCustomValidity('')"
+                  required
+                />
+              </div>
+              <div class="down-payment-price-div">
+                <label class="price-label">Down Payment</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="car-down-payment"
+                  placeholder="$"
+                  min="0"
+                  step="0.01"
+                  oninput="setCustomValidity('')"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="prices-value2">
+              <div class="insurance-div">
+                <label class="price-label">Annual Interest Rate</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="car-apr"
+                  placeholder="%"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="loan-type-div">
+                <label class="price-label">Loan Duration</label>
+                <select
+                  name="auto-loan-months"
+                  class="price-input"
+                  id="loan-months"
+                  required
+                >
+                  <option value="">Select Months</option>
+                  <option value="12">12 Months</option>
+                  <option value="24">24 Months</option>
+                  <option value="36">36 Months</option>
+                  <option value="48">48 Months</option>
+                  <option value="60">60 Months</option>
+                  <option value="72">72 Months</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="calculate-btn">Calculate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span
+        >Image Source :<a
+          href=" https://www.iconfinder.com/icons/378992/car_old_icon"
+          target="_blank"
+        >
+          Icon Finder</a
+        >
+        <span> (Licence Unknown)</span>
+      </span>
+    </footer>
+    <script src="js/auto.js"></script>
+  </body>
+</html>

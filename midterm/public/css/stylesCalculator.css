@@ -1,0 +1,134 @@
+.main-container {
+  margin-top: 5rem;
+}
+
+.sub-title {
+  display: flex;
+  flex-direction: row;
+}
+
+.home-image {
+  margin-top: 1rem;
+  margin-right: 0;
+  width: auto;
+  height: 3rem;
+}
+
+h2 {
+  margin-left: 0.5rem;
+
+  color: rgb(28, 179, 78);
+  text-align: left;
+}
+
+.sub-container1 .sub-container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 10px 10px 70px grey;
+  padding: 1rem;
+  margin: 2rem 2rem 1rem;
+}
+
+h3 {
+  text-align: center;
+}
+.output {
+  margin: auto;
+  display: block;
+  padding: 1rem;
+  width: auto;
+  margin-bottom: 2rem;
+  border: 0.1rem solid rgb(46, 121, 121);
+  border-radius: 1rem;
+  color: blue;
+  font-size: 01rem;
+}
+
+.prices-value1 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.prices-value2 {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.prices-value3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.price-label {
+  margin: 1rem;
+}
+
+.price-input {
+  margin: 1rem;
+  padding: 0.5rem;
+  width: 10rem;
+  border: 0.1rem solid rgb(46, 121, 121);
+}
+
+.credit-score-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-score-div label {
+  color: red;
+  font-size: 1.1rem;
+  margin: 1rem;
+}
+
+.credit-score {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.radio-btn-div {
+  margin: 1rem;
+}
+
+.calculate-btn {
+  margin: 2rem;
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  width: 40%;
+  border-radius: 0.5rem;
+  background-color: rgb(157, 247, 227);
+
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+@media (min-width: 600px) {
+  .blocks {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .prices-value1 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .prices-value2 {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+  .credit-score-div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+  }
+}

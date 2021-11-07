@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/stylesIndex.css" />
+    <link rel="stylesheet" href="css/stylesSurvey.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <img class="logo" src="assets/images/logo.png" alt="" />
+        <h1>FINANCIAL CALCULATOR</h1>
+      </div>
+      <nav class="menubar">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li>
+            <button type="button">Our Calculators</button>
+            <ul class="submenu">
+              <li><a href="mortgage.html">Mortgage Calculator</a></li>
+              <li><a href="auto.html">Auto Loan Calculator</a></li>
+              <li><a href="compound.html">Compound Interest Calculator</a></li>
+            </ul>
+          </li>
+          <li><a class="survey" href="survey.html">Take Survey</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="form">
+      <h3>Please Fill In your Details and FeedBack Here</h3>
+      <form method="post" name="mymailfrom" action="form">
+        <div class="name">
+          <label for="name">Name: </label>
+          <br />
+          <input type="text" name="name" required />
+        </div>
+        <div name="address">
+          <label for="email">Email Address: </label>
+          <br />
+          <input type="email" name="email" size="30" required />
+        </div>
+        <div class="tier">
+          <label for="dropdown">Category</label>
+          <br />
+          <select name="dropdown" id="tier" required>
+            <option value="">Select your Category</option>
+            <option value="student">Student</option>
+            <option value="professional">Professional</option>
+          </select>
+        </div>
+        <div class="radio-btn-div">
+            <label for="feedback-label">Level of Accuracy</label>
+            <div>
+              <input type="radio" name="type" checked/>
+              <label for="term-type">Great</label>
+              <input type="radio" name="type" />
+              <label for="term-type">Average</label>
+              <input type="radio" name="type" />
+              <label for="term-type">Poor</label>
+        </div>
+        <div class="checkb">
+          <label for="check"
+            >Do you want us to send emails about our latest products?</label
+          >
+          <input type="checkbox" id="check" name="check" />
+        </div>
+        <button class="submit-btn" type="submit">Submit Survey</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: ivory;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  display: flex;
+  margin: 0rem;
+}
+header {
+  margin: 0rem;
+}
+
+header ul {
+  padding: 0;
+  margin: 0;
+
+  list-style-type: none;
+}
+
+header .logo {
+  margin-top: 1rem;
+  margin-right: 0;
+  width: 4rem;
+  height: auto;
+}
+
+header h1 {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+
+  color: rgb(11, 187, 105);
+  font-weight: bold;
+}
+
+.menubar {
+  list-style-type: none;
+  margin-left: 3rem;
+}
+
+.menubar > ul {
+  display: flex;
+  flex-direction: row;
+
+  font-size: 1.3rem;
+  color: rgb(0, 2, 100);
+}
+
+a {
+  color: rgb(11, 187, 105);
+  text-decoration: none;
+}
+
+.menu > li {
+  position: relative;
+
+  padding: 0 1rem;
+  position: 100%;
+}
+
+.submenu {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+
+  max-height: 0;
+  width: 100%;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.submenu > li > a {
+  display: inline-block;
+
+  color: rgb(54, 155, 125);
+
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+}
+
+.submenu a:hover {
+  color: rgb(11, 84, 133);
+  transition: all 1s ease-out;
+}
+
+.menu button {
+  border: 0;
+
+  background-color: transparent;
+  font: inherit;
+  color: rgb(11, 187, 105);
+}
+.menu a {
+  cursor: pointer;
+}
+
+.menu > li > a:focus-within,
+.menu > li > a:hover {
+  visibility: visible;
+  background-color: transparent;
+  color: rgb(192, 107, 37);
+}
+
+.menu > li:focus-within .submenu,
+.menu > li:hover .submenu {
+  max-height: 90vh;
+  visibility: visible;
+  background-color: rgb(189, 235, 241);
+  color: blue;
+}
+
+.page-content {
+  margin: 1rem;
+
+  font-size: 1.2rem;
+}
+
+.main-container {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.main-container h3 {
+  color: rgb(19, 104, 64);
+}
+
+.sub-container {
+  display: block;
+  margin: auto;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+
+  font-size: 1.2rem;
+}
+
+.blocks li {
+  margin: 1rem;
+
+  cursor: pointer;
+  list-style-type: none;
+  box-shadow: 0.2rem 0.3rem 0.5rem grey;
+}
+
+.blocks li a:hover,
+.blocks li a:focus {
+  color: rgb(192, 107, 37);
+}
+
+.blocks span {
+  margin: 1rem;
+}
+
+.blocks p {
+  margin: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+
+  margin: 0.5rem;
+  padding: 1rem;
+  bottom: 1rem;
+  width: 99%;
+}
+
+footer span {
+  display: block;
+  margin: auto;
+}
+
+@media (min-width: 600px) {
+  .page-content {
+    margin-top: 5rem;
+    padding: 2rem;
+  }
+  .blocks {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  footer {
+    position: fixed;
+  }
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+  .menubar {
+    display: block;
+    margin: auto;
+  }
+  .main-container {
+    margin-top: 5rem;
+    text-align: center;
+  }
+  footer {
+    left: 30%;
+  }
+}

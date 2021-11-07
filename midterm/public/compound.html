@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Financial Calculator</title>
+    <link rel="stylesheet" href="css/stylesIndex.css" />
+    <link rel="stylesheet" href="css/stylesCalculator.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-title">
+        <img class="logo" src="assets/images/logo.png" alt="" />
+        <h1>FINANCIAL CALCULATOR</h1>
+      </div>
+      <nav class="menubar">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li>
+            <button type="button">Our Calculators</button>
+            <ul class="submenu">
+              <li><a href="mortgage.html">Mortgage Calculator</a></li>
+              <li><a href="auto.html">Auto Loan Calculator</a></li>
+              <li><a href="compound.html">Compound Interest Calculator</a></li>
+            </ul>
+          </li>
+          <li><a class="survey" href="survey.html">Take Survey</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="main-container">
+      <div class="sub-title">
+        <img
+          class="home-image"
+          src="assets/images/compoundInterst.png"
+          alt="assets/images/compoundInterst-alt.png"
+        />
+        <h2>Compound Interest Calculator</h2>
+      </div>
+      <div class="sub-container1">
+        <h3>Your Compound Interest</h3>
+        <div class="result-value-div">
+          <input class="output" placeholder="Amount ($)" readonly="readonly" />
+        </div>
+        <div class="sub-container2">
+          <form id="compound-form" action="/">
+            <div class="prices-value1">
+              <div class="price-div">
+                <label class="price-label">Principal Amount</label>
+                <input
+                  class="price-input"
+                  id="deposit-input"
+                  placeholder="$"
+                  min="1"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="contribution-price-div">
+                <label class="price-label">Compound Per Year</label>
+                <input
+                  class="price-input"
+                  id="contribution-input"
+                  placeholder="1 - 12"
+                  min="1"
+                  max="12"
+                  step="1"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="prices-value2">
+              <div class="insurance-div">
+                <label class="price-label">Annual Interest Rate</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="apr"
+                  placeholder="%"
+                  min="0"
+                  max="100"
+                  step="0.01"
+                  required
+                />
+              </div>
+              <div class="loan-type-div">
+                <label class="price-label">Number Of Years</label>
+                <input
+                  type="number"
+                  class="price-input"
+                  id="terms-input"
+                  placeholder="Ex:5"
+                  min="1"
+                  step="1"
+                  required
+                />
+              </div>
+            </div>
+            <div>
+              <button type="submit" class="calculate-btn">Calculate</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span
+        >Image Source :<a
+          href=" https://cdn3.iconfinder.com/data/icons/start-up-4/44/money-256.png"
+          target="_blank"
+        >
+          Icon Finder</a
+        >
+        <span> (Licence Unknown)</span>
+      </span>
+    </footer>
+    <script src="js/compound.js"></script>
+  </body>
+</html>
