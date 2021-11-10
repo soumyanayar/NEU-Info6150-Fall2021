@@ -1,0 +1,66 @@
+.todo-list { 
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.todo { 
+  min-height: 54px;
+  min-width: 54px;
+  border: 1px solid transparent;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.todo:hover, 
+.todo:focus-within { 
+  background-color: #eee;
+  border: 1px solid black;
+}
+
+.todo__label {
+  min-height: 54px;
+  min-width: 54px;
+  display: flex;
+  align-items: center;
+}
+
+.todo__text { 
+  margin-left: 1rem;
+}
+
+.todo__text--done { 
+  text-decoration: line-through;
+}
+
+.todo__delete { 
+  display: none;
+  background-color: transparent;
+  font-size: inherit;
+  border: none;
+  cursor: pointer;
+  min-height: 54px;
+  min-width: 54px;
+  margin-left: 2rem;
+}
+
+.todo:focus-within .todo__delete,
+.todo:hover .todo__delete { 
+  display: inline-block;
+}
+
+.todo__delete:hover,
+.todo__delete:focus { 
+  background-color: #0e0;
+}
+
+.todo__form { 
+  padding: 2rem;
+}
+
+.todo__add-text { 
+  display: inline-block;
+  margin: 0 1rem;
+}

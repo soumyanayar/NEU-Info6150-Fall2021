@@ -1,0 +1,52 @@
+.accordion { 
+  display: flex;
+  flex-direction: column;
+
+  margin: auto;
+  width: 80%;
+  max-width: 40rem;
+  border: 1px solid black;
+  border-bottom: none;
+}
+
+.accordion__title { 
+  position: relative;
+
+  display: inline-block;
+  
+  width: 100%;
+  padding: 1rem;
+  padding-right: 3rem;
+  border: none;
+  border-bottom: 1px solid black;
+
+  background-color: lightblue;
+  font: inherit;
+  font-weight: bold;
+  text-align: left;
+}
+
+.accordion__title::after { 
+  position: absolute;
+  right: 1rem;
+  top: calc(50% - 1ch);
+}
+
+.accordion__title::after { 
+  content: "\2795";
+}
+
+.accordion__entry--open .accordion__title::after { 
+  content: "\2796";
+}
+
+.accordion__body { 
+  display: none;
+
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+
+.accordion__entry--open .accordion__body { 
+  display: block;
+}
