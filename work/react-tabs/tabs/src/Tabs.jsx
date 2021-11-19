@@ -14,25 +14,25 @@ function Tabs() {
     <div className="container">
       <div className="tabs-div">
         <button 
-          className={toggleTabs === 1 ? "tabs active-tabs" : "tabs"}
+          className={toggleTabs === 1 ? "tabs current-tab" : "tabs"}
           onClick={() => toggleTab(1)}
         >
           HOME
         </button>
         <button
-          className={toggleTabs === 2 ? "tabs active-tabs" : "tabs"}
+          className={toggleTabs === 2 ? "tabs current-tab" : "tabs"}
           onClick={() => toggleTab(2)}
         >
           ABOUT
         </button>
         <button
-          className={toggleTabs === 3 ? "tabs active-tabs" : "tabs"}
+          className={toggleTabs === 3 ? "tabs current-tab" : "tabs"}
           onClick={() => toggleTab(3)}
         >
          RECIPES
         </button>
         <button
-          className={toggleTabs === 4 ? "tabs active-tabs" : "tabs"}
+          className={toggleTabs === 4 ? "tabs current-tab" : "tabs"}
           onClick={() => toggleTab(4)}
         >
          FEEDBACK
@@ -41,7 +41,7 @@ function Tabs() {
 
       <div className="content-tabs">
         <div
-          className={toggleTabs === 1 ? "content  active-content" : "content"}
+          className={toggleTabs === 1 ? "content  current-content" : "content"}
         >
           <h2>Welcome To My Blog</h2>
           <p>
@@ -50,7 +50,7 @@ function Tabs() {
         </div>
 
         <div
-          className={toggleTabs === 2 ? "content  active-content" : "content"}
+          className={toggleTabs === 2 ? "content  current-content" : "content"}
         >
           <h2>About Me</h2>
           <p>
@@ -60,16 +60,13 @@ function Tabs() {
         </div>
 
         <div
-          className={toggleTabs === 3 ? "content  active-content" : "content"}
+          className={toggleTabs === 3 ? "content  current-content" : "content"}
         >
           <h2>My Recipes</h2>
           <Recipes></Recipes>
-          <p>
-            I use fresh vegetables and fruits in my recipes. They have most vitamins and nutritions required for body. 
-          </p>
         </div>
         <div
-          className={toggleTabs === 4 ? "content  active-content" : "content"}
+          className={toggleTabs === 4 ? "content  current-content" : "content"}
         >
           <h2>Your Feedback Is Valuable</h2>
           <Feedback/>

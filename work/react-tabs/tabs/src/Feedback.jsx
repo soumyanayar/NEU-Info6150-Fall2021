@@ -16,7 +16,7 @@ function Feedback() {
             <div name="text-area">
                 <textarea required>Please Provide Feedback Here</textarea>
             </div>
-            <button type="submit">Register</button>
+            <button type="submit">Submit</button>
             </form> 
         </div>
     )

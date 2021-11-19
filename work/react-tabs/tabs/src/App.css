@@ -51,13 +51,13 @@ body {
   border-top: 0.2rem solid green;
 }
 
-.active-tabs {
+.current-tab {
   background: white;
   border-bottom: 1px solid transparent;
   border-top: 2px solid Green;
 }
 
-.active-tabs::after {
+.current-tab::after {
   display: block;
   position: absolute;
   top: -5px;
@@ -98,7 +98,7 @@ button {
   height: 100%;
   color: black;
 }
-.active-content {
+.current-content {
   display: block;
 }
 
