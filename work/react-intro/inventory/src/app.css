@@ -1,0 +1,66 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 3rem;
+  margin-left: 20%;
+  width: 50%;
+  background-color: darkgoldenrod;
+  border: 0.1rem solid black;
+}
+
+h2,
+.text {
+  text-align: center;
+}
+
+.app-sub-container {
+  display: flex;
+  flex-direction: row;
+  padding: 3rem;
+  margin: 1rem;
+}
+
+.text {
+  margin: 1rem;
+}
+
+.counter-div {
+  display: block;
+  margin: auto;
+}
+
+.btn {
+  width: 5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  background-color: lightyellow;
+}
+
+.reorder-btn {
+  width: 5rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  border: 0.1rem solid black;
+  background-color: yellowgreen;
+  animation: fadein 2s linear;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .app-sub-container {
+    display: block;
+
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
