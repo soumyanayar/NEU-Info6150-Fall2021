@@ -49,7 +49,7 @@ main{
     grid-template-columns: 3fr;
     grid-gap:1rem;
 
-    padding:0.5rem;
+    padding: 0.25em;
 
     border-radius: 1rem;
     border: 0.1rem solid blue;
@@ -62,7 +62,7 @@ main{
 
 .card__more{
     width: 5rem;
-    padding: 0.25rem;
+    padding: 0.25rem; 
     margin-top: auto ;
     margin-left: auto;
     margin-right: auto;
