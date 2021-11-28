@@ -1,0 +1,28 @@
+.topnavigation a.current {
+  background-color: rgb(141, 158, 81);
+  color: black;
+}
+.topnavigation a:hover {
+  background-color: rgb(224, 240, 166);
+  color: black;
+}
+
+.form-container div {
+  margin: 2rem;
+}
+
+.text-area {
+  width: 50%;
+}
+.form-container button {
+  margin: 10px;
+  border-color: rgb(6, 5, 95);
+  color: white;
+  background-color: #008cba;
+  padding: 0.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+:required {
+  box-shadow: 0 0 1px 1px yellow;
+}

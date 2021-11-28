@@ -1,0 +1,37 @@
+.recipes img {
+  height: 20rem;
+  height: 10rem;
+  margin: 0.5rem;
+}
+.credits {
+  margin: 0.5rem;
+}
+
+.credits h4 {
+  margin-top: 2rem;
+}
+
+.image-links {
+  margin-top: 0.5rem;
+}
+
+.image-links a {
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .recipes {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .food-images {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .recipes h3 {
+    margin: 0.5rem;
+  }
+}
