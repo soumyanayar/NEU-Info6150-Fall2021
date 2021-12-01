@@ -1,28 +1,30 @@
 body{
-    display: grid;
-    grid-template-columns: repeat(12, 1fr, 1fr);
     margin:0;
     background-color: skyblue; 
     font-family: sans-serif; 
 }
-
 .header{
-    background-color: skyblue;
-    height:5rem;
-    padding: 0;
-    display:flex;
-    align-items:left;
-    justify-content:left;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+
+    margin-top:0;
+    padding:0;
+
+    background-color: skyblue(133, 216, 236); 
 }
 
 .header__logo{
-    margin-left: 0.5rem;   
-    align-items: center;
+    grid-column: span 1;
+
+    height:10vh;
+    padding:0;
+    margin-left: 0.5rem;  
 }
 
 .header__title{
- padding:0.25rem;
- margin-left: 0.25rem;
+    grid-column: span 4;
 }
 
 main{
