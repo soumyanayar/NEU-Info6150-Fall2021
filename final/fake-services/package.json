@@ -1,0 +1,15 @@
+{
+  "name": "fake-services",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fake-services.js",
+  "type": "module",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "author": "Brett Ritter <swiftone@swiftone.org>",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^27.4.2"
+  }
+}

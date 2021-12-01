@@ -66,7 +66,7 @@ NOTE: Specific requirements are subject to change until Dec 1, but the overall r
 ## Fake services
 
 - You can use real remote services, such as the Pokemon API, but are not required to
-- You can use some "fake" services that you write, or use any of the "fake" services I supply in the `fake-services/` sbudirectory
+- You can use some "fake" services that you write, or use any of the "fake" services I supply in the `fake-services/` subdirectory
   - to use one of the provided fake services, see the README.md in the `fake-services/` directory
   - to write your own fake service, write it to return a promise that resolves with content after a 1 second delay
 
@@ -80,6 +80,7 @@ NOTE: Specific requirements are subject to change until Dec 1, but the overall r
   - You may otherwise organize your CSS and CSS files in any system you choose, 
 - Do not use JS that wasn't written by you or wasn't provided with this assignment
   - No external JS libraries
+- Exception: react-router-dom and history modules are allowed, but they themselves do not count towards or against your grade
 - Do not use CSS that you didn't write or that wasn't provided by create-react-app
   - Exception: You are allowed to use font-awesome icons (CSS only!), provided you follow the licensing terms
 - You may not use CSS floats to do more than manage flowing text with images
