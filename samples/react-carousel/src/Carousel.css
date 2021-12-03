@@ -31,4 +31,8 @@
   flex-direction: row;
 }
 
+.carousel__control { 
+  min-width: 54px;
+  min-height: 54px;
+}
 

@@ -4,6 +4,8 @@ This is VERY SIMPLE Image Carousel in response to a request
   - And I understand that they can be visually impressive and this makes them arguably good portfolio pieces
     - Just make sure you understand the issues they have
 - This is a very, very basic example.  Some features you might want to add:
+  - Making the buttons transparent overlays over the slides instead of at the sides
+    - make sure they can still get focus and be visible then
   - a tab-like control of dots/thumbnails/titles allowing you to:
     - See how many slides there are
     - Jump directly to a given slide
