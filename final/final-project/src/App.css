@@ -39,14 +39,14 @@ body {
 display: flex;
 flex-direction: column;
 /* background-color: rgb(143, 194, 194); */
-width:100%;
+/* width:100%; */
 } 
 
 .title-container{
   display: flex;
   flex-direction: corowlumn;
   margin:0;
-  padding:0;
+  padding:0; 
   width:100%;
   background-color:black;
 }
@@ -95,6 +95,7 @@ h3{
 .tabs:hover {
   transition: transform 250ms linear;
   background-color: grey;
+  color: black;
 }  
 
 .current-tab {
@@ -341,8 +342,9 @@ letter-spacing: 0.08rem;
 line-height: 1.3;
 }
 
-/* About */
+/* FeedBack */
 .introduction-title{
   text-align: left;
   color: black;
 }
+
