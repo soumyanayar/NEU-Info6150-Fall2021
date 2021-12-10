@@ -45,7 +45,7 @@ const Submitform = () => {
   };
 
   return (
-    <div className="container">
+    <div className="feedback-container">
       {/* {Object.keys(formErrors).length === 0 && isSubmit ? (
         <div className="ui message success">Signed in successfully</div>
       ) : (
@@ -53,7 +53,7 @@ const Submitform = () => {
       )} */}
 
       <form onSubmit={handleSubmit}>
-        <h1>Login Form</h1>
+        <h2>Register With Us!!</h2>
         <div className="ui divider"></div>
         <div className="ui form">
           <div className="field">
@@ -89,7 +89,7 @@ const Submitform = () => {
             />
           </div>
           <p>{formErrors.password}</p>
-          <button className="fluid ui button blue">Submit</button>
+          <button className="btn">Submit</button>
         </div>
       </form>
     </div>

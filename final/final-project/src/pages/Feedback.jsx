@@ -14,7 +14,7 @@ const Feedback = () => {
       </p>
       <br></br>
       </div>
-      <h2 className="introduction-title">Please Fill In The Below Details And Encourage</h2>
+      <h2 className="introduction-title">Please Fill In The Below Details</h2>
       <form className="submit-form">
           <div className="faq-div">
           <label>On a scale of 1 - 5 how usefule is this application?</label>
@@ -30,6 +30,7 @@ const Feedback = () => {
               <input type="radio" name="grade" value="5"/>
               <label>5</label>
           </div>
+          <br></br>
           <label>How do you rate the accuracy of the output?</label>
           <div className="grouping-div">
               <input type="radio" name="accuracy" value="1"/>
@@ -43,6 +44,7 @@ const Feedback = () => {
               <input type="radio" name="accuracy" value="5"/>
               <label>5</label>
           </div>
+          <br></br>
           <label>How do you rate the visual effect of the application?</label>
           <div className="grouping-div">
               <input type="radio" value="1"/>
@@ -56,6 +58,7 @@ const Feedback = () => {
               <input type="radio" value="5"/>
               <label>5</label>
           </div>
+          <br></br>
           <label>Where do you think we should Improve?</label>
           <div className="grouping-div">
               <input type="checkbox" value="1"/>
@@ -69,6 +72,7 @@ const Feedback = () => {
           </div>
         </div>
       </form>
+      <br></br>
     <Submitform/>
     </section>
   )

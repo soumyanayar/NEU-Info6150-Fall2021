@@ -38,8 +38,9 @@ body {
  .header {
 display: flex;
 flex-direction: column;
+
 /* background-color: rgb(143, 194, 194); */
-/* width:100%; */
+width:100%;
 } 
 
 .title-container{
@@ -346,11 +347,36 @@ line-height: 1.3;
 .submit-form{
   display: flex;
   flex-direction: row;
+  border: 1px solid #dfdfdf;
 }
 
 label{
-  margin:1rem;
-  color:green;
-  padding: 0.5rem;
+  margin:0.2rem;
+  color:black;
   line-height: 1.3;
 }
+
+.feedback-container {
+  display: flex ;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh;
+  max-width: 500px; */
+  width: 100%;
+  margin: auto;
+}
+.container > form {
+  width: 70%;
+  border: 1px solid #dfdfdf;
+  padding: 20px;
+  border-radius: 5px;
+  background: #fff;
+}
+pre {
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+}
+
+
