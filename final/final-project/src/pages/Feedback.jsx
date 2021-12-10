@@ -14,32 +14,33 @@ const Feedback = () => {
       </p>
       <br></br>
       </div>
-      <form className="search-form">
+      <h2 className="introduction-title">Please Fill In The Below Details And Encourage</h2>
+      <form className="submit-form">
           <div className="faq-div">
           <label>On a scale of 1 - 5 how usefule is this application?</label>
           <div className="grouping-div">
-              <input type="radio" value="1"/>
+              <input type="radio" name="grade" value="1"/>
               <label>1</label>
-              <input type="radio" value="2"/>
+              <input type="radio" name="grade" value="2"/>
               <label>2</label>
-              <input type="radio" value="3"/>
+              <input type="radio" name="grade" value="3"/>
               <label>3</label>
-              <input type="radio" value="4"/>
+              <input type="radio" name="grade" value="4"/>
               <label>4</label>
-              <input type="radio" value="5"/>
+              <input type="radio" name="grade" value="5"/>
               <label>5</label>
           </div>
           <label>How do you rate the accuracy of the output?</label>
           <div className="grouping-div">
-              <input type="radio" value="1"/>
+              <input type="radio" name="accuracy" value="1"/>
               <label>1</label>
-              <input type="radio" value="2"/>
+              <input type="radio" name="accuracy" value="2"/>
               <label>2</label>
-              <input type="radio" value="3"/>
+              <input type="radio" name="accuracy" value="3"/>
               <label>3</label>
-              <input type="radio" value="4"/>
+              <input type="radio" name="accuracy" value="4"/>
               <label>4</label>
-              <input type="radio" value="5"/>
+              <input type="radio" name="accuracy" value="5"/>
               <label>5</label>
           </div>
           <label>How do you rate the visual effect of the application?</label>
