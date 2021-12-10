@@ -12,10 +12,8 @@ const Feedback = () => {
         We highly encourage you to fill in few details asked about your experience while using this application.
         We want to give the best of user experience from the inputs we recieve from you.
       </p>
-      <br></br>
       </div>
       <h2 className="introduction-title">Please Fill In The Below Details</h2>
-      <form className="submit-form">
           <div className="faq-div">
           <label>On a scale of 1 - 5 how usefule is this application?</label>
           <div className="grouping-div">
@@ -71,7 +69,6 @@ const Feedback = () => {
               <label >Content</label>
           </div>
         </div>
-      </form>
       <br></br>
     <Submitform/>
     </section>

@@ -54,11 +54,11 @@ const Submitform = () => {
 
       <form onSubmit={handleSubmit}>
         <h2>Register With Us!!</h2>
-        <div className="ui divider"></div>
-        <div className="ui form">
+        <div className="ui-divider"></div>
+        <div className="ui-form">
           <div className="field">
             <label>Username</label>
-            <input
+            <input className="search-input"
               type="text"
               name="username"
               placeholder="Username"
