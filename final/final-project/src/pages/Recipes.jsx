@@ -26,7 +26,7 @@ const Recipes = () => {
   return (
     <section className="recipe-search">
       <h2 className="section-title">Find Your Favourite Food Recipe</h2>
-      <form classname="search-form" onSubmit={searchRecipes}>
+      <form className="search-form" onSubmit={searchRecipes}>
         <div className="form-control">
         <input className="search-input"type="text" onChange={(e) => {
           setQuery(e.target.value);
@@ -36,8 +36,8 @@ const Recipes = () => {
         </div>
       </form>
       <div className="recipe-center">
-      {recipe.map((item) => (
-        <Recipe
+      {recipe.map((item, key) => (
+        <Recipe key={item.recipe.label}
          image={item.recipe.image} 
           title={item.recipe.label}    
           ingredients = {item.recipe.ingredients}>

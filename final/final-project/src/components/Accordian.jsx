@@ -24,8 +24,8 @@ function Accordion({title, ingredients}) {
             </button>
             <div className="accordion__body">
                 <ol className="recipe-ingredients">
-                    {ingredients.map((ingredient) => (
-                        <li>{ingredient.text}</li>
+                    {ingredients.map((ingredient, title) => (
+                        <li key = {title} >{ingredient.text}</li>
                     ))}
                 </ol>
             </div>  
