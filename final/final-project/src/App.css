@@ -363,7 +363,23 @@ label{
   width: 100%;
   margin: auto;
   border: 1px solid #dfdfdf;
+  height:130vw;
+}
+.user-input{
+  display: block;
+  border: none;
+  border-color: transparent;
+  background: #f1f5f8;
+  border-radius: 0.25rem;
+  padding: 0.45rem 0.8rem;
+  font-size: 1.2rem;
+}
+.label{
+  font-weight: bold;
 }
 
-
-
+@media screen and (min-width: 576px) {
+  .feedback-container{
+    height:45vw;
+  }
+}

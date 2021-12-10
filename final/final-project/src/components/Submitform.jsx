@@ -57,8 +57,8 @@ const Submitform = () => {
         <div className="ui-divider"></div>
         <div className="ui-form">
           <div className="field">
-            <label>Username</label>
-            <input className="search-input"
+            <label className="label">Username</label>
+            <input className="user-input"
               type="text"
               name="username"
               placeholder="Username"
@@ -68,8 +68,9 @@ const Submitform = () => {
           </div>
           <p>{formErrors.username}</p>
           <div className="field">
-            <label>Email</label>
+            <label className="label">Email</label>
             <input
+            className="user-input"
               type="text"
               name="email"
               placeholder="Email"
@@ -79,8 +80,9 @@ const Submitform = () => {
           </div>
           <p>{formErrors.email}</p>
           <div className="field">
-            <label>Password</label>
+            <label className="label">Password</label>
             <input
+              className="user-input"
               type="password"
               name="password"
               placeholder="Password"
