@@ -1,12 +1,12 @@
 import React from 'react'
 import {useState, useEffect} from "react";
 import Recipe from '../components/Recipe';
-import '../App.css';
+
 import env from "react-dotenv";
 
 const Recipes = () => {
   const [recipe, setRecipe] = useState([]);
-  const [query, setQuery] = useState("chocolate");
+  const [query, setQuery] = useState("oats");
   let recipeStore;
   useEffect(() => {
     getRecipes();

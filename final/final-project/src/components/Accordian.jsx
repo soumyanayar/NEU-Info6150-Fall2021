@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Accordion({ entries }) {
+function Accordion({title, ingredients}) {
   const [isEntryOpen, setIsEntryOpen] = useState({});
 
   function toggleEntry(title) {
@@ -9,12 +9,9 @@ function Accordion({ entries }) {
       [title]: !isEntryOpen[title],
     });
   }
-
+  const isOpen = isEntryOpen[title];
   return (
     <div className="accordion">
-      { Object.keys(entries).map( title => {
-        const isOpen = isEntryOpen[title];
-        return (
           <div
             key={title}
             className={`accordion__entry ${isOpen ? 'accordion__entry--open' : '' }`}
@@ -23,12 +20,16 @@ function Accordion({ entries }) {
               className="accordion__title"
               onClick={ () => toggleEntry(title) }
             >
-              {title}
+              Ingredients
             </button>
-            <div className="accordion__body">{entries[title]}</div>
+            <div className="accordion__body">
+                <ol className="recipe-ingredients">
+                    {ingredients.map((ingredient) => (
+                        <li>{ingredient.text}</li>
+                    ))}
+                </ol>
+            </div>  
           </div>
-        );
-      })}
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React from 'react'
+import Accordion from './Accordian'
 
 const Recipe = ({title, image, ingredients}) => {
     return (
@@ -6,19 +7,10 @@ const Recipe = ({title, image, ingredients}) => {
         <div className="recipe-div">
             <img className="recipe-img" src={image} alt=""></img>
            <p className="recipe-name">{title}</p>
-           <div className="accordion-div">
-           <button>Ingredients</button> 
-           <div className="accordion-content">
-                <ol className="recipe-ingredients">
-                    {ingredients.map((ingredient) => (
-                        <li>{ingredient.text}</li>
-                    ))}
-                </ol>
-            </div>     
-           </div>
+           <Accordion title={title} ingredients={ingredients}></Accordion>
         </div>
         </div>
     )
 }
 
-export default Recipe
+export default Recipe;

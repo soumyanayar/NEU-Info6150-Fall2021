@@ -14,7 +14,7 @@ function Navbar() {
 
   return (
     <div className="container">
-      <div classname="header">
+      <div className="header">
       <div className="title-container">
       <img className="logo" src={logo} alt=""></img>
       <h3>CALORIE VISUALISER</h3>
