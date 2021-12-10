@@ -1,9 +1,9 @@
 import { useState } from "react";
 import logo from "../logo.png";
 import Home from "../pages/Home";
-import About from "../pages/About"
 import Recipes from "../pages/Recipes"
 import Tools from "../pages/Tools"
+import Feedback from "../pages/Feedback";
 
 function Navbar() {
   const [toggleTabs, setToggleTabs] = useState(1);
@@ -42,7 +42,7 @@ function Navbar() {
           className={toggleTabs === 4 ? "tabs current-tab" : "tabs"}
           onClick={() => toggleTab(4)}
         >
-         ABOUT
+         FEEDBACK
         </button>
       </div>
       </div>
@@ -68,8 +68,7 @@ function Navbar() {
         <div
           className={toggleTabs === 4 ? "content  current-content" : "content"}
         >
-          <About/>
-        
+          <Feedback/>    
         </div>
       </div>
     </div>
