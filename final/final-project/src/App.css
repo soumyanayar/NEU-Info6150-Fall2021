@@ -59,7 +59,7 @@ h3{
 }
 
 .logo{
-  margin-top:1rem;
+  margin-top:0.6rem;
   margin-right: 0;
   width: 5rem;
   height:3rem;
@@ -72,7 +72,7 @@ h3{
 .tabs {
   padding: 1rem;
   text-align: center;
-  width:100%; 
+  width:100%;
   background: black;
   color:green;
   font-weight: bold;
@@ -411,16 +411,11 @@ label{
 }
 
 .tools-tabs {
-  padding: 15px;
-  /* width: 50%; */
-  /* text-align: center;
+  text-align: center;
   width: 50%;
-  background: rgba(128, 128, 128, 0.075);
-  cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
   box-sizing: content-box;
   position: relative;
-  outline: none; */
+  outline: none;
   letter-spacing: 0.1rem;
   color:#476a2e;
   border-bottom: 0.1rem solid #476a2e;
@@ -462,8 +457,9 @@ label{
 
 .tools-content {
   background: white;
-  padding: 20px;
+  padding: 5rem;
   display: none;
+  height: auto;
 }
 
 .tools-content h2 {
@@ -483,6 +479,7 @@ label{
 }
 .current-tools-content {
   display: block;
+  height: auto;
 }
 
 @media only screen and (min-width: 500px) {
@@ -491,4 +488,17 @@ label{
     height: 500px;
     margin: 3rem auto 0;
   }
+}
+
+
+/* BMI Calculatot */
+
+.tool-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.tool-form{
+  margin:0;
+  padding:0;
 }
