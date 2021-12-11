@@ -32,11 +32,11 @@ function BMICalculator() {
   return (
     <div className="tool-container">
       <form className="tool-form">
-        <h3 className="tool-title"> BMI Calculator</h3>
+        
         <div className="user-input-entry-div">
           <label
             className="user-input-label"
-            for="username"
+            for="height"
           >
             Height
           </label>
@@ -52,22 +52,22 @@ function BMICalculator() {
         <div className="user-input-entry-div">
           <label
             className="user-input-label"
-            for="password"
+            for="weight"
           >
             Weight
           </label>
           <input
-            className="shadow appearance-none  rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="user-input"
             id="Weight"
             type="number"
-            placeholder="Weight in cm"
+            placeholder="Weight in kg"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
           />
         </div>
         <div className="calculation-div">
           <button
-            className=".btn"
+            className="btn-new"
             type="button"
             onClick={calculateBMI}
           >

@@ -211,7 +211,7 @@ button {
   font-size: 1.2rem;
 }
 
-.btn {
+.btn, .btn-new {
 margin-right: 20%;
 letter-spacing: 0.1rem;
 color:#476a2e;
@@ -457,7 +457,7 @@ label{
 
 .tools-content {
   background: white;
-  padding: 5rem;
+  /* padding: 5rem; */
   display: none;
   height: auto;
 }
@@ -499,6 +499,43 @@ label{
 }
 
 .tool-form{
-  margin:0;
-  padding:0;
+  display: block;
+  margin:auto;
+}
+
+.tool-title{
+text-align: center;
+margin-top: 0.5rem;
+margin-bottom: 0.5rem;
+}
+.user-input-entry-div{
+  display: flex;
+  flex-direction: column;
+  margin:1rem;
+}
+.user-input-label{
+  font:1;
+  padding:0.2rem;
+  font-weight: bold;
+}
+.btn-new{
+  margin:1rem;
+  margin-left: 3rem;
+
+}
+.result-div{
+  background:rgb(165, 241, 162);
+  animation: createBox .25s;
+  width: auto; height: auto;
+  font:1.2;
+  font-weight: bold;
+  padding:0.25rem;
+}
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
