@@ -1,11 +1,57 @@
-import React from 'react'
+import { useState } from "react";
 
-const Tools = () => {
+
+function Tools() {
+  const [toggleTabs, setToggleTabs] = useState(1);
+
+  const toggleTab = (tabNumber) => {
+    setToggleTabs(tabNumber);
+  };
+
   return (
-    <div>
-      <h2>Tools page</h2>
+    <div className="tool-tabs-container">
+      <div className="tool-tabs-div">
+        <button 
+          className={toggleTabs === 1 ? "tools-tabs current-tools-tab" : "tools-tabs"}
+          onClick={() => toggleTab(1)}
+        >
+          BMI CACLULATOR
+        </button>
+        <button 
+          className={toggleTabs === 2 ? "tools-tabs current-tools-tab" : "tools-tabs"}
+          onClick={() => toggleTab(2)}
+        >
+          CALORIES TO CONSUME
+        </button>
+        <button 
+          className={toggleTabs === 3 ? "tools-tabs current-tools-tab" : "tools-tabs"}
+          onClick={() => toggleTab(3)}
+        >
+          HIP TO WEIGHT RATIO
+        </button>
+      </div> 
+
+      <div className="content-tabs-div">
+        <div
+          className={toggleTabs === 1 ? "tools-content  current-tools-content" : "tools-content"}
+        >
+          nkdfhfghfgh
+        </div>
+
+        <div
+          className={toggleTabs === 2 ? "tools-content  current-tools-content" : "tools-content"}
+        >
+          jcigidfgjifkd
+        </div>
+
+        <div
+          className={toggleTabs === 3 ? "tools-content  current-tools-content" : "tools-content"}
+        >
+          ghjhjhk
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
 export default Tools;

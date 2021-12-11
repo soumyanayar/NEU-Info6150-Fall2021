@@ -86,10 +86,6 @@ h3{
 
 }
 
-/* .tabs:not(:last-child) {
-  border-right: 0.1rem solid green;
-} */
-
 .tabs:focus {
   border-top: 0.2rem solid green;
 }   
@@ -190,14 +186,14 @@ button {
 .form-control {
   display:flex;
   flex-direction: row;
-  margin: 2rem;
+  margin: 1rem;
 }
 .search-form {
-  width: 85vw; 
+  width: 100vw; 
   margin: auto;
   max-width: 40rem;
   background: #fff;
-  padding: 2rem 2.5rem;
+  padding: 1rem;
   text-transform: capitalize;
   /* border-radius: 0.25rem;
   box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5); */
@@ -283,6 +279,16 @@ border-radius: 0.1rem;
   .recipe-center {
     grid-template-columns: repeat(auto-fill, minmax(338.8px, 1fr));
   }
+  .search-form {
+    width: 80vw; 
+    margin: auto;
+    max-width: 40rem;
+    background: #fff;
+    padding: 1rem;
+    text-transform: capitalize;
+    /* border-radius: 0.25rem;
+    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5); */
+  }
 }
 
 /* Accordion */
@@ -346,6 +352,7 @@ line-height: 1.3;
 /* FeedBack And SubmitForm */
 
 label{
+  font:inherit;
   color:black;
   line-height: 1.3;
 }
@@ -378,8 +385,110 @@ label{
   font-weight: bold;
 }
 
-@media screen and (min-width: 576px) {
+/* @media screen and (min-width: 576px) {
   .feedback-container{
-    /* height:20vw; */
+     height:20vw; 
+  }
+} */
+
+/* TOOL */
+
+.tool-tabs-container{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: rgb(198, 238, 179);
+  margin: 3rem auto 0;
+  word-break: break-all;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  box-shadow: 1rem solid black;
+  /* margin: 2rem;
+  box-shadow: 1rem solid black;
+  background-color: offwhite; */
+}
+.tool-tabs-div {
+  display: flex;
+}
+
+.tools-tabs {
+  padding: 15px;
+  /* width: 50%; */
+  /* text-align: center;
+  width: 50%;
+  background: rgba(128, 128, 128, 0.075);
+  cursor: pointer;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
+  box-sizing: content-box;
+  position: relative;
+  outline: none; */
+  letter-spacing: 0.1rem;
+  color:#476a2e;
+  border-bottom: 0.1rem solid #476a2e;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+}
+
+.tools-tabs:not(:last-child) {
+  border-right: 0.1rem solid green;
+}
+
+.tools-tabs:focus {
+  border-top: 0.2rem solid green;
+}   
+
+
+.current-tools-tab {
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid Green;
+  background-color: white;
+}
+
+.current-tools-tab::after {
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+
+  height: 5px;
+}
+
+
+.content-tabs-div {
+  flex-grow: 1;
+}
+
+.tools-content {
+  background: white;
+  padding: 20px;
+  display: none;
+}
+
+.tools-content h2 {
+  padding: 0px 0 5px 0px;
+  margin: 0.5rem ;
+}
+.tools-content hr {
+  width: 100px;
+  height: 100%;
+  background: #222;
+  margin-bottom: 5px;
+}
+.tools-content p {
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+.current-tools-content {
+  display: block;
+}
+
+@media only screen and (min-width: 500px) {
+  .container-div {
+    width: 800px;
+    height: 500px;
+    margin: 3rem auto 0;
   }
 }

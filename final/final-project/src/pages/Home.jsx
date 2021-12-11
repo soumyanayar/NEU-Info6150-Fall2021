@@ -14,7 +14,7 @@ const Home = () => {
         Our services designed to educate, motivate and inspire lifelong weight control.To achieve this, we have determined that everything we do should be science-based, and equally important, our products and programs must produce the results our members and visitors desire.
         Our web-based and clinical tools and software include reliable information in a format that is useful every day. We believe this approach will lead to positive permanent change and better health.
       </p>
-      <p>
+      {/* <p>
       An important component of the Calorie Visualiser product 
       suite is our food database. Calorie Visualiser food data is 
       widely recognized as the best available for weight control. 
@@ -23,7 +23,7 @@ const Home = () => {
        have the same objective - to get us to buy and consume more 
        of it. CalorieKing food data sets the record straight about 
        the caloric value of the foods we encounter each day.
-      </p>
+      </p> */}
       </div>  
     <SearchForm/>
     </div>

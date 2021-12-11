@@ -60,9 +60,9 @@ const Feedback = () => {
         We highly encourage you to fill in few details asked about your experience while using this application.
         We want to give the best of user experience from the inputs we recieve from you.
       </p>
-      </div>
-      <h2 className="introduction-title">Please Fill In The Below Details</h2>
+      </div>   
           <div className="faq-div">
+          <h2 className="introduction-title">Please Fill In The Below Details</h2>
           <label>On a scale of 1 - 5 how usefule is this application?</label>
           <div className="grouping-div">
               <input type="radio" name="grade" value="1"/>
@@ -119,7 +119,7 @@ const Feedback = () => {
         </div>
       <br></br>
       <form onSubmit={handleSubmit}>
-        <h2>Register With Us!!</h2>
+        <h2>You Details Please</h2>
         <div className="ui-divider"></div>
         <div className="ui-form">
           <div className="field">
