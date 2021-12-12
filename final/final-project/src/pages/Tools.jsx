@@ -1,6 +1,7 @@
 import { useState } from "react";
 import BMICalculator from "../components/BMICalculator";
-import CalorieConsumption from "../components/CalorieConsumption"
+import CalorieConsumption from "../components/CalorieConsumption";
+import WaistHipRatio from "../components/WaistHipRatio";
 function Tools() {
   const [toggleTabs, setToggleTabs] = useState(1);
 
@@ -11,43 +12,61 @@ function Tools() {
   return (
     <div className="tool-tabs-container">
       <div className="tool-tabs-div">
-        <button 
-          className={toggleTabs === 1 ? "tools-tabs current-tools-tab" : "tools-tabs"}
+        <button
+          className={
+            toggleTabs === 1 ? "tools-tabs current-tools-tab" : "tools-tabs"
+          }
           onClick={() => toggleTab(1)}
         >
           BMI CACLULATOR
         </button>
-        <button 
-          className={toggleTabs === 2 ? "tools-tabs current-tools-tab" : "tools-tabs"}
+        <button
+          className={
+            toggleTabs === 2 ? "tools-tabs current-tools-tab" : "tools-tabs"
+          }
           onClick={() => toggleTab(2)}
         >
           CALORIES TO CONSUME
         </button>
-        <button 
-          className={toggleTabs === 3 ? "tools-tabs current-tools-tab" : "tools-tabs"}
+        <button
+          className={
+            toggleTabs === 3 ? "tools-tabs current-tools-tab" : "tools-tabs"
+          }
           onClick={() => toggleTab(3)}
         >
-          HIP TO WEIGHT RATIO
+          WAIST TO HIP RATIO
         </button>
-      </div> 
+      </div>
 
       <div className="content-tabs-div">
         <div
-          className={toggleTabs === 1 ? "tools-content  current-tools-content" : "tools-content"}
+          className={
+            toggleTabs === 1
+              ? "tools-content  current-tools-content"
+              : "tools-content"
+          }
         >
           <BMICalculator></BMICalculator>
         </div>
 
         <div
-          className={toggleTabs === 2 ? "tools-content  current-tools-content" : "tools-content"}
+          className={
+            toggleTabs === 2
+              ? "tools-content  current-tools-content"
+              : "tools-content"
+          }
         >
-         <CalorieConsumption></CalorieConsumption>
+          <CalorieConsumption></CalorieConsumption>
         </div>
 
         <div
-          className={toggleTabs === 3 ? "tools-content  current-tools-content" : "tools-content"}
+          className={
+            toggleTabs === 3
+              ? "tools-content  current-tools-content"
+              : "tools-content"
+          }
         >
-          ghjhjhk
+          <WaistHipRatio></WaistHipRatio>
         </div>
       </div>
     </div>

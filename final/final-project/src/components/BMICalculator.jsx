@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 
 function BMICalculator() {
@@ -6,17 +6,21 @@ function BMICalculator() {
   const [weight, setWeight] = useState("");
   const [bmiResult, setBmiResult] = useState("");
   const [status, setStatus] = useState("");
+  const [error, setError] = useState(false);
 
   function calculateBMI() {
+    if (weight === "" || height === "" || !setBmiResult) {
+      setError(true);
+    }
     let bmi = Number(weight / (height / 100) ** 2).toFixed(2);
     setBmiResult(bmi);
 
     let bmiStatus = getStatus(bmi);
 
     setStatus(bmiStatus);
-
+    setError(false);
     setHeight("");
-    setWeight(""); 
+    setWeight("");
   }
 
   function getStatus(bmi) {
@@ -29,14 +33,8 @@ function BMICalculator() {
   return (
     <div className="tool-container">
       <form className="tool-form">
-        
         <div className="user-input-entry-div">
-          <label
-            className="user-input-label"
-         
-          >
-            Height (cm)
-          </label>
+          <label className="user-input-label">Height (cm)</label>
           <input
             className="user-input"
             id="Height "
@@ -49,12 +47,7 @@ function BMICalculator() {
           />
         </div>
         <div className="user-input-entry-div">
-          <label
-            className="user-input-label"
-          
-          >
-            Weight (kg)
-          </label>
+          <label className="user-input-label">Weight (kg)</label>
           <input
             className="user-input"
             id="Weight"
@@ -67,11 +60,7 @@ function BMICalculator() {
           />
         </div>
         <div className="calculation-div">
-          <button
-            className="btn-new"
-            type="button"
-            onClick={calculateBMI}
-          >
+          <button className="btn-new" type="button" onClick={calculateBMI}>
             Calculate BMI
           </button>
         </div>
@@ -86,4 +75,4 @@ function BMICalculator() {
   );
 }
 
-export default BMICalculator
+export default BMICalculator;
