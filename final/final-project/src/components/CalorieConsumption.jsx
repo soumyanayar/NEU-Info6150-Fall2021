@@ -8,11 +8,7 @@ const CalorieConsumption = () => {
   const [gender, setGender] = useState("1");
   const [activity, setActivity] = useState("1");
   const [caloriesToConsume, setCaloriesToConsume] = useState("");
-  const [error, setError] = useState("");
   const calculateCaloriesToConsume = () => {
-    if (gender === "" || weight === "" || height === "") {
-      setError("Enter valid values in Input fields");
-    }
     let bmr;
     if (gender === "1") {
       bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
@@ -20,11 +16,16 @@ const CalorieConsumption = () => {
       bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
     }
     setCaloriesToConsume(bmr * activity);
-    setError("");
   };
 
   return (
     <div className="tool-container">
+      <div className="tool-tab-content">
+        <p>
+          Find out how many calories you should consume everyday based on your
+          weight and activity level
+        </p>
+      </div>
       <form className="tool-form">
         <div className="bmr-div">
           <div className="user-input-entry-div">
@@ -33,7 +34,7 @@ const CalorieConsumption = () => {
               <label className="user-input-label">Female</label>
               <input
                 type="radio"
-                className="GenderF"
+                className="user-input-radio-btn"
                 name="gender"
                 value="1"
                 onChange={(e) => setGender(e.target.value)}
@@ -41,7 +42,7 @@ const CalorieConsumption = () => {
               <label className="user-input-label">Male</label>
               <input
                 type="radio"
-                className="GenderM"
+                className="user-input-radio-btn"
                 name="gender"
                 value="2"
                 onChange={(e) => setGender(e.target.value)}
@@ -78,28 +79,19 @@ const CalorieConsumption = () => {
               onChange={(e) => setWeight(parseFloat(e.target.value))}
             />
           </div>
-          <div className="workout-div">
+          <div className="user-input-entry-div">
             <select
-              className="activity"
+              className="user-input"
               name="activity"
               value={activity}
               onChange={(e) => setActivity(parseFloat(e.target.value))}
             >
               <option value="1">Select Your Activity</option>
-              <option value="1.2">Very little or no excercise/desk job</option>
-              <option value="1.375">
-                Light Activity(Light excercise 1 or 3 days per week)
-              </option>
-              <option value="1.55">
-                Moderately Active(Moderate excercise 3 or 5 days per week)
-              </option>
-              <option value="1.72">
-                Very Active(Heavy excercise more than 5 days per week)
-              </option>
-              <option value="1.9">
-                Extremely Active(Intensive excercise and physical job multiple
-                days per week)
-              </option>
+              <option value="1.2">Very little</option>
+              <option value="1.375">Light Activity</option>
+              <option value="1.55">Moderately Active</option>
+              <option value="1.72">Very Active</option>
+              <option value="1.9">Extremely Active</option>
             </select>
           </div>
           <div className="calculation-div">

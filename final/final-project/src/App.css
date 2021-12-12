@@ -491,11 +491,19 @@ label{
 }
 
 
-/* BMI Calculatot */
-
+/* all Calculator */
 .tool-container{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.tool-tab-content{
+  width:auto;
+  padding: 1rem;
+  background-color: #f1f5f8;
+}
+.tool-tab-content p{
+  margin: 1rem;
 }
 
 .tool-form{
@@ -518,10 +526,19 @@ margin-bottom: 0.5rem;
   padding:0.2rem;
   font-weight: bold;
 }
+
+.user-input{
+  width:auto;
+  padding:0.5rem;
+  margin:0.5rem;
+}
+/* .user-input-radio-btn{
+  display: flex;
+  flex-direction: row;
+} */
 .btn-new{
   margin:1rem;
-  margin-left: 3rem;
-
+  margin-left: 2rem;
 }
 .result-div{
   background:rgb(165, 241, 162);
@@ -539,3 +556,9 @@ margin-bottom: 0.5rem;
     transform: scale(1);
   }
 }
+
+/* @media screen and (min-width: 576px) {
+  .tool-container{
+    height:120vw;
+  }
+} */

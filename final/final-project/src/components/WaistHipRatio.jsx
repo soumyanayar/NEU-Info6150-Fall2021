@@ -23,66 +23,80 @@ function WaistHipRatio() {
     else if (gender === "1" && result < 0.8) return "Low Health Risks";
     else if (gender === "1" && result > 0.95) return "High Health Risks";
     else if (gender === "1" && result > 0.95) return "Low Health Risks";
-    else return "Valid Inputs";
+    else return "Enter Valid Inputs";
   }
 
   return (
     <div className="tool-container">
+      <div className="tool-tab-content">
+        <p>
+          Waist Hip Ratio indicates your body shape, which indicates the
+          potential health risks.
+        </p>
+      </div>
       <form className="tool-form">
-        <div className="user-input-entry-div">
-          <label className="user-input-label">Gender</label>
-          <div className="gender-div">
-            <label className="user-input-label">Female</label>
+        <div className="bmr-div">
+          <div className="user-input-entry-div">
+            <label className="user-input-label">Gender</label>
+            <div className="gender-div">
+              <label className="user-input-label">Female</label>
+              <input
+                type="radio"
+                className="user-input-radio-btn"
+                name="gender"
+                value="1"
+                checked={gender}
+                onChange={(e) => setGender(e.target.value)}
+              />
+              <label className="user-input-label">Male</label>
+              <input
+                type="radio"
+                className="user-input-radio-btn"
+                name="gender"
+                value="2"
+                onChange={(e) => setGender(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="user-input-entry-div">
+            <label className="user-input-label">Waist (cm)</label>
             <input
-              type="radio"
-              className="GenderF"
-              name="gender"
-              value="1"
-              checked={gender}
-              onChange={(e) => setGender(e.target.value)}
+              className="user-input"
+              type="number"
+              placeholder="Waist Circumference in cm"
+              min="100"
+              max="300"
+              value={waist}
+              onChange={(e) => setWaist(e.target.value)}
             />
-            <label className="user-input-label">Male</label>
+          </div>
+          <div className="user-input-entry-div">
+            <label className="user-input-label">Hip (cm)</label>
             <input
-              type="radio"
-              className="GenderM"
-              name="gender"
-              value="2"
-              onChange={(e) => setGender(e.target.value)}
+              className="user-input"
+              type="number"
+              placeholder="Hip Circumference in cm"
+              min="1"
+              max="300"
+              value={hip}
+              onChange={(e) => setHip(e.target.value)}
             />
           </div>
         </div>
-        <div className="user-input-entry-div">
-          <label className="user-input-label">Waist Circumference (cm)</label>
-          <input
-            className="user-input"
-            type="number"
-            placeholder="Height in cm"
-            min="100"
-            max="300"
-            value={waist}
-            onChange={(e) => setWaist(e.target.value)}
-          />
-        </div>
-        <div className="user-input-entry-div">
-          <label className="user-input-label">Hip Circumference (cm)</label>
-          <input
-            className="user-input"
-            type="number"
-            placeholder="Weight in kg"
-            min="1"
-            max="300"
-            value={hip}
-            onChange={(e) => setHip(e.target.value)}
-          />
-        </div>
         <div className="calculation-div">
           <button className="btn-new" type="button" onClick={calculateBMI}>
-            Calculate BMI
+            Calculate Ratio
           </button>
         </div>
         {result && (
           <div className="result-div">
-            <p>Your Waist Hip ratio is: {result} </p>
+            <p>
+              {result == !NaN ? (
+                <p>Your Waist Hip ratio is : {result}</p>
+              ) : (
+                <p>Input Fileds are Empty</p>
+              )}{" "}
+            </p>
             <p>{status}</p>
           </div>
         )}
