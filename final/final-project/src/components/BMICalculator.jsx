@@ -2,11 +2,9 @@ import React from 'react';
 import { useState } from "react";
 
 function BMICalculator() {
-    const [height, setHeight] = useState("");
+  const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
-
-  const [bmiResult, setBmiResult] = useState(null);
-
+  const [bmiResult, setBmiResult] = useState("");
   const [status, setStatus] = useState("");
 
   function calculateBMI() {
@@ -18,8 +16,7 @@ function BMICalculator() {
     setStatus(bmiStatus);
 
     setHeight("");
-    setWeight("");
-    
+    setWeight(""); 
   }
 
   function getStatus(bmi) {
@@ -36,15 +33,17 @@ function BMICalculator() {
         <div className="user-input-entry-div">
           <label
             className="user-input-label"
-            for="height"
+         
           >
-            Height
+            Height (cm)
           </label>
           <input
             className="user-input"
             id="Height "
             type="number"
             placeholder="Height in cm"
+            min="100"
+            max="300"
             value={height}
             onChange={(e) => setHeight(e.target.value)}
           />
@@ -52,15 +51,17 @@ function BMICalculator() {
         <div className="user-input-entry-div">
           <label
             className="user-input-label"
-            for="weight"
+          
           >
-            Weight
+            Weight (kg)
           </label>
           <input
             className="user-input"
             id="Weight"
             type="number"
             placeholder="Weight in kg"
+            min="1"
+            max="300"
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
           />

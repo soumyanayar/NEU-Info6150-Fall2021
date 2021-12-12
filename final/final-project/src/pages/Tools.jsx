@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BMICalculator from "../components/BMICalculator";
-
+import CalorieConsumption from "../components/CalorieConsumption"
 function Tools() {
   const [toggleTabs, setToggleTabs] = useState(1);
 
@@ -41,7 +41,7 @@ function Tools() {
         <div
           className={toggleTabs === 2 ? "tools-content  current-tools-content" : "tools-content"}
         >
-          jcigidfgjifkd
+         <CalorieConsumption></CalorieConsumption>
         </div>
 
         <div
