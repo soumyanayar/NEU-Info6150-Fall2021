@@ -101,6 +101,13 @@ function WaistHipRatio() {
           </div>
         )}
       </form>
+      <div className="tool-tab-content">
+        <p>
+          In order to calculate the right hip and waist ratio, measurement of
+          hip and waist must be taken from narrowest and widest points
+          respectively
+        </p>
+      </div>
     </div>
   );
 }

@@ -77,6 +77,12 @@ function BMICalculator() {
           </div>
         )}
       </form>
+      <div className="tool-tab-content">
+        <p>
+          Studies have shown that a BMI of 25 or more is associated with an
+          increased health risk
+        </p>
+      </div>
     </div>
   );
 }

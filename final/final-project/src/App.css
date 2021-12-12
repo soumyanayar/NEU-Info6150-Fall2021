@@ -495,6 +495,8 @@ label{
 .tool-container{
   display: flex;
   flex-direction: column;
+  width:auto;
+  height: auto;
 }
 
 .tool-tab-content{
@@ -532,13 +534,10 @@ margin-bottom: 0.5rem;
   padding:0.5rem;
   margin:0.5rem;
 }
-/* .user-input-radio-btn{
-  display: flex;
-  flex-direction: row;
-} */
+
 .btn-new{
   margin:1rem;
-  margin-left: 2rem;
+  margin-left: 1.5rem;
 }
 .result-div{
   background:rgb(165, 241, 162);
