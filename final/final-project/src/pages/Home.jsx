@@ -1,12 +1,42 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 //import FoodList from '../components/FoodList'
-import SearchForm from "../components/SearchForm";
 import "../App.css";
 import env from "react-dotenv";
+import FoodItem from "../components/FoodItem";
 
 const Home = () => {
+  const [recipe, setRecipe] = useState([]);
+  const [query, setQuery] = useState("");
+  let recipeStore;
+
+  const getRecipes = async () => {
+    const response = await fetch(
+      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
+    );
+    recipeStore = await response.json();
+    if (
+      recipeStore.hits.length > 0 &&
+      !recipeStore.hits[0].recipe.label.includes(query)
+    ) {
+      setRecipe(recipeStore.hits.slice(1));
+    } else {
+      setRecipe(recipeStore.hits);
+    }
+  };
+
+  const searchRecipes = (e) => {
+    e.preventDefault();
+    getRecipes();
+  };
+
+  useEffect(() => {
+    getRecipes();
+  }, []);
+
   return (
-    <div>
+    <section className="recipe-search">
       <div className="introduction">
         <h2 className="introduction-title"> Introduction </h2>
         <p>
@@ -21,8 +51,32 @@ const Home = () => {
           lead to positive permanent change and better health.
         </p>
       </div>
-      <SearchForm />
-    </div>
+      <form className="search-form" onSubmit={searchRecipes}>
+        <div className="form-control">
+          <input
+            className="search-input"
+            type="text"
+            onChange={(e) => {
+              setQuery(e.target.value);
+            }}
+          />
+          <button type="submit" className="btn">
+            Search
+          </button>
+        </div>
+      </form>
+      <div>
+        {recipe.map((item) => {
+          return (
+            <div key={item.recipe.uri}>
+              <Link to={`/nutrients/${item.recipe.uri.split("_")[1]}`}>
+                {item.recipe.label}
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 

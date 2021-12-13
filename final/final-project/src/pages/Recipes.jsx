@@ -1,7 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Recipe from "../components/Recipe";
-import Loading from "../components/Loading";
 import env from "react-dotenv";
 
 const Recipes = () => {
@@ -36,7 +35,6 @@ const Recipes = () => {
             type="text"
             onChange={(e) => {
               setQuery(e.target.value);
-              // console.log(e.target.value);
             }}
           />
           <button type="submit" className="btn">
