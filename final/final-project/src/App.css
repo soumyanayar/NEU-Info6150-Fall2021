@@ -2,8 +2,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: 222;
-  background: #f1f5f8;
-  /* line-height: 1.4; */
+  line-height: 1.4;
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
@@ -17,157 +16,95 @@ h5,
 h6, .section-title {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
   Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  margin-bottom: 1.25rem;
-  margin-top:0.5rem;
-  /* letter-spacing: 0.3rem; */
+  margin-bottom: 1.3rem;
+  margin-top:1rem;
+  color: #476a2e;
   text-align: center;
+  text-transform: uppercase;
 }
-body {
+
+/* /////////--------  Navbar ---------/////////// */
+
+.navbar {
+  display: flex;
+  flex-direction: column;
   background: #fff;
-  color: green;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-/*   Navbar */
-
-.app h1 {
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 0;
-}
- .header {
-display: flex;
-flex-direction: column;
-
-/* background-color: rgb(143, 194, 194); */
-width:100%;
-} 
-
-.title-container{
+  height: 6.5rem;
   display: flex;
-  flex-direction: corowlumn;
-  margin:0;
-  padding:0; 
-  width:100%;
-  background-color:black;
+  align-items: center;
+  border-bottom: 2px solid #fff;
+  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
 }
-
-h3{
-  margin-top:1.5rem;
-  margin-left:0;
-  letter-spacing: 0.1rem;;
+.nav-title{
+  display: flex;
+  height:2rem;
 }
-
+.title-text{
+  margin-top: 0.5rem;
+  color: orange;
+  letter-spacing: 1px;
+}
+.nav-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin: 0.5rem;
+   margin-top:1rem;
+}
 .logo{
-  margin-top:0.6rem;
-  margin-right: 0;
-  width: 1rem;
-  height:1rem;
+  width:5rem;
+  height:3rem;
 }
-
-.tabs-div {
+.nav-links {
   display: flex;
+  align-items: center;
+  padding:0;
 }
-
-.tabs {
-  padding: 1rem;
-  text-align: center;
-  width:100%;
-  background: black;
-  color:green;
+.nav-links  li{
+  list-style-type: none;
+}
+.nav-links a {
+  color:#476a2e;
+  display: inline-block;
   font-weight: bold;
-  letter-spacing: 0.1rem;
-  cursor: pointer;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.274);
-  box-shadow: 10px 5px 5px grey;
-  box-sizing: content-box;
-  position: relative;
-  outline: none; 
-
+  margin-right: 0.5rem;
+  margin-left: 0.25rem;
+  font-weight: 400 bold;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  padding: 0.1rem;
+  transition:all 0.2s linear;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  color: #3c4985;
+  
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.nav-links a:active{
+  color:#476a2e;
 }
 
-.tabs:focus {
-  border-top: 0.2rem solid green;
-}   
-.tabs:hover {
-  transition: transform 250ms linear;
-  background-color: grey;
-  color: black;
-}  
-
-.current-tab {
-  border-bottom: 1px solid transparent;
-  border-top: 1px solid Green;
-  background-color: white;
-}
-
-.current-tab::after {
-  display: block;
-  position: absolute;
-  top: -5px;
-  left: 50%;
-
-  height: 5px;
-}
-
-button {
-  border: none;
-}
-
-.content-tabs {
-  flex-grow: 1;
-}
-
-.content {
-  background: white;
-  padding: 1rem;
-  /* width:100%; */
-  height: 100%;
-  display: none;
-}
-
-.content h2 {
-  padding: 0px 0 5px 0px;
-  margin: 0.5rem ;
-}
-.content hr {
-  width: 100px;
-  height: 100%;
-  background: #222;
-  margin-bottom: 5px;
-}
-.content p {
-  width: 100%;
-  height: 100%;
-  color: black;
-}
-.current-content {
-  display: block;
-}
-
-@media only screen and (min-width: 500px) {
-  .header {
-    display:flex;
+@media screen and (min-width: 576px) {
+  .navbar {
+    display: flex;
     flex-direction: row;
   }
-
-  .tabs{
-  width:100%; 
-  padding: 0.5rem;
-  text-align: center;
-  background: black;
-  color:green;
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  cursor: pointer;
-
-  box-sizing: content-box;
-  position: relative; 
+  .nav-title{
+    height:3rem;
   }
-  .current-tab {
-    background: white;
-    border-bottom: 1px solid transparent;
-    border-top: 2px solid Green;
+  .nav-center{
+    margin:auto;
+  }
+  .nav-links a:hover {
+    background-color: #476a2e;
+    border: 2px solid #476a2e;
+    border-radius: 0.25rem;
+    color:white;
+    text-underline-offset: on;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 }
 
@@ -182,7 +119,8 @@ button {
   text-align: center;
 }
 
-/* ///////    Forms  //////*/
+/* /////////--------  Forms ---------///////////*/
+
 .form-control {
   display:flex;
   flex-direction: row;
@@ -564,37 +502,43 @@ margin-bottom: 0.5rem;
 
 
 /* ----------------------------  */
-.navbar {
-  background: #fff;;
-  height: 5rem;
+
+
+/* Carousel  */
+.carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+}
+
+.carousel__slide-container { 
+  position: relative;
+
   display: flex;
-  align-items: center;
-  border-bottom: 2px solid #fff;;
-  box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  flex-direction: row;
+  justify-content: center;
+
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
 }
-.nav-center {
+
+.carousel__slide { 
+  position: absolute;
+  visibility: hidden;
+}
+
+.carousel__slide--active { 
+  position: static;
+  visibility: visible;
+}
+
+.carousel__img { 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 85vw;
-  margin: 0 auto;
-  max-width: 40rem;;
+  flex-direction: row;
 }
-.nav-links {
-  display: flex;
-  align-items: center;
-}
-.nav-links a {
-  text-transform: capitalize;
-  display: inline-block;
-  font-weight: bold;
-  margin-right: 0.5rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 1.2rem;
-  padding: 0.25rem 0.5rem;
-  transition:all 0.3s linear;
-}
-.nav-links a:hover {
-  color: #fff;
+
+.carousel__control { 
+  min-width: 54px;
+  min-height: 54px;
 }

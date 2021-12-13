@@ -18,7 +18,41 @@ const FoodItem = () => {
     getNutrients();
   }, []);
 
-  return <div>{nutrients && <h1>{nutrients.recipe.label}</h1>}</div>;
+  return (
+    <div>
+      {nutrients && (
+        <div>
+          <h1>{nutrients.recipe.label}</h1>
+          <img src={nutrients.recipe.image} alt="name"></img>
+          <div>
+            {Object.keys(nutrients.recipe.totalNutrients).map((keyName, i) => (
+              <li key={i}>
+                <span>
+                  {nutrients.recipe.totalNutrients[keyName].label}
+                  {"    "}
+                  {nutrients.recipe.totalNutrients[keyName].quantity.toFixed(2)}
+                  {nutrients.recipe.totalNutrients[keyName].unit}
+                </span>
+              </li>
+            ))}
+          </div>
+          <div>
+            <h4>Daily Value</h4>
+            {Object.keys(nutrients.recipe.totalDaily).map((keyName, i) => (
+              <li key={i}>
+                <span>
+                  {nutrients.recipe.totalDaily[keyName].label}
+                  {"    "}
+                  {nutrients.recipe.totalDaily[keyName].quantity.toFixed(2)}
+                  {nutrients.recipe.totalDaily[keyName].unit}
+                </span>
+              </li>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default FoodItem;

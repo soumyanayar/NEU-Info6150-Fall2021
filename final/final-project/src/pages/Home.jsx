@@ -4,9 +4,23 @@ import { Link } from "react-router-dom";
 //import FoodList from '../components/FoodList'
 import "../App.css";
 import env from "react-dotenv";
-import FoodItem from "../components/FoodItem";
+import Carousel from "../components/Carousel";
 
 const Home = () => {
+  const slides = [
+    {
+      src: "https://placekitten.com/150/150/?image=1",
+      alt: "you should have better alt text",
+    },
+    {
+      src: "https://placekitten.com/150/150/?image=2",
+      alt: "that actually describes the image",
+    },
+    {
+      src: "https://placekitten.com/150/150/?image=3",
+      alt: "because useless text like this will lose points",
+    },
+  ];
   const [recipe, setRecipe] = useState([]);
   const [query, setQuery] = useState("");
   let recipeStore;
@@ -16,6 +30,9 @@ const Home = () => {
       `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
     );
     recipeStore = await response.json();
+    // if (recipeStore.hit.length <= 0 && query !== "") {
+    //   console.log("error");
+    // }
     if (
       recipeStore.hits.length > 0 &&
       !recipeStore.hits[0].recipe.label.includes(query)
@@ -76,6 +93,9 @@ const Home = () => {
           );
         })}
       </div>
+      {/* <div className="app">
+        <Carousel slides={slides} />
+      </div> */}
     </section>
   );
 };

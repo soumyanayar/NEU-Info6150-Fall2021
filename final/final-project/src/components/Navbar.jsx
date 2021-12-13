@@ -5,8 +5,11 @@ import logo from "../logo.png";
 const Navbar = () => {
   return (
     <nav className="navbar">
+      <div className="nav-title">
+        <img className="logo" src={logo} alt="food"></img>
+        <h2 className="title-text">CALORIE EXPERT</h2>
+      </div>
       <div className="nav-center">
-        <img src={logo} alt="food"></img>
         <ul className="nav-links">
           <li>
             <Link to="/">HOME</Link>
