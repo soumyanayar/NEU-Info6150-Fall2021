@@ -18,7 +18,7 @@ h6, .section-title {
   Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-bottom: 1.3rem;
   margin-top:1rem;
-  color: #476a2e;
+  color: #077210;
   text-align: center;
   text-transform: uppercase;
 }
@@ -41,7 +41,7 @@ h6, .section-title {
 }
 .title-text{
   margin-top: 0.5rem;
-  color: orange;
+  color: #476a2e;
   letter-spacing: 1px;
 }
 .nav-center {
@@ -77,13 +77,13 @@ h6, .section-title {
   text-decoration: none;
 }
 .nav-links a:hover {
-  color: #3c4985;
+  color: #43cfcf;
   
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 .nav-links a:active{
-  color:#476a2e;
+  color:#43cfcf
 }
 
 @media screen and (min-width: 576px) {
@@ -106,6 +106,7 @@ h6, .section-title {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+  
 }
 
 /* Footer */
@@ -118,7 +119,46 @@ h6, .section-title {
   color: white;
   text-align: center;
 }
+/* /////////--------  Home ---------///////////*/
+.introduction{
+  margin: 1rem;
+  font-weight: 350;
+  letter-spacing: 1px;
+}
+.search-items-div{
+  border-color: transparent;
+  background: #f1f5f8;
+  border-radius: 0.25rem;
+  margin-left:25%;
+  margin-right: 20%;
+}
 
+.search-items-div a{
+  display: block;
+  width:100vw;
+  font:inherit;
+
+  text-decoration: none;
+  margin-bottom: 0.25rem;
+  color:black;
+  border-radius: 0.25rem;
+  width:auto;
+  cursor: pointer;
+}
+
+.search-items-div a:hover{
+  background-color: black;
+  color:white;
+}
+
+@media screen and (min-width: 576px) {
+  .search-items-div{
+    border-color: transparent;
+    background: #f1f5f8;
+    margin-left:30%;
+    margin-right: 30%;
+  }
+}
 /* /////////--------  Forms ---------///////////*/
 
 .form-control {
@@ -131,7 +171,7 @@ h6, .section-title {
   margin: auto;
   max-width: 40rem;
   background: #fff;
-  padding: 1rem;
+  padding: 0.5rem;
   text-transform: capitalize;
   /* border-radius: 0.25rem;
   box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5); */

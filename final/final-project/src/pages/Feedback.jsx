@@ -47,7 +47,7 @@ const Feedback = () => {
 
   return (
     <div className="feedback-container">
-      <h1 className="section-title">Your Feedback Is Valuable</h1>
+      <h2 className="section-title">Your Feedback Is Valuable</h2>
       <div className="introduction">
         <p>
           Calorie Visualiser is developed by young web designers as an academic

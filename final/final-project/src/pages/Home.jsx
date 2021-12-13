@@ -62,10 +62,7 @@ const Home = () => {
           Our services designed to educate, motivate and inspire lifelong weight
           control.To achieve this, we have determined that everything we do
           should be science-based, and equally important, our products and
-          programs must produce the results our members and visitors desire. Our
-          web-based and clinical tools and software include reliable information
-          in a format that is useful every day. We believe this approach will
-          lead to positive permanent change and better health.
+          programs must produce the results our members and visitors desire.
         </p>
       </div>
       <form className="search-form" onSubmit={searchRecipes}>
@@ -85,17 +82,20 @@ const Home = () => {
       <div>
         {recipe.map((item) => {
           return (
-            <div key={item.recipe.uri}>
-              <Link to={`/nutrients/${item.recipe.uri.split("_")[1]}`}>
+            <div className="search-items-div" key={item.recipe.uri}>
+              <Link
+                className="search-item-list"
+                to={`/nutrients/${item.recipe.uri.split("_")[1]}`}
+              >
                 {item.recipe.label}
               </Link>
             </div>
           );
         })}
       </div>
-      {/* <div className="app">
+      <div className="app">
         <Carousel slides={slides} />
-      </div> */}
+      </div>
     </section>
   );
 };

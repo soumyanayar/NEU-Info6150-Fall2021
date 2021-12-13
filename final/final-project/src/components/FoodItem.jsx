@@ -21,8 +21,8 @@ const FoodItem = () => {
   return (
     <div>
       {nutrients && (
-        <div>
-          <h1>{nutrients.recipe.label}</h1>
+        <div className="food-container">
+          <h3>{nutrients.recipe.label}</h3>
           <img src={nutrients.recipe.image} alt="name"></img>
           <div>
             {Object.keys(nutrients.recipe.totalNutrients).map((keyName, i) => (
