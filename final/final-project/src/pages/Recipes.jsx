@@ -2,18 +2,26 @@ import React from "react";
 import { useState, useEffect } from "react";
 import Recipe from "../components/Recipe";
 import env from "react-dotenv";
+import Loading from "../components/Loading";
 
 const Recipes = () => {
   const [recipe, setRecipe] = useState([]);
   const [query, setQuery] = useState("oats");
+  const [loading, setLoading] = useState(false);
   let recipeStore;
 
   const getRecipes = async () => {
-    const response = await fetch(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
-    );
-    recipeStore = await response.json();
-    setRecipe(recipeStore.hits);
+    setLoading(true);
+    try {
+      const response = await fetch(
+        `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
+      );
+      recipeStore = await response.json();
+      setRecipe(recipeStore.hits);
+      setLoading(false);
+    } catch (error) {
+      setLoading(false);
+    }
   };
 
   const searchRecipes = (e) => {
@@ -25,6 +33,9 @@ const Recipes = () => {
     getRecipes();
   }, [setQuery]);
 
+  if (loading) {
+    return <Loading />;
+  }
   return (
     <section className="recipe-search">
       <h2 className="section-title">Find Your Favourite Food Recipe</h2>

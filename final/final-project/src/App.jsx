@@ -8,6 +8,7 @@ import Tools from "./pages/Tools";
 import Feedback from "./pages/Feedback";
 import Nutrition from "./components/Nutrition";
 import FoodItem from "./components/FoodItem";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           <Feedback />
         </Route>
         <Route path="/nutrients/:id" children={<FoodItem />}></Route>
+        <Route path="*">
+          <Error />
+        </Route>
       </Switch>
     </Router>
   );
