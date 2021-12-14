@@ -38,7 +38,7 @@ function Carousel({ slides, label }) {
         onClick={goToPrev}
         aria-label="Prev"
       >
-        &lt;
+        &larr;
       </button>
       <div className="carousel__content">
         <ul className="carousel__slide-container">{slideList}</ul>
@@ -48,7 +48,7 @@ function Carousel({ slides, label }) {
         onClick={goToNext}
         aria-label="Next"
       >
-        &gt;
+        &rarr;
       </button>
     </div>
   );

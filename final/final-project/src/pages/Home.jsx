@@ -9,16 +9,24 @@ import Carousel from "../components/Carousel";
 const Home = () => {
   const slides = [
     {
-      src: "https://placekitten.com/150/150/?image=1",
-      alt: "you should have better alt text",
+      src: "https://fortmyersoliveoil.com/wp-content/uploads/2019/01/chicken-lettuce-wraps_thecozyapron_1.jpg",
+      alt: "image1",
     },
     {
-      src: "https://placekitten.com/150/150/?image=2",
-      alt: "that actually describes the image",
+      src: "https://fortmyersoliveoil.com/wp-content/uploads/2020/02/download-9.jpg",
+      alt: "image2",
     },
     {
-      src: "https://placekitten.com/150/150/?image=3",
-      alt: "because useless text like this will lose points",
+      src: "https://fortmyersoliveoil.com/wp-content/uploads/2020/02/download-21.jpg",
+      alt: "image3",
+    },
+    {
+      src: "https://fortmyersoliveoil.com/wp-content/uploads/2019/10/green-beans-almondine-1-29-600x900-e1571169761496.jpg",
+      alt: "image4",
+    },
+    {
+      src: "https://fortmyersoliveoil.com/wp-content/uploads/2019/09/Classic-Mimosa-f-1.jpg",
+      alt: "image5",
     },
   ];
   const [recipe, setRecipe] = useState([]);
