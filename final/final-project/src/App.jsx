@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import Recipes from "./pages/Recipes";
 import Tools from "./pages/Tools";
 import Feedback from "./pages/Feedback";
-import Nutrition from "./components/Nutrition";
 import FoodItem from "./components/FoodItem";
 import Error from "./pages/Error";
 

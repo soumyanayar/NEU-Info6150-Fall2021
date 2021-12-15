@@ -8,7 +8,8 @@ function WaistHipRatio() {
   const [gender, setGender] = useState("1");
   const [status, setStatus] = useState("");
 
-  function calculateBMI() {
+  function calculateBMI(e) {
+    e.preventDefault();
     let ratio = Number(waist / hip).toFixed(2);
     setResult(ratio);
 
@@ -34,7 +35,7 @@ function WaistHipRatio() {
           potential health risks.
         </p>
       </div>
-      <form className="tool-form">
+      <form className="tool-form" onSubmit={calculateBMI}>
         <div className="bmr-div">
           <div className="user-input-entry-div">
             <label className="user-input-label">Gender</label>
@@ -63,7 +64,7 @@ function WaistHipRatio() {
             <input
               className="user-input"
               type="number"
-              placeholder="Waist Circumference in cm"
+              placeholder="cm"
               min="100"
               max="300"
               value={waist}
@@ -75,7 +76,7 @@ function WaistHipRatio() {
             <input
               className="user-input"
               type="number"
-              placeholder="Hip Circumference in cm"
+              placeholder="cm"
               min="1"
               max="300"
               value={hip}
@@ -84,19 +85,14 @@ function WaistHipRatio() {
           </div>
         </div>
         <div className="calculation-div">
-          <button className="btn-new" type="button" onClick={calculateBMI}>
+          <button className="btn-new" type="submit">
             Calculate Ratio
           </button>
         </div>
         {result && (
           <div className="result-div">
-            <p>
-              {result == !NaN ? (
-                <p>Your Waist Hip ratio is : {result}</p>
-              ) : (
-                <p>Input Fileds are Empty</p>
-              )}{" "}
-            </p>
+            <p>Your Waist Hip ratio is : {result}</p>
+            <p>Input Fileds are Empty</p>
             <p>{status}</p>
           </div>
         )}

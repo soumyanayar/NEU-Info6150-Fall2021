@@ -171,7 +171,6 @@ h6, .section-title {
   width: 100vw; 
   margin: auto;
   max-width: 40rem;
-  background: #fff;
   padding: 0.5rem;
   text-transform: capitalize;
 }
@@ -182,13 +181,13 @@ h6, .section-title {
   width:100%;
   border: none;
   border-color: transparent;
-  background: #f1f5f8;
+  background: white;
   border-radius: 0.25rem;
   padding: 0.45rem 0.8rem;
   font-size: 1.2rem;
 }
 
-.btn, .btn-new {
+.btn {
 margin-right: 20%;
 letter-spacing: 0.1rem;
 color:#476a2e;
@@ -204,10 +203,15 @@ display: inline-block;
 text-decoration: none;
 }
 
-.btn:hover {
-background: #476a2e;
+ .btn:hover {
+background: #476a2e;      
 color: #fff;
 }
+
+.btn-new :hover {
+  background: #476a2e;
+  color: #fff;
+  }
 
 @media screen and (min-width: 576px) {
   .form-control input {
@@ -342,7 +346,7 @@ color: #fff;
   position: relative;
   background: rgb(198, 238, 179);
   margin: 3rem auto 0;
-  word-break: break-all;
+  word-break: break-word;
   border: 1px solid rgba(0, 0, 0, 0.274);
   box-shadow: 1rem solid black;
 }
@@ -357,7 +361,7 @@ color: #fff;
   position: relative;
   outline: none;
   letter-spacing: 0.1rem;
-  color:#476a2e;
+  color:#080808;
   border-bottom: 0.1rem solid #476a2e;
   padding: 0.3rem 0.6rem;
   transition: all 0.3s linear;
@@ -390,14 +394,12 @@ color: #fff;
   height: 5px;
 }
 
-
 .content-tabs-div {
   flex-grow: 1;
 }
 
 .tools-content {
   background: white;
-  /* padding: 5rem; */
   display: none;
   height: auto;
 }
@@ -428,6 +430,13 @@ color: #fff;
     height: 500px;
     margin: 3rem auto 0;
   }
+  .tool-sub-container{
+    display: flex;
+  }
+  .bmi-status-div{
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 
@@ -437,7 +446,15 @@ color: #fff;
   flex-direction: column;
   width:auto;
   height: auto;
+  background-color: #f1f5f8;
   
+}
+
+.bmi-status-div{
+  display: flex;
+  flex-direction: column;
+  margin:1rem;
+  background-color: #f1f5f8;
 }
 
 .tool-tab-content{
@@ -445,10 +462,16 @@ color: #fff;
   padding: 0.5rem;
   background-color: #f1f5f8;
 }
-
+p, span{
+  font-weight: 350;
+  margin:1rem;
+  letter-spacing: 1.2px;
+  line-width:1.2px;
+}
 .tool-form{
   display: block;
   margin:auto;
+  background-color: #f1f5f8;
 }
 
 .tool-title{
@@ -469,12 +492,10 @@ margin-bottom: 0.5rem;
 
 .user-input{
   width:auto;
-  padding:0.5rem;
 }
 
 .btn-new{
   margin:1rem;
-  margin-left: 1.5rem;
 }
 .result-div{
   background:rgb(165, 241, 162);
@@ -490,6 +511,24 @@ margin-bottom: 0.5rem;
   }
   to {
     transform: scale(1);
+  }
+}
+@media only screen and (min-width: 500px) {
+  .bmi-status-div{
+    display: flex;
+    flex-direction: column;
+    margin-right:10%;
+    margin-left: 20%;
+  }
+  .tool-form{
+    margin-right: 1;
+    padding:1rem;
+    background-color: rgb(221, 234, 243);
+  }
+  .user-input{
+    width:auto;
+    padding:0.5rem;
+    background-color: white;
   }
 }
 
@@ -533,11 +572,8 @@ border-radius: 0.1rem;
     width: 80vw; 
     margin: auto;
     max-width: 40rem;
-    background: #fff;
     padding: 1rem;
     text-transform: capitalize;
-    /* border-radius: 0.25rem;
-    box-shadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5); */
   }
 }
 
@@ -608,8 +644,7 @@ label{
 }
 .faq-div{
   width: 100%;
-  margin: auto;
-  border: 1px solid #dfdfdf;
+  margin:auto;
 }
 
 .feedback-container {
@@ -617,35 +652,75 @@ label{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  margin: auto;
-  border: 1px solid #dfdfdf;
-  /* height:130vw; */
+  padding:1rem;
 }
+
 .user-input{
   display: block;
-  border: none;
-  border-color: transparent;
-  background: #f1f5f8;
+  border-color: 0.1rem solid grey;
+  background: white;
   border-radius: 0.25rem;
   padding: 0.45rem 0.8rem;
   font-size: 1.2rem;
 }
-.label{
-  font-weight: bold;
+label{
+  font-weight: 350;
+  margin-right:1rem;
 }
 
-/* TOOL */
+.error-msg{
+  color:red;
+  margin-top: 0;
+}
+.hide-form{
+  display:none;
+}
+.show-text{
+  display: block;
+  padding: 5rem;
+  border:none;
+  color:rgb(10, 90, 155);
+  font-weight: 350 bold;
+  font-size:1.2rem;
+  background-color: transparent;
+  width:95%;
+}
+.hide-text{
+  display: none;
+}
 
-
-/* @media screen and (min-width: 576px) {
-  .tool-container{
-    height:120vw;
+.btn-new{
+  margin-right: 20%;
+  letter-spacing: 0.1rem;
+  color:#476a2e;
+  border: 2px solid #476a2e;
+  padding: 0.3rem 0.6rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+  text-decoration: none;
+  margin-left: 40%;
   }
-} */
+  .btn-new :hover {
+    background: #476a2e;
+    color: #fff;
+  }
+@media screen and (min-width: 576px) {
+  .faq-div{
+    margin-left: 2rem;
+  }
+  .field{
+   margin-left: 30%;
+  }
+}
 
 
-/* ----------------------------  */
+
+/* -------------  Loading ---------------  */
 
 .loader{
   background: transparent;

@@ -49,7 +49,7 @@ const FoodItem = () => {
                     <span className="food-nutrition-span-main">
                       <span className="food-nutrition-span-label">
                         {nutrients.recipe.totalNutrients[keyName].label}
-                        {"   :  "}
+                        {":"}
                       </span>
                       <span className="food-nutrition-span-qty">
                         {nutrients.recipe.totalNutrients[
@@ -69,7 +69,7 @@ const FoodItem = () => {
                   <span className="food-nutrition-span-main">
                     <span className="food-nutrition-span-label">
                       {nutrients.recipe.totalDaily[keyName].label}
-                      {"  :  "}
+                      {" : "}
                     </span>
                     <span className="food-nutrition-span-qty">
                       {nutrients.recipe.totalDaily[keyName].quantity.toFixed(2)}

@@ -6,11 +6,10 @@ function BMICalculator() {
   const [weight, setWeight] = useState("");
   const [bmiResult, setBmiResult] = useState("");
   const [status, setStatus] = useState("");
-  const [error, setError] = useState(false);
 
-  function calculateBMI() {
+  function calculateBMI(e) {
+    e.preventDefault();
     if (weight === "" || height === "" || !setBmiResult) {
-      setError(true);
     }
     let bmi = Number(weight / (height / 100) ** 2).toFixed(2);
     setBmiResult(bmi);
@@ -18,7 +17,6 @@ function BMICalculator() {
     let bmiStatus = getStatus(bmi);
 
     setStatus(bmiStatus);
-    setError(false);
     setHeight("");
     setWeight("");
   }
@@ -38,45 +36,62 @@ function BMICalculator() {
           a measure of body weight based on your hight and weight
         </p>
       </div>
-      <form className="tool-form">
-        <div className="user-input-entry-div">
-          <label className="user-input-label">Height (cm)</label>
-          <input
-            className="user-input"
-            id="Height "
-            type="number"
-            placeholder="Height in cm"
-            min="100"
-            max="300"
-            value={height}
-            onChange={(e) => setHeight(e.target.value)}
-          />
-        </div>
-        <div className="user-input-entry-div">
-          <label className="user-input-label">Weight (kg)</label>
-          <input
-            className="user-input"
-            id="Weight"
-            type="number"
-            placeholder="Weight in kg"
-            min="1"
-            max="300"
-            value={weight}
-            onChange={(e) => setWeight(e.target.value)}
-          />
-        </div>
-        <div className="calculation-div">
-          <button className="btn-new" type="button" onClick={calculateBMI}>
-            Calculate BMI
-          </button>
-        </div>
-        {bmiResult && (
-          <div className="result-div">
-            <p>Your BMI is: {bmiResult} </p>
-            <p>You are currently: {status}</p>
+      <div className="tool-sub-container">
+        <form className="tool-form" onSubmit={calculateBMI}>
+          <div className="user-input-entry-div">
+            <label className="user-input-label">Height (cm)</label>
+            <input
+              className="user-input"
+              id="Height "
+              type="number"
+              placeholder="cm"
+              min="100"
+              max="300"
+              value={height}
+              onChange={(e) => setHeight(e.target.value)}
+            />
           </div>
-        )}
-      </form>
+          <div className="user-input-entry-div">
+            <label className="user-input-label">Weight (kg)</label>
+            <input
+              className="user-input"
+              id="Weight"
+              type="number"
+              placeholder="kg"
+              min="1"
+              max="300"
+              value={weight}
+              onChange={(e) => setWeight(e.target.value)}
+            />
+          </div>
+          <div className="calculation-div">
+            <button className="btn-new" type="submit">
+              Calculate BMI
+            </button>
+          </div>
+          {bmiResult && (
+            <div className="result-div">
+              <p>Your BMI is: {bmiResult} </p>
+              <p>You are currently: {status}</p>
+            </div>
+          )}
+        </form>
+        <div className="bmi-status-div">
+          <h4>Comapre Your Results</h4>
+          <span>
+            Below 18.5 : <span>Underweight</span>
+          </span>
+          <span>
+            18.5—24.9 : <span>Healthy</span>
+          </span>
+          <span>
+            25.0—29.9 : <span>Overweight</span>
+          </span>
+          <span>
+            Above 30 : <span>Obese</span>
+          </span>
+        </div>
+      </div>
       <div className="tool-tab-content">
         <p>
           Studies have shown that a BMI of 25 or more is associated with an

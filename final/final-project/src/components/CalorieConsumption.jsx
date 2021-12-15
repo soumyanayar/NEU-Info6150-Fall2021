@@ -8,7 +8,11 @@ const CalorieConsumption = () => {
   const [gender, setGender] = useState("1");
   const [activity, setActivity] = useState("1");
   const [caloriesToConsume, setCaloriesToConsume] = useState("");
-  const calculateCaloriesToConsume = () => {
+
+  const calculateCaloriesToConsume = (e) => {
+    e.preventDefault();
+    if (weight === "" || height === "" || age === "") {
+    }
     let bmr;
     if (gender === "1") {
       bmr = 447.593 + 9.247 * weight + 3.098 * height - 4.33 * age;
@@ -26,7 +30,7 @@ const CalorieConsumption = () => {
           weight and activity level
         </p>
       </div>
-      <form className="tool-form">
+      <form className="tool-form" onSubmit={calculateCaloriesToConsume}>
         <div className="bmr-div">
           <div className="user-input-entry-div">
             <label className="user-input-label">Gender</label>
@@ -55,6 +59,9 @@ const CalorieConsumption = () => {
             <input
               className="user-input"
               type="number"
+              placeholder="years"
+              min="1"
+              max="100"
               value={age}
               onChange={(e) => setAge(parseInt(e.target.value))}
             />
@@ -65,6 +72,9 @@ const CalorieConsumption = () => {
               className="user-input"
               id="Height "
               type="number"
+              placeholder="cm"
+              min="100"
+              max="300"
               value={height}
               onChange={(e) => setHeight(parseFloat(e.target.value))}
             />
@@ -75,6 +85,9 @@ const CalorieConsumption = () => {
               className="user-input"
               id="Weight "
               type="number"
+              placeholder="kg"
+              min="1"
+              max="300"
               value={weight}
               onChange={(e) => setWeight(parseFloat(e.target.value))}
             />
@@ -95,11 +108,7 @@ const CalorieConsumption = () => {
             </select>
           </div>
           <div className="calculation-div">
-            <button
-              className="btn-new"
-              type="button"
-              onClick={calculateCaloriesToConsume}
-            >
+            <button className="btn-new" type="submit">
               Calculate Calories
             </button>
             {caloriesToConsume && (
