@@ -7,7 +7,7 @@ import Recipes from "./pages/Recipes";
 import Tools from "./pages/Tools";
 import Feedback from "./pages/Feedback";
 import FoodItem from "./components/FoodItem";
-import Error from "./pages/Error";
+import SkipToMain from "./pages/SkipToMain";
 import Footer from "./components/Footer";
 import Privacy from "./pages/Privacy";
 
@@ -23,6 +23,11 @@ function App() {
     // </div>
 
     <Router>
+      <Switch>
+        <Route exact path="/">
+          <SkipToMain />
+        </Route>
+      </Switch>
       <Navbar />
       <Switch>
         <Route exact path="/">

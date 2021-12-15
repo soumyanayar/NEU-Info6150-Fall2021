@@ -833,3 +833,23 @@ label{
   color:black;
   text-underline-offset: on;
 }
+
+/*  ----- Skip to Main ---- */
+.skip-link-div{
+  margin:0;
+  padding: 0;
+}
+.skip-link {
+  position: absolute;
+  top: -3rem;
+  padding:0.1rem;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  background-color: rgb(241, 204, 204);
+}
+
+.skip-link:focus{
+  top:0;
+  outline: 3px solid green;
+}
