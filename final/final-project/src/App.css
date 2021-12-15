@@ -494,11 +494,26 @@ margin-bottom: 0.5rem;
   width:auto;
 }
 
-.btn-new{
-  margin:1rem;
+.tool-btn{
+  margin-right: 20%;
+  margin-left: 30%;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  color:#476a2e;
+  border: 2px solid #476a2e;
+  padding: 0.3rem 0.6rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+  text-decoration: none;
+ 
 }
 .result-div{
-  background:rgb(165, 241, 162);
+  background:rgb(147, 236, 236);
   animation: createBox .25s;
   width: auto; height: auto;
   font:1.2;
@@ -529,6 +544,9 @@ margin-bottom: 0.5rem;
     width:auto;
     padding:0.5rem;
     background-color: white;
+  }
+  .tool-btn{
+    margin-left:20%;
   }
 }
 
@@ -703,7 +721,7 @@ label{
   border-radius: 0.25rem;
   display: inline-block;
   text-decoration: none;
-  margin-left: 40%;
+  margin-left: 22%;
   }
   .btn-new :hover {
     background: #476a2e;
@@ -715,6 +733,9 @@ label{
   }
   .field{
    margin-left: 30%;
+  }
+  .btn-new{
+    margin-left: 40%;
   }
 }
 

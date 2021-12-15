@@ -108,7 +108,7 @@ const CalorieConsumption = () => {
             </select>
           </div>
           <div className="calculation-div">
-            <button className="btn-new" type="submit">
+            <button className="tool-btn" type="submit">
               Calculate Calories
             </button>
             {caloriesToConsume && (
