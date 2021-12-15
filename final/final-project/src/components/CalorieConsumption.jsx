@@ -105,7 +105,7 @@ const CalorieConsumption = () => {
               required
               onChange={(e) => setActivity(parseFloat(e.target.value))}
             >
-              <option value="">Select Activity Level</option>
+              <option value="">Select Actvity Level</option>
               <option value="1.2">Very little</option>
               <option value="1.375">Light Activity</option>
               <option value="1.55">Moderately Active</option>
