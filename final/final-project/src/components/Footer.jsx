@@ -5,7 +5,7 @@ function Footer() {
   return (
     <nav className="footer-navbar">
       <div className="footer-nav-center">
-        <Link to="/privacypolicy">Privacy Policy</Link>
+        <Link to="/privacypolicy">PRIVACY POLICY</Link>
       </div>
     </nav>
   );

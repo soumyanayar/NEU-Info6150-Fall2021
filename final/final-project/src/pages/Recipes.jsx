@@ -38,7 +38,9 @@ const Recipes = () => {
   }
   return (
     <section className="recipe-search">
-      <h2 className="section-title">Find Your Favourite Food Recipe</h2>
+      <h2 className="section-title">
+        Find Your Favourite Food Recipe's Ingredients
+      </h2>
       <form className="search-form" onSubmit={searchRecipes}>
         <div className="form-control">
           <input

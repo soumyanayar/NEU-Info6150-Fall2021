@@ -76,7 +76,7 @@ const Home = () => {
       <div className="introduction">
         <h2 className="introduction-title"> Introduction </h2>
         <p>
-          We are World's most trusted Food batabase. We analyse the food you
+          We are World's most trusted Food database. We analyse the food you
           entered and provide the most accurate nutritional value in the food.
           Our services designed to educate, motivate and inspire lifelong weight
           control.To achieve this, we have determined that everything we do

@@ -19,7 +19,7 @@ const CalorieConsumption = () => {
     } else {
       bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age;
     }
-    setCaloriesToConsume(bmr * activity);
+    setCaloriesToConsume((bmr * activity).toFixed(2));
   };
 
   return (

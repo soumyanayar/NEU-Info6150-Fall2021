@@ -33,7 +33,7 @@ function BMICalculator() {
       <div className="tool-tab-content">
         <p>
           This calculator provides you with your BMI(Body Mass Index), which is
-          a measure of body weight based on your hight and weight
+          a measure of body weight based on your height and weight
         </p>
       </div>
       <div className="tool-sub-container">

@@ -14,8 +14,8 @@ function Tools() {
       <h2 className="section-title">TOOLS AND CALCULATORS</h2>
       <div className="introduction">
         <p>
-          Try out the Calculators of Calorie Visualiser, more interactive and
-          helps you find out more about your health.
+          Try out the Calculators/Tools of Calorie Expert, and find out more
+          about your health.
         </p>
       </div>
       <div className="tool-tabs-container">

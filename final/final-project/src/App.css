@@ -42,8 +42,10 @@ h6, .section-title {
 }
 .title-text{
   margin-top: 0.5rem;
+  margin-left: 0;
   color: #476a2e;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .nav-center {
   display: flex;
@@ -811,16 +813,23 @@ label{
 
 /* -------------  Footer ---------------  */
 .footer-navbar{
-  
   bottom: 0;
   width: 100%;
-  height: 2rem;   
+  height: 1.5rem; 
+  margin-top: 1rem;
   background-color: #476a2e;
   text-align: center;
 }
 .footer-nav-center a{
   text-decoration: none;
   color: #f1f5f8;
-  font:1rem;
+  font:1.5rem;
   font-weight: 400;
+}
+.footer-nav-center a:hover{
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 0.25rem;
+  color:black;
+  text-underline-offset: on;
 }
