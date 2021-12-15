@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
-// import "./Carousel.css";
+import { Link } from "react-router-dom";
 
 function Carousel({ slides, label }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,13 +19,16 @@ function Carousel({ slides, label }) {
 
   const slideList = slides.map((slide, index) => {
     let classes = ["carousel__slide"];
+    let nutrientLink = `/nutrients/${slide.foodId}`;
     if (index === activeIndex) {
       classes.push("carousel__slide--active");
     }
 
     return (
       <li key={slide.src} className={classes.join(" ")}>
-        <img src={slide.src} alt={slide.alt} className="carousel__img" />
+        <Link to={nutrientLink}>
+          <img src={slide.src} alt={slide.alt} className="carousel__img" />
+        </Link>
       </li>
     );
   });

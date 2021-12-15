@@ -11,22 +11,27 @@ const Home = () => {
     {
       src: "https://www.edamam.com/web-img/c75/c755a75617c903f23739e7e7a9a083d8.jpg",
       alt: "milkshake",
+      foodId: "8e93fc948d74af0f69d000feaf103f9f",
     },
     {
       src: " https://www.edamam.com/web-img/72e/72ebeef4f13b029165ce5fc4a675130e.jpg",
       alt: "Salad",
+      foodId: "dd4a76ee9f4ce2efd21e40e3d620f8c4",
     },
     {
       src: "https://www.edamam.com/web-img/16c/16c9f7a2bcf8a7643ada8729cd693c9d.jpg",
       alt: "CrispyEgg",
+      foodId: "db742742099859a8053b992dd3c1f452",
     },
     {
       src: " https://www.edamam.com/web-img/9a4/9a48eba8331850cac217738f647c2500.jpg",
       alt: "Chowmein",
+      foodId: "1fb38f8550561f3d85e34fdf111fe82d",
     },
     {
       src: "https://www.edamam.com/web-img/22c/22c27bdc6b8dc67215c7478cb4e5dc42.jpg",
       alt: "BlueberryPancakes",
+      foodId: "452e9fce1999537b9e5698fda667c75f",
     },
   ];
   const [recipe, setRecipe] = useState([]);
@@ -90,6 +95,7 @@ const Home = () => {
             id="search-bar-id"
             className="search-input"
             type="text"
+            required
             onChange={(e) => {
               setQuery(e.target.value);
             }}

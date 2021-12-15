@@ -243,14 +243,14 @@ color: #fff;
   margin-bottom: 1rem;
 }
 .sub-title{
-  color: darkcyan;
+  color: darkblue;
   text-align: center;
   margin: 0.5rem;
 }
 
 .food-sub-container{
   margin: 1rem;
-  background: black;
+  background: linear-gradient(45deg, rgb(119, 216, 223), transparent);
   border-radius: 0.5rem;
 }
 .food-sub-container li{
@@ -263,7 +263,8 @@ color: #fff;
   font-weight: 350;
 }
 .food-nutrition-span-qty{
-  color:white;
+  color:black;
+  padding: 0;
 }
 @media screen and (min-width: 576px) {
   .food-img-details-container{
@@ -476,9 +477,9 @@ color: #fff;
 }
 p, span{
   font-weight: 350;
-  margin:1rem;
+   margin:0.25rem;
   letter-spacing: 1.2px;
-  line-width:1.2px;
+  line-height:1.2px;
 }
 .tool-form{
   display: block;
