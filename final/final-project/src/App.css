@@ -302,21 +302,26 @@ color: #fff;
 }
 
 .carousel__slide--active { 
-  position: static;
+  position: relative;
   visibility: visible;
  
+}
+
+.carousel__slide--active li { 
+ 
+  position: static;
 }
 
 .carousel__img { 
   display: flex;
   flex-direction: row;
-  width:14rem;
+  width:10rem;
 }
 
 .carousel__control { 
   min-width: 54px;
   min-height: 54px;
-  background-color: rgb(179, 236, 236);
+  background-color: #f1f5f8;
   border:none;
   color:black;
 }
@@ -333,7 +338,7 @@ color: #fff;
   }
   .carousel__control{
     min-width: 200px;
-    min-height: 200px;
+    min-height: 200px; 
   }
 }
 
