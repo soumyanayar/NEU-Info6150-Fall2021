@@ -22,9 +22,8 @@ function WaistHipRatio() {
   function getStatus(result) {
     if (gender === "1" && result > 0.8) return "High Health Risks";
     else if (gender === "1" && result < 0.8) return "Low Health Risks";
-    else if (gender === "1" && result > 0.95) return "High Health Risks";
-    else if (gender === "1" && result > 0.95) return "Low Health Risks";
-    else return "Enter Valid Inputs";
+    else if (gender === "2" && result > 0.95) return "High Health Risks";
+    else if (gender === "2" && result > 0.95) return "Low Health Risks";
   }
 
   return (
@@ -46,7 +45,7 @@ function WaistHipRatio() {
                 className="user-input-radio-btn"
                 name="gender"
                 value="1"
-                checked={gender}
+                required
                 onChange={(e) => setGender(e.target.value)}
               />
               <label className="user-input-gender-label">Male</label>
@@ -55,6 +54,7 @@ function WaistHipRatio() {
                 className="user-input-radio-btn"
                 name="gender"
                 value="2"
+                required
                 onChange={(e) => setGender(e.target.value)}
               />
             </div>
@@ -68,6 +68,7 @@ function WaistHipRatio() {
               min="100"
               max="300"
               value={waist}
+              required
               onChange={(e) => setWaist(e.target.value)}
             />
           </div>
@@ -80,6 +81,7 @@ function WaistHipRatio() {
               min="1"
               max="300"
               value={hip}
+              required
               onChange={(e) => setHip(e.target.value)}
             />
           </div>
@@ -92,7 +94,6 @@ function WaistHipRatio() {
         {result && (
           <div className="result-div">
             <p>Your Waist Hip ratio is : {result}</p>
-            <p>Input Fileds are Empty</p>
             <p>{status}</p>
           </div>
         )}

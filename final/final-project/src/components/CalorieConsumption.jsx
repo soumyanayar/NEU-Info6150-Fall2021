@@ -41,6 +41,7 @@ const CalorieConsumption = () => {
                 className="user-input-radio-btn"
                 name="gender"
                 value="1"
+                required
                 onChange={(e) => setGender(e.target.value)}
               />
               <label className="user-input-gender-label">Male</label>
@@ -49,6 +50,7 @@ const CalorieConsumption = () => {
                 className="user-input-radio-btn"
                 name="gender"
                 value="2"
+                required
                 onChange={(e) => setGender(e.target.value)}
               />
             </div>
@@ -63,6 +65,7 @@ const CalorieConsumption = () => {
               min="1"
               max="100"
               value={age}
+              required
               onChange={(e) => setAge(parseInt(e.target.value))}
             />
           </div>
@@ -75,6 +78,7 @@ const CalorieConsumption = () => {
               placeholder="cm"
               min="100"
               max="300"
+              required
               value={height}
               onChange={(e) => setHeight(parseFloat(e.target.value))}
             />
@@ -88,6 +92,7 @@ const CalorieConsumption = () => {
               placeholder="kg"
               min="1"
               max="300"
+              required
               value={weight}
               onChange={(e) => setWeight(parseFloat(e.target.value))}
             />
@@ -97,9 +102,10 @@ const CalorieConsumption = () => {
               className="user-input"
               name="activity"
               value={activity}
+              required
               onChange={(e) => setActivity(parseFloat(e.target.value))}
             >
-              <option value="1">Select Your Activity</option>
+              <option value="">Select Activity Level</option>
               <option value="1.2">Very little</option>
               <option value="1.375">Light Activity</option>
               <option value="1.55">Moderately Active</option>

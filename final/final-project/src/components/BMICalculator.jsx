@@ -48,6 +48,7 @@ function BMICalculator() {
               min="100"
               max="300"
               value={height}
+              required
               onChange={(e) => setHeight(e.target.value)}
             />
           </div>
@@ -61,6 +62,7 @@ function BMICalculator() {
               min="1"
               max="300"
               value={weight}
+              required
               onChange={(e) => setWeight(e.target.value)}
             />
           </div>
