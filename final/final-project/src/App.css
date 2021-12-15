@@ -475,11 +475,16 @@ color: #fff;
   padding: 0.5rem;
   background-color: #f1f5f8;
 }
-p, span{
+p{
   font-weight: 350;
-   margin:0.25rem;
+  margin:1.5rem;
   letter-spacing: 1.2px;
-  line-height:1.2px;
+}
+
+ span{
+  font-weight: 350;
+  margin:0.25rem;
+  letter-spacing: 1.2px;
 }
 .tool-form{
   display: block;

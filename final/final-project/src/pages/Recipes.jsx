@@ -46,6 +46,7 @@ const Recipes = () => {
           <input
             className="search-input"
             type="text"
+            required
             onChange={(e) => {
               setQuery(e.target.value);
             }}

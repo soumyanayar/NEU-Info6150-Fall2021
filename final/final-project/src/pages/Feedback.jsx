@@ -124,6 +124,7 @@ const Feedback = () => {
                 name="username"
                 placeholder="Name"
                 value={formValues.username}
+                required
                 onChange={handleChange}
               />
             </div>
@@ -132,11 +133,12 @@ const Feedback = () => {
               <label className="label">Email</label>
               <input
                 className="user-input"
-                type="text"
+                type="email"
                 name="email"
                 placeholder="Email"
                 value={formValues.email}
                 onChange={handleChange}
+                required
               />
             </div>
             <p className="error-msg">{formErrors.email}</p>
