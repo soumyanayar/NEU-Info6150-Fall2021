@@ -214,15 +214,15 @@ color: #fff;
   }
 
 @media screen and (min-width: 576px) {
+    .form-control input {
+      display: block;
+      margin-left:20vw;
+  }
   .form-control input {
     display: block;
-    margin-left:20vw;
-}
-.form-control input {
-  display: block;
-  margin-left: 20%;
-  width:60%;
-}
+    margin-left: 20%;
+    width:60%;
+  }
 }
 
 /* /////////--------  FoodItem ---------///////////*/
@@ -308,7 +308,6 @@ color: #fff;
 }
 
 .carousel__slide--active li { 
- 
   position: static;
 }
 
@@ -484,6 +483,7 @@ text-align: center;
 margin-top: 0.5rem;
 margin-bottom: 0.5rem;
 }
+
 .user-input-entry-div{
   display: flex;
   flex-direction: column;
@@ -493,6 +493,11 @@ margin-bottom: 0.5rem;
   font:1;
   padding:0.2rem;
   font-weight: bold;
+}
+.user-input-gender-label{
+  padding:0;
+  margin:0;
+  margin-left: 1rem;
 }
 
 .user-input{

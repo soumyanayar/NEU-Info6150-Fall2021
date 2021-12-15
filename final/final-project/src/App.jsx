@@ -8,6 +8,8 @@ import Tools from "./pages/Tools";
 import Feedback from "./pages/Feedback";
 import FoodItem from "./components/FoodItem";
 import Error from "./pages/Error";
+import Footer from "./components/Footer";
+import Privacy from "./pages/Privacy";
 
 function App() {
   return (
@@ -36,9 +38,16 @@ function App() {
           <Feedback />
         </Route>
         <Route path="/nutrients/:id" children={<FoodItem />}></Route>
-        <Route path="*">
-          <Error />
+        <Footer />
+      </Switch>
+      <Switch>
+        <Footer />
+        <Route path="/privacypolicy">
+          <Privacy />
         </Route>
+        {/* <Route path="*">
+          <Error />
+        </Route> */}
       </Switch>
     </Router>
   );

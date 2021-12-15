@@ -7,6 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-title">
         <img className="logo" src={logo} alt="food"></img>
+        <Link to="/"></Link>
         <h2 className="title-text">CALORIE EXPERT</h2>
       </div>
       <div className="nav-center">

@@ -35,7 +35,7 @@ const CalorieConsumption = () => {
           <div className="user-input-entry-div">
             <label className="user-input-label">Gender</label>
             <div className="gender-div">
-              <label className="user-input-label">Female</label>
+              <label className="user-input-gender-label">Female</label>
               <input
                 type="radio"
                 className="user-input-radio-btn"
@@ -43,7 +43,7 @@ const CalorieConsumption = () => {
                 value="1"
                 onChange={(e) => setGender(e.target.value)}
               />
-              <label className="user-input-label">Male</label>
+              <label className="user-input-gender-label">Male</label>
               <input
                 type="radio"
                 className="user-input-radio-btn"
