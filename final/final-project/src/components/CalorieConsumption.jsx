@@ -119,12 +119,12 @@ const CalorieConsumption = () => {
           </div>
         </div>
       </form>
-      <div className="tool-tab-content">
+      {/* <div className="tool-tab-content">
         <p>
           You can plan yor meals referring to the Calorie consumption value you
           calculated
         </p>
-      </div>
+      </div> */}
     </div>
   );
 };

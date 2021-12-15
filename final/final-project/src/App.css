@@ -365,6 +365,7 @@ color: #fff;
   position: relative;
   outline: none;
   letter-spacing: 0.1rem;
+  background: rgb(198, 238, 179);
   color:#080808;
   border-bottom: 0.1rem solid #476a2e;
   padding: 0.3rem 0.6rem;
@@ -430,9 +431,14 @@ color: #fff;
 
 @media only screen and (min-width: 500px) {
   .container-div {
-    width: 800px;
-    height: 500px;
+    /* width: 800px;
+    height: 500px; */
     margin: 3rem auto 0;
+  }
+  .tool-tabs-container{
+    height:70vh;
+    width:65%;
+    background: rgb(198, 238, 179);
   }
   .tool-sub-container{
     display: flex;
@@ -801,4 +807,20 @@ label{
 
 .error-container{
   display: flex;
+}
+
+/* -------------  Footer ---------------  */
+.footer-navbar{
+  
+  bottom: 0;
+  width: 100%;
+  height: 2rem;   
+  background-color: #476a2e;
+  text-align: center;
+}
+.footer-nav-center a{
+  text-decoration: none;
+  color: #f1f5f8;
+  font:1rem;
+  font-weight: 400;
 }

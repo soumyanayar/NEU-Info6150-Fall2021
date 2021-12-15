@@ -37,18 +37,14 @@ function App() {
         <Route path="/feedback">
           <Feedback />
         </Route>
-        <Route path="/nutrients/:id" children={<FoodItem />}></Route>
-        <Footer />
-      </Switch>
-      <Switch>
-        <Footer />
+        <Route path="/nutrients/:id" children={<FoodItem />}>
+          <FoodItem />
+        </Route>
         <Route path="/privacypolicy">
           <Privacy />
         </Route>
-        {/* <Route path="*">
-          <Error />
-        </Route> */}
       </Switch>
+      <Footer />
     </Router>
   );
 }
