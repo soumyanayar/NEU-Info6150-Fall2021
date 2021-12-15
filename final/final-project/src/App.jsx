@@ -10,7 +10,7 @@ import FoodItem from "./components/FoodItem";
 import SkipToMain from "./pages/SkipToMain";
 import Footer from "./components/Footer";
 import Privacy from "./pages/Privacy";
-
+import MainContent from "./components/MainContent";
 function App() {
   return (
     // <div>
@@ -44,6 +44,9 @@ function App() {
         </Route>
         <Route path="/nutrients/:id" children={<FoodItem />}>
           <FoodItem />
+        </Route>
+        <Route path="/mainContent">
+          <MainContent />
         </Route>
         <Route path="/privacypolicy">
           <Privacy />
