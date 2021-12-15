@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 export default function Error() {
   return (
     <div className="skip-link-div">
-      <Link className="skip-link" to="/">
+      <a className="skip-link" href="#search-bar-id">
         SKIP TO CONTENT
-      </Link>
+      </a>
     </div>
   );
 }

@@ -87,6 +87,7 @@ const Home = () => {
       <form className="search-form" onSubmit={searchRecipes}>
         <div className="form-control">
           <input
+            id="search-bar-id"
             className="search-input"
             type="text"
             onChange={(e) => {
