@@ -874,19 +874,25 @@ label{
 /* -------------  Loading ---------------  */
 
 .loader{
-  background: transparent;
-  -webkit-animation: load1 1s infinite ease-in-out;
-  animation: load1 1s infinite ease-in-out;
   width: 1em;
   height: 4em;
+
+  background: transparent;
+
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
 }
+
 .loader {
-  color: var(205, 86%, 17%);
-  text-indent: -9999em;
+  position: relative;
+
   margin: 88px auto;
   margin-top: 20rem;
-  position: relative;
+
+  color: var(205, 86%, 17%);
+  text-indent: -9999em; 
   font-size: 3rem;
+
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);
@@ -929,16 +935,21 @@ label{
   width: 100%;
   height: 3.5rem; 
   margin-top:3vh;
+
   background-color: #476a2e;
   text-align: center;
 }
+
 .footer-nav-center a{
-  text-decoration: none;
+
   margin-top:2rem;
+
+  text-decoration: none;
   color: #f1f5f8;
   font:1.5rem;
   font-weight: 400;
 }
+
 .footer-nav-center a:hover{
   background-color: white;
   border: 2px solid white;
@@ -952,10 +963,13 @@ label{
   margin:0;
   padding: 0;
 }
+
 .skip-link {
   position: absolute;
+
   top: -3rem;
   padding:0.1rem;
+
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -965,9 +979,4 @@ label{
 .skip-link:focus{
   top:0;
   outline: 3px solid green;
-}
-
-/*--------- Privacy Policy ------------*/
-.privacy-list{
-
 }
