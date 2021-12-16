@@ -122,7 +122,17 @@ const CalorieConsumption = () => {
             </button>
             {caloriesToConsume && (
               <div className="result-div">
-                <p>Your calorie Consumption per day is: {caloriesToConsume} </p>
+                <p>
+                  Consume {(caloriesToConsume - 500.0).toFixed(2)} to lose 0.5
+                  kg/week
+                </p>
+                <p>
+                  Consume {caloriesToConsume} to maintain your current weight
+                </p>
+                <p>
+                  Consume {(caloriesToConsume - -500.0).toFixed(2)} to gain 0.5
+                  kg/week
+                </p>
               </div>
             )}
           </div>

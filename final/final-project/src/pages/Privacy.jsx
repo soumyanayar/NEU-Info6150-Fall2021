@@ -24,13 +24,13 @@ function Privacy() {
         <h3>Storage and Security of Personal Information</h3>
         <p>
           We use firewalls and Secure Socket Layer ("SSL") encryption technology
-          to ensure the integrity and privacy of the information you pass to us
-          via the Internet. However, to take advantage of this, you must utilize
-          a browser that maintains 128-bit encryption support.
+          to ensure the integrity and privacy of the information you provide us.
+          However, to take advantage of this, you must utilize a browser that
+          maintains 128-bit encryption support.
         </p>
         <h3>Accessing, Changing and Deleting your Personal Information</h3>
         <p>
-          You may at any time request a copy of your file from CalorieKing.com.
+          You may at any time request a copy of your file from Calorie Expert.
           If you wish to change the information we have about you or have it
           deleted entirely, please contact us. We will provide you with a copy
           of your file and do everything we reasonably can to alter or delete

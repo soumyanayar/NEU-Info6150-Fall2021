@@ -37,6 +37,7 @@ const Home = () => {
   const [recipe, setRecipe] = useState([]);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
+  const [search, setSearch] = useState("true");
   let recipeStore;
 
   const getRecipes = async () => {
@@ -46,9 +47,6 @@ const Home = () => {
         `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
       );
       recipeStore = await response.json();
-      // if (recipeStore.hit.length <= 0 && query !== "") {
-      //   console.log("error");
-      // }
       if (
         recipeStore.hits.length > 0 &&
         !recipeStore.hits[0].recipe.label.includes(query)
@@ -65,9 +63,19 @@ const Home = () => {
 
   const searchRecipes = (e) => {
     e.preventDefault();
-    getRecipes();
+    if (validateForm) {
+      getRecipes();
+    }
   };
 
+  const validateForm = () => {
+    let error = {};
+    if (query.length == 0) {
+      setSearch(false);
+    } else {
+      error = "Search Not Found!!";
+    }
+  };
   useEffect(() => {
     getRecipes();
   }, []);
@@ -84,9 +92,9 @@ const Home = () => {
           We are World's most trusted Food database. We analyse the food you
           entered and provide the most accurate nutritional value in the food.
           Our services designed to educate, motivate and inspire lifelong weight
-          control.To achieve this, we have determined that everything we do
-          should be science-based, and equally important, our products and
-          programs must produce the results our members and visitors desire.
+          control. To achieve this, we have determined that everything we do
+          should be science-based and our product must produce the results our
+          users desire.
         </p>
       </div>
       <form className="search-form" onSubmit={searchRecipes}>
