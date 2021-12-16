@@ -4,27 +4,27 @@ import logo from "../logo.png";
 
 const Navbar = () => {
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation">
       <div className="nav-title">
         <Link to="/">
           <img className="logo" src={logo} alt="food"></img>
         </Link>
-        <Link to="/">
-          <h2 className="title-text">CALORIE EXPERT</h2>
+        <Link to="/" className="title-text">
+          CALORIE EXPERT{" "}
         </Link>
       </div>
       <div className="nav-center">
         <ul className="nav-links">
-          <li>
+          <li role="menuitem">
             <Link to="/">HOME</Link>
           </li>
-          <li>
+          <li role="menuitem">
             <Link to="/tools">TOOLS</Link>
           </li>
-          <li>
+          <li role="menuitem">
             <Link to="/recipes">RECIPES</Link>
           </li>
-          <li>
+          <li role="menuitem">
             <Link to="/feedback">FEEDBACK</Link>
           </li>
         </ul>

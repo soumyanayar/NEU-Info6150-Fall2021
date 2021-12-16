@@ -41,6 +41,8 @@ h6, .section-title {
   height:2rem;
 }
 .title-text{
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-top: 0.5rem;
   margin-left: 0;
   color: #476a2e;
@@ -208,6 +210,12 @@ text-decoration: none;
  .btn:hover {
 background: #476a2e;      
 color: #fff;
+}
+.btn:hover{
+  border: 0.1rem solid blue ;
+}
+ .btn-new:hover{
+  border: 0.1rem solid blue ;
 }
 
 .btn-new :hover {

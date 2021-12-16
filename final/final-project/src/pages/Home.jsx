@@ -100,7 +100,7 @@ const Home = () => {
               setQuery(e.target.value);
             }}
           />
-          <button type="submit" className="btn">
+          <button type="submit" className="btn" aria-label="search food item">
             Search
           </button>
         </div>

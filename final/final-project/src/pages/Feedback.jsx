@@ -142,7 +142,11 @@ const Feedback = () => {
               />
             </div>
             <p className="error-msg">{formErrors.email}</p>
-            <button className="btn-new" type="submit">
+            <button
+              className="btn-new"
+              type="submit"
+              aria-label="submit feedback"
+            >
               Submit
             </button>
           </div>

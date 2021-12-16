@@ -117,7 +117,7 @@ const CalorieConsumption = () => {
             </div>
           </div>
           <div className="calculation-div">
-            <button className="tool-btn" type="submit">
+            <button className="tool-btn" type="submit" aria-label="calculate">
               Calculate Calories
             </button>
             {caloriesToConsume && (

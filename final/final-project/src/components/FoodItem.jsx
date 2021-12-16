@@ -36,16 +36,16 @@ const FoodItem = () => {
                 src={nutrients.recipe.image}
                 alt="name"
               ></img>
-              <h6 className="sub-title">
+              <h5 className="sub-title">
                 Cuisine type : {nutrients.recipe.cuisineType}
-              </h6>
-              <h6 className="sub-title">
+              </h5>
+              <h5 className="sub-title">
                 Meal type : {nutrients.recipe.mealType}
-              </h6>
-              <h6 className="sub-title">
+              </h5>
+              <h5 className="sub-title">
                 Serving quantity : {nutrients.recipe.totalWeight.toFixed(2)}{" "}
                 grams
-              </h6>
+              </h5>
             </div>
             <div className="food-sub-container">
               <h4 className="sub-title">Nutrition Facts</h4>

@@ -87,7 +87,7 @@ function WaistHipRatio() {
           </div>
         </div>
         <div className="calculation-div">
-          <button className="tool-btn" type="submit">
+          <button className="tool-btn" type="submit" aria-label="calculate">
             Calculate Ratio
           </button>
         </div>

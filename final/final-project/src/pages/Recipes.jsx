@@ -52,7 +52,7 @@ const Recipes = () => {
               setQuery(e.target.value);
             }}
           />
-          <button type="submit" className="btn">
+          <button type="submit" className="btn" aria-label="search recipe">
             Search
           </button>
         </div>
