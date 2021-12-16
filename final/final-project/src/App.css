@@ -326,7 +326,12 @@ color: #fff;
   background-color: #f1f5f8;
   border:none;
   color:black;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color:#476a2e;
+
 }
+
 @media screen and (min-width: 576px) {
   .carousel {
     display: grid;
@@ -433,13 +438,13 @@ color: #fff;
 }
 
 @media only screen and (min-width: 500px) {
+  .main-div{
+    margin-bottom: 4rem;
+  }
   .container-div {
-    /* width: 800px;
-    height: 500px; */
     margin: 3rem auto 0;
   }
   .tool-tabs-container{
-    height:70vh;
     width:65%;
     background: rgb(198, 238, 179);
   }
@@ -475,6 +480,8 @@ color: #fff;
   padding: 0.5rem;
   background-color: #f1f5f8;
 }
+
+
 p{
   font-weight: 350;
   margin:1rem;
@@ -847,13 +854,14 @@ label{
 .footer-navbar{
   bottom: 0;
   width: 100%;
-  height: 1.5rem; 
-  margin-top: 1rem;
+  height: 3.5rem; 
+  margin-top:3vh;
   background-color: #476a2e;
   text-align: center;
 }
 .footer-nav-center a{
   text-decoration: none;
+  margin-top:2rem;
   color: #f1f5f8;
   font:1.5rem;
   font-weight: 400;

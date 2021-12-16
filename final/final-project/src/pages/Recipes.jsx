@@ -46,6 +46,7 @@ const Recipes = () => {
           <input
             className="search-input"
             type="text"
+            placeholder="Enter the food name"
             required
             onChange={(e) => {
               setQuery(e.target.value);

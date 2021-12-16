@@ -95,6 +95,7 @@ const Home = () => {
             className="search-input"
             type="text"
             required
+            placeholder="Enter the food name"
             onChange={(e) => {
               setQuery(e.target.value);
             }}

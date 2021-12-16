@@ -44,7 +44,7 @@ function BMICalculator() {
               className="user-input"
               id="Height "
               type="number"
-              placeholder="cm"
+              placeholder="height in cm"
               min="100"
               max="300"
               value={height}
@@ -58,7 +58,7 @@ function BMICalculator() {
               className="user-input"
               id="Weight"
               type="number"
-              placeholder="kg"
+              placeholder="weight in kg"
               min="1"
               max="300"
               value={weight}
