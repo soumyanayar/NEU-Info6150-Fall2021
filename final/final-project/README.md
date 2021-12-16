@@ -1,70 +1,29 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Calorie Expert React App
+​
+## Description
+​
+-   Calorie Expert is a responsive web application written using React where the primary functionality of the app is to show detailed information about the calorie and nutritional data for any food item the user wants to search
+-   The app also has a Recipe page where user can search for food items and it shows the ingredients for that food item.
+-   We have used https://api.edamam.com as the source of truth for calorie, nutritional data & ingrediants info which has a very rich set of food items all over across the globe
+-   The app also has a tools page where it provides 3 useful calculators w.r.t health and fitness
+    -   BMI Calculator
+    -   Calorie Consumption Calculator
+    -   Hip to Waist ratio Calculator
+-   All in all, the application has necessary things to know and find out about delicious and healthy food and nutritional details about it
+-   The app is compliant with all the accessibility requirements and cleared from the Wave tool evaluation
+-   Each of the tool/calculators have necessary validations in order to prevent any user errors.
+-   The Application also provides a page where user can provide the feedback about different aspects of the website.
+​
+## Complex UI elements
+​
+-   Carasoul of images of most viewed food items (Clickable and navigates to the nutritional page for the image clicked)
+-   Tool page has 3 different calculators navigated using tabs.
+-   Accordian of food items which shows the ingredients of those when clicked.
+​
+## Loading indicator
+​
+-   In home page during loading of carasoul of images there is a loading indicator
+-   In food nutrition page & food recipe page, we make an API call to https://api.edamam.com. During this api call, there is a loading indicator.
+​
+## License
+License provided by Edamam LLC (“Edamam”) through Edamam’s web site, Edamam.com, (the "Site"). For more information visit https://developer.edamam.com/about/terms
