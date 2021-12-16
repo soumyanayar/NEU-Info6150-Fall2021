@@ -482,7 +482,7 @@ color: #fff;
 }
 
 
-p{
+p, .privacy-list{
   font-weight: 350;
   margin:1rem;
   letter-spacing: 1.2px;
@@ -892,4 +892,9 @@ label{
 .skip-link:focus{
   top:0;
   outline: 3px solid green;
+}
+
+/*--------- Privacy Policy ------------*/
+.privacy-list{
+
 }

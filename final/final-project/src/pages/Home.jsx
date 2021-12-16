@@ -78,7 +78,7 @@ const Home = () => {
 
   return (
     <section className="recipe-search">
-      <div className="introduction" id="search-bar-id">
+      <div className="introduction" id="intro-id">
         <h2 className="introduction-title"> Introduction </h2>
         <p>
           We are World's most trusted Food database. We analyse the food you

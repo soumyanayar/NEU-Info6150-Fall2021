@@ -16,7 +16,7 @@ function Privacy() {
           We will never store or use your data without your concern, unless we
           consider it is necessary for following reasons :
         </p>
-        <ul>
+        <ul className="privacy-list">
           <li>To comply with the law</li>
           <li>To protect the rights of this website</li>
           <li>To provide service to you</li>
