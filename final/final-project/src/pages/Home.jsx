@@ -37,6 +37,7 @@ const Home = () => {
   const [recipe, setRecipe] = useState([]);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
+  const [searchNotFound, setSearchNotFound] = useState(false);
   let recipeStore;
 
   const getRecipes = async () => {
@@ -46,13 +47,18 @@ const Home = () => {
         `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
       );
       recipeStore = await response.json();
-      if (
-        recipeStore.hits.length > 0 &&
-        !recipeStore.hits[0].recipe.label.includes(query)
-      ) {
-        setRecipe(recipeStore.hits.slice(1));
+      if (recipeStore.hits.length == 0) {
+        setSearchNotFound(true);
       } else {
-        setRecipe(recipeStore.hits);
+        setSearchNotFound(false);
+        if (
+          recipeStore.hits.length > 0 &&
+          !recipeStore.hits[0].recipe.label.includes(query)
+        ) {
+          setRecipe(recipeStore.hits.slice(1));
+        } else {
+          setRecipe(recipeStore.hits);
+        }
       }
       setLoading(false);
     } catch (error) {
@@ -64,9 +70,6 @@ const Home = () => {
     e.preventDefault();
     getRecipes();
   };
-  useEffect(() => {
-    getRecipes();
-  }, []);
 
   if (loading) {
     return <Loading />;
@@ -100,20 +103,25 @@ const Home = () => {
             Search
           </button>
         </div>
+        <button className={searchNotFound ? "show-text" : "hide-text"}>
+          Sorry!! We couldn't find that
+        </button>
       </form>
+      <></>
       <div>
-        {recipe.map((item) => {
-          return (
-            <div className="search-items-div" key={item.recipe.uri}>
-              <Link
-                className="search-item-list"
-                to={`/nutrients/${item.recipe.uri.split("_")[1]}`}
-              >
-                {item.recipe.label}
-              </Link>
-            </div>
-          );
-        })}
+        {!searchNotFound &&
+          recipe.map((item) => {
+            return (
+              <div className="search-items-div" key={item.recipe.uri}>
+                <Link
+                  className="search-item-list"
+                  to={`/nutrients/${item.recipe.uri.split("_")[1]}`}
+                >
+                  {item.recipe.label}
+                </Link>
+              </div>
+            );
+          })}
       </div>
       <div className="app">
         <Carousel slides={slides} />
