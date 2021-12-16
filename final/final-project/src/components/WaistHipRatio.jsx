@@ -34,7 +34,7 @@ function WaistHipRatio() {
           potential health risks.
         </p>
       </div>
-      <form className="tool-form" onSubmit={calculateBMI}>
+      <form className="tool-form-new" onSubmit={calculateBMI}>
         <div className="bmr-div">
           <div className="user-input-entry-div">
             <label className="user-input-label">Gender</label>

@@ -55,63 +55,66 @@ const CalorieConsumption = () => {
               />
             </div>
           </div>
-
-          <div className="user-input-entry-div">
-            <label className="user-input-label">Age (years)</label>
-            <input
-              className="user-input"
-              type="number"
-              placeholder="years"
-              min="1"
-              max="100"
-              value={age}
-              required
-              onChange={(e) => setAge(parseInt(e.target.value))}
-            />
+          <div className="age-activity-div">
+            <div className="user-input-entry-div">
+              <label className="user-input-label">Age (years)</label>
+              <input
+                className="user-input"
+                type="number"
+                placeholder="years"
+                min="1"
+                max="100"
+                value={age}
+                required
+                onChange={(e) => setAge(parseInt(e.target.value))}
+              />
+            </div>
+            <div className="user-input-entry-div">
+              <select
+                className="user-input-selection"
+                name="activity"
+                value={activity}
+                required
+                onChange={(e) => setActivity(parseFloat(e.target.value))}
+              >
+                <option value="">Select Actvity Level</option>
+                <option value="1.2">Very little</option>
+                <option value="1.375">Light Activity</option>
+                <option value="1.55">Moderately Active</option>
+                <option value="1.72">Very Active</option>
+                <option value="1.9">Extremely Active</option>
+              </select>
+            </div>
           </div>
-          <div className="user-input-entry-div">
-            <label className="user-input-label">Height (cm)</label>
-            <input
-              className="user-input"
-              id="Height "
-              type="number"
-              placeholder="cm"
-              min="100"
-              max="300"
-              required
-              value={height}
-              onChange={(e) => setHeight(parseFloat(e.target.value))}
-            />
-          </div>
-          <div className="user-input-entry-div">
-            <label className="user-input-label">Weight (kg)</label>
-            <input
-              className="user-input"
-              id="Weight "
-              type="number"
-              placeholder="kg"
-              min="1"
-              max="300"
-              required
-              value={weight}
-              onChange={(e) => setWeight(parseFloat(e.target.value))}
-            />
-          </div>
-          <div className="user-input-entry-div">
-            <select
-              className="user-input"
-              name="activity"
-              value={activity}
-              required
-              onChange={(e) => setActivity(parseFloat(e.target.value))}
-            >
-              <option value="">Select Actvity Level</option>
-              <option value="1.2">Very little</option>
-              <option value="1.375">Light Activity</option>
-              <option value="1.55">Moderately Active</option>
-              <option value="1.72">Very Active</option>
-              <option value="1.9">Extremely Active</option>
-            </select>
+          <div className="hgt-wht-div">
+            <div className="user-input-entry-div">
+              <label className="user-input-label">Height (cm)</label>
+              <input
+                className="user-input"
+                id="Height "
+                type="number"
+                placeholder="cm"
+                min="100"
+                max="300"
+                required
+                value={height}
+                onChange={(e) => setHeight(parseFloat(e.target.value))}
+              />
+            </div>
+            <div className="user-input-entry-div">
+              <label className="user-input-label">Weight (kg)</label>
+              <input
+                className="user-input"
+                id="Weight "
+                type="number"
+                placeholder="kg"
+                min="1"
+                max="300"
+                required
+                value={weight}
+                onChange={(e) => setWeight(parseFloat(e.target.value))}
+              />
+            </div>
           </div>
           <div className="calculation-div">
             <button className="tool-btn" type="submit">
@@ -125,12 +128,12 @@ const CalorieConsumption = () => {
           </div>
         </div>
       </form>
-      {/* <div className="tool-tab-content">
+      <div className="tool-tab-content">
         <p>
           You can plan yor meals referring to the Calorie consumption value you
           calculated
         </p>
-      </div> */}
+      </div>
     </div>
   );
 };

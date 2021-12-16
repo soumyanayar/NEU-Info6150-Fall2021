@@ -486,7 +486,7 @@ p{
   margin:0.25rem;
   letter-spacing: 1.2px;
 }
-.tool-form{
+.tool-form, .tool-form-new{
   display: block;
   margin:auto;
   background-color: #f1f5f8;
@@ -514,8 +514,11 @@ margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
 
-.user-input{
+.user-input, .user-input-selection{
   width:auto;
+  padding:0.5rem;
+  border-radius: 0.25rem;
+  font-size: 1rem;
 }
 
 .tool-btn{
@@ -544,6 +547,7 @@ margin-bottom: 0.5rem;
   font-weight: bold;
   padding:0.2rem;
 }
+
 @keyframes createBox {
   from {
     transform: scale(0);
@@ -557,16 +561,24 @@ margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
   }
-  .tool-form{
-    width:30%;
+  .tool-form, .tool-form-new{
+    width:auto;
     margin-right: 1;
     padding:1rem;
     background-color: rgb(221, 234, 243);
+  }
+  .tool-form-new{
+    width:40%;
+  }
+  .user-input-selection{
+    margin-top: 1.7rem;
+    padding:0.5rem;
   }
   .user-input{
     width:auto;
     padding:0.5rem;
     background-color: white;
+    margin-bottom: 0.5rem;
   }
   .tool-btn{
     margin-left:25%;
@@ -574,6 +586,17 @@ margin-bottom: 0.5rem;
   .tool-btn:hover{
     background-color: #476a2e;
     color:white;
+  }
+  .age-activity-div{
+    display: flex;
+    flex-direction: row;
+  }
+  .hgt-wht-div{
+    display: flex;
+    flex-direction: row;
+  }
+  .BMI-bottom-contenet{
+    margin-bottom: 4rem;
   }
 }
 

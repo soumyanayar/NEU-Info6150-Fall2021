@@ -78,7 +78,7 @@ const Home = () => {
 
   return (
     <section className="recipe-search">
-      <div className="introduction">
+      <div className="introduction" id="search-bar-id">
         <h2 className="introduction-title"> Introduction </h2>
         <p>
           We are World's most trusted Food database. We analyse the food you
@@ -92,7 +92,6 @@ const Home = () => {
       <form className="search-form" onSubmit={searchRecipes}>
         <div className="form-control">
           <input
-            id="search-bar-id"
             className="search-input"
             type="text"
             required

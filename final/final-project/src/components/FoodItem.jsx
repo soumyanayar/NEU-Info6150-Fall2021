@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
+import Home from "../pages/Home";
 import env from "react-dotenv";
 
 const FoodItem = () => {
@@ -7,6 +8,11 @@ const FoodItem = () => {
   const { id } = useParams();
 
   const getNutrients = async () => {
+    if (!env.APP_ID || !env.APP_KEY) {
+      <Link to="/">
+        <Home />
+      </Link>;
+    }
     const response = await fetch(
       `https://api.edamam.com/api/recipes/v2/${id}?type=public&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
     );

@@ -37,7 +37,7 @@ function BMICalculator() {
         </p>
       </div>
       <div className="tool-sub-container">
-        <form className="tool-form" onSubmit={calculateBMI}>
+        <form className="tool-form-new" onSubmit={calculateBMI}>
           <div className="user-input-entry-div">
             <label className="user-input-label">Height (cm)</label>
             <input
@@ -95,7 +95,7 @@ function BMICalculator() {
         </div>
       </div>
       <div className="tool-tab-content">
-        <p>
+        <p className="BMI-bottom-contenet">
           Studies have shown that a BMI of 25 or more is associated with an
           increased health risk
         </p>
