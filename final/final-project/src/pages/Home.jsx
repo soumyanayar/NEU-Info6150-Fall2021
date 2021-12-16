@@ -37,7 +37,6 @@ const Home = () => {
   const [recipe, setRecipe] = useState([]);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
-  const [search, setSearch] = useState("true");
   let recipeStore;
 
   const getRecipes = async () => {
@@ -63,18 +62,7 @@ const Home = () => {
 
   const searchRecipes = (e) => {
     e.preventDefault();
-    if (validateForm) {
-      getRecipes();
-    }
-  };
-
-  const validateForm = () => {
-    let error = {};
-    if (query.length == 0) {
-      setSearch(false);
-    } else {
-      error = "Search Not Found!!";
-    }
+    getRecipes();
   };
   useEffect(() => {
     getRecipes();

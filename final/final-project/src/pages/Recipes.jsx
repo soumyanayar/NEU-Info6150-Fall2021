@@ -17,7 +17,14 @@ const Recipes = () => {
         `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${env.APP_ID}&app_key=${env.APP_KEY}`
       );
       recipeStore = await response.json();
-      setRecipe(recipeStore.hits);
+      if (
+        recipeStore.hits.length > 0 &&
+        !recipeStore.hits[0].recipe.label.includes(query)
+      ) {
+        setRecipe(recipeStore.hits.slice(1));
+      } else {
+        setRecipe(recipeStore.hits);
+      }
       setLoading(false);
     } catch (error) {
       setLoading(false);
@@ -31,7 +38,7 @@ const Recipes = () => {
 
   useEffect(() => {
     getRecipes();
-  }, [setQuery]);
+  }, []);
 
   if (loading) {
     return <Loading />;
@@ -60,7 +67,7 @@ const Recipes = () => {
       <div className="recipe-center">
         {recipe.map((item, key) => (
           <Recipe
-            key={item.recipe.label}
+            key={item.recipe.uri}
             image={item.recipe.image}
             title={item.recipe.label}
             ingredients={item.recipe.ingredients}
