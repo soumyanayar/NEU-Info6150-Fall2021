@@ -1,0 +1,10 @@
+[{"id":"3478ac3e-b22a-4356-a4c2-f02800167fb7","name":"Apple","image_url":"http://dummyimage.com/247x100.png/dddddd/000000","nutrition_value":[{},{},{},{},{},{},{},{}]},
+{"id":"8c91e23f-f9b8-4440-b0d4-61d9b1398679","name":"Avacado Milkshake","image_url":"http://dummyimage.com/173x100.png/ff4444/ffffff","nutrition_value":[{},{},{},{},{},{},{},{},{},{}]},
+{"id":"3ad0c5a9-6eaf-4b72-9324-182bf8000735","name":"Chocolate Icecream","image_url":"http://dummyimage.com/125x100.png/cc0000/ffffff","nutrition_value":[{},{},{},{},{},{}]},
+{"id":"dd81ba67-7977-4a89-9793-8df33bb4af63","name":"Barrito","image_url":"http://dummyimage.com/103x100.png/dddddd/000000","nutrition_value":[{},{},{},{},{}]},
+{"id":"c10ef26a-116f-45d4-9f09-1a186d87c7b6","name":"Chicken Nuggets","image_url":"http://dummyimage.com/115x100.png/dddddd/000000","nutrition_value":[{},{},{},{}]},
+{"id":"82bb145e-aa61-4658-9399-6216ad48e7cb","name":"Chicken Sandwich","image_url":"http://dummyimage.com/184x100.png/cc0000/ffffff","nutrition_value":[{},{},{},{},{}]},
+{"id":"784e8542-387f-40c2-9a74-3b5b5896e1a0","name":"Boba Tea","image_url":"http://dummyimage.com/224x100.png/dddddd/000000","nutrition_value":[{}]},
+{"id":"38d0a77a-923d-4364-ad27-fb6139b3b615","name":"Mac and Cheese","image_url":"http://dummyimage.com/123x100.png/5fa2dd/ffffff","nutrition_value":[{}]},
+{"id":"90d9ed2a-63ee-410c-a897-b8373ec1a17f","name":"Tacos","image_url":"http://dummyimage.com/117x100.png/ff4444/ffffff","nutrition_value":[{},{},{}]},
+{"id":"318be109-9604-430c-8ec9-8c94e540f050","name":"Crab Fried Rice","image_url":"http://dummyimage.com/116x100.png/5fa2dd/ffffff","nutrition_value":[{},{},{},{}]}]

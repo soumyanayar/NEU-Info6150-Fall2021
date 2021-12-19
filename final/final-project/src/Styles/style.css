@@ -1,0 +1,30 @@
+/* // For Recipes // */
+.section {
+    padding: 5rem 0;
+  }
+  .section-title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    margin-top: 1rem;
+  }
+.btn {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color:#476a2e;
+  border: 2px solid #476a2e;
+  padding: 0.45rem 0.8rem;
+  display: inline-block;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background: transparent;
+  border-radius: 0.25rem;
+  display: inline-block;
+}
+.btn:hover {
+  background: #476a2e;
+  color: #fff;
+}
